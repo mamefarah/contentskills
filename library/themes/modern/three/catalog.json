@@ -1,0 +1,55 @@
+{
+ "id": "three",
+ "title": "3D",
+ "summary": "3D scenes in the modern editorial style: flat picture panels painted with the kit's studio-light tones (the light is in the picture, no glow), white frames and heavy white type, on near-black charcoal with grain. Motion lands on the 0.2 s beat with expo-out snaps and small overshoots; nothing drifts. Pass \"clear\": true for a transparent canvas over footage.",
+ "usage": "{\"piece\": \"three/panel-ring\"} or {\"background\": {\"piece\": \"three/bokeh-sweep\"}}. Most take tones (kit tone names) and some take images (stills) and word. Files: library/themes/modern/three/pieces/.",
+ "groups": [
+  "Panels",
+  "Type",
+  "Backdrops"
+ ],
+ "items": [
+  {
+   "id": "lookbook-strips",
+   "name": "Lookbook strips",
+   "group": "Panels",
+   "piece": "three/lookbook-strips",
+   "description": "Five tall picture strips with staggered heights flip about their vertical axes on the beat, in a scattered order, turning to new pictures; a big word builds across them letter by letter and drops out. word, tones, backs, images."
+  },
+  {
+   "id": "card-slab",
+   "name": "Card slab",
+   "group": "Panels",
+   "piece": "three/card-slab",
+   "description": "A deck of thin portrait picture cards seen three-quarter on fans open in depth card by card, turns a notch per beat, and closes back into one slab. count, tones."
+  },
+  {
+   "id": "panel-ring",
+   "name": "Panel ring",
+   "group": "Panels",
+   "piece": "three/panel-ring",
+   "description": "A carousel of ten tall picture panels on a ring, turning one panel per bar with a hard landing; the front panel gets a thin white frame. Loops. word, tones, images."
+  },
+  {
+   "id": "frame-corridor",
+   "name": "Frame corridor",
+   "group": "Backdrops",
+   "piece": "three/frame-corridor",
+   "description": "A slow even dolly down an endless gallery corridor of thin white portrait frames, studio-light pictures hanging on both walls and fading into the charcoal ahead. speed, tones."
+  },
+  {
+   "id": "slab-word",
+   "name": "Slab word",
+   "group": "Type",
+   "piece": "three/slab-word",
+   "description": "A big word built from tall white slabs (one per column of each heavy capital): letters drop in column by column in a scattered order, ghost until they lock solid, then drop out. word."
+  },
+  {
+   "id": "bokeh-sweep",
+   "name": "Bokeh sweep",
+   "group": "Backdrops",
+   "piece": "three/bokeh-sweep",
+   "description": "Out-of-focus warm and cool studio light over charcoal with a broad white light sweep crossing on a diagonal and lifting the discs it passes. Loops. count, tones, sweeps."
+  }
+ ]
+}

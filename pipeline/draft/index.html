@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rough draft</title>
+<link rel="stylesheet" href="/dashboard/style.css">
+<link rel="stylesheet" href="player.css">
+</head>
+<body class="draft">
+<div id="viewer"><div id="frame"></div></div>
+<aside id="panel">
+  <a class="back" href="/dashboard/">← Master dashboard</a>
+  <a class="back" id="review" href="/pipeline/review/">Review the finished video →</a>
+  <h1 id="title">Rough draft</h1>
+  <p id="note"></p>
+  <div class="ctl"><button id="play">Play</button><input id="scrub" type="range" min="0" max="1" step="0.01" value="0" aria-label="Scrub"><output id="time">0.0s</output></div>
+  <div class="chips" id="cuts">
+    <button class="chip" data-cut="all" aria-pressed="true">Review every shot</button>
+    <button class="chip" data-cut="usable" aria-pressed="false">Preview the cut</button>
+  </div>
+  <ol id="shots"></ol>
+  <p class="foot" id="next"></p>
+</aside>
+<script type="module" src="player.js"></script>
+</body>
+</html>

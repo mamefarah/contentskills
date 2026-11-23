@@ -1,0 +1,26 @@
+# Machine-local dependencies and generated caches
+node_modules/
+.tools/
+.venv/
+__pycache__/
+*.py[cod]
+node-compile-cache/
+.cache/
+.DS_Store
+*.log
+.ses
+.playwright-mcp/
+
+# Credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# User workspaces and generated output; curated examples will live in examples/
+/projects/
+/test-runs/
+/settings/user.json
+/style/profile.json
+/style/references/

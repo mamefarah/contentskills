@@ -1,0 +1,39 @@
+{
+  "id": "minimal",
+  "title": "Minimal",
+  "summary": "Quiet product-launch explainer: one hero object centred on a near-black canvas with a faint vignette (or a warm light grey for the calm 'how it works' part), and one line of narration at the top revealed word by word, key words in bold white, an italic serif accent or a translucent blue highlight. Heroes are Apple-like product UI: glowing app-icon tiles, white or graphite rounded cards with soft shadows, chips, a pointer that clicks, giant numbers ticking up, meters and funnels filling. Inter for everything, Instrument Serif italic for accents, JetBrains Mono for tiny subtitles. Pops with a slight overshoot, soft blur in and out. Original work in the genre.",
+  "categories": [
+    "scenes",
+    "transitions",
+    "fonts",
+    "captions",
+    "voiceover"
+  ],
+  "pieceFonts": [
+    "400 20px Inter",
+    "600 20px Inter",
+    "700 20px Inter",
+    "800 20px Inter",
+    "400 20px \"Instrument Serif Italic\"",
+    "500 20px \"JetBrains Mono\"",
+    "700 20px \"Inter Tight\""
+  ],
+  "look": {"surface":"#161618","ink":"#f5f5f4","dim":"#8e8e93","line":"#2a2a2d","accent":"#3b5bdb","accent2":"#22c55e","head":"Inter","headWeight":700,"body":"Inter","mono":"JetBrains Mono","card":"flat","radius":24},
+  "colors": {
+    "night": "#0b0b0c",
+    "graphite": "#161618",
+    "paper": "#ecebe8",
+    "white": "#ffffff",
+    "ink": "#111113",
+    "dim": "#8e8e93",
+    "blue": "#3b5bdb",
+    "green": "#22c55e",
+    "red": "#e5484d",
+    "orange": "#ff7a1a"
+  },
+  "frame": {
+    "background": "#0b0b0c",
+    "headingFont": "Inter",
+    "headingColor": "#f5f5f4"
+  }
+}

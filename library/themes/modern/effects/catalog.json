@@ -1,0 +1,213 @@
+{
+  "id": "effects",
+  "title": "Filters",
+  "summary": "The editorial opener look on footage, shown on the sample clip under the theme grade: the clean contrasty editorial grade, the frame splitting into staggered strips or a 2x2 mosaic of crops, a card punching up from charcoal, an image in a slot that widens, and beat hits (strobe cuts, step zooms, a black-and-white flash), plus a few quiet shared treatments.",
+  "usage": "In a footage storyboard: {\"footage\": {\"look\": {\"name\": \"editorial_grade\", \"amount\": 0.8}}} and {\"name\": \"strip_split\", \"at\": 2.4, \"seconds\": 1.6, \"where\": \"all\", \"amount\": 1, \"props\": {\"n\": 3}}. On a shot candidate: {\"effect\": {\"name\": \"strobe_cut\", \"amount\": 0.9, \"where\": \"in\", \"seconds\": 0.4}}. Layout effects time themselves over their seconds. Own effects: library/themes/modern/effects/theme_effects.py; zoom_blur, grain, vignette and halation come from library/_shared/effects_engine.py.",
+  "groups": [
+    "Look",
+    "Layout",
+    "Beat",
+    "Texture",
+    "Lighting"
+  ],
+  "items": [
+    {
+      "id": "editorial_grade",
+      "name": "editorial grade",
+      "group": "Look",
+      "src": "clips/editorial_grade.mp4",
+      "portrait": true,
+      "description": "The theme look (footage.look, about 0.8): clean contrasty fashion grade, an S-curve with blacks set down to the canvas charcoal, saturation eased back, cool shadows, light vignette. Options (\"props\"): contrast (1), warmth (0), fade (0.6), mono (0..1)."
+    },
+    {
+      "id": "strip_split",
+      "name": "strip split",
+      "group": "Layout",
+      "src": "clips/strip_split.mp4",
+      "portrait": true,
+      "description": "The frame splits into 2-3 vertical strips of the clip at different crops and zooms (one mirrored, one black and white) with staggered edges on charcoal, sliding in from alternate ends on the beat and out at the end. Times itself over the effect's seconds: \"where\": \"all\", \"amount\": 1. Options: n (3), gap (8), stagger (.05), zooms, grades (none|mono|warm|cool|punch), out (true), face ([.5, .4])."
+    },
+    {
+      "id": "mosaic",
+      "name": "mosaic",
+      "group": "Layout",
+      "src": "clips/mosaic.mp4",
+      "portrait": true,
+      "description": "A 2x2 grid of different crops of the clip (wide, close, mirrored, black and white) on charcoal; cells wipe in one by one and out at the end. Times itself: \"where\": \"all\", \"amount\": 1. Options: gap (10), zooms, grades, out (true), face."
+    },
+    {
+      "id": "punch_zoom",
+      "name": "punch zoom",
+      "group": "Layout",
+      "src": "clips/punch_zoom.mp4",
+      "portrait": true,
+      "description": "The clip sits as a centred card on charcoal and punches up to full frame on the beat with a small overshoot. Times itself: \"where\": \"all\", \"amount\": 1. Options: from (.62), at (s, .4), ramp (s, .3), back (false: shrink back over the last beat)."
+    },
+    {
+      "id": "slot_reveal",
+      "name": "slot reveal",
+      "group": "Layout",
+      "src": "clips/slot_reveal.mp4",
+      "portrait": true,
+      "description": "The clip shows only through a narrow vertical slot on charcoal that drops open, holds a beat and widens to full frame. Times itself: \"where\": \"all\", \"amount\": 1. Options: w0 (.12), h0 (.62), at (s, .4), len (s, .45)."
+    },
+    {
+      "id": "strobe_cut",
+      "name": "strobe cut",
+      "group": "Beat",
+      "src": "clips/strobe_cut.mp4",
+      "portrait": true,
+      "description": "One-frame hits on every beat, alternating a white flash and a charcoal frame, while the picture steps in a punch zoom per beat (resets every 4). Options: beat (s, .4), flash (.85), zoom (.06), mode (both|white|dark)."
+    },
+    {
+      "id": "slow_push",
+      "name": "slow push",
+      "group": "Beat",
+      "portrait": true,
+      "description": "A slow, smooth push-in over the effect's whole length (ease in and out). With \"layer\": \"all\" it pushes into the graphics too, e.g. a full-screen grid. Options: to (1.15), focus ([.5, .5])."
+    },
+    {
+      "id": "beat_zoom",
+      "name": "beat zoom",
+      "group": "Beat",
+      "src": "clips/beat_zoom.mp4",
+      "portrait": true,
+      "description": "Hard step zooms on the beat toward the face, snapping back wide every bar: each step a jump cut. Options: beat (s, .4), step (.1), bar (4), face."
+    },
+    {
+      "id": "mono_flash",
+      "name": "mono flash",
+      "group": "Beat",
+      "src": "clips/mono_flash.mp4",
+      "portrait": true,
+      "description": "The picture drops to contrasty black and white on the hit and colour returns (where: \"in\" on a cut, or \"pulse\" on a stressed word)."
+    },
+    {
+      "id": "exposure",
+      "name": "exposure lift",
+      "group": "Look",
+      "portrait": true,
+      "description": "Brightens a stretch that reads too dark after the look: lifts the mid-tones, whites rolled off. Options (\"props\"): lift (0.18; 0.3 = a lot). Use \"where\": \"all\"."
+    },
+    {
+      "id": "zoom_blur",
+      "name": "zoom blur",
+      "group": "Beat",
+      "src": "clips/zoom_blur.mp4",
+      "portrait": true,
+      "description": "Shared: a radial streak toward the centre, for a push on a turn."
+    },
+    {
+      "id": "grain",
+      "name": "grain",
+      "group": "Texture",
+      "src": "clips/grain.mp4",
+      "portrait": true,
+      "description": "Shared: fine film grain, as on the theme's title cards."
+    },
+    {
+      "id": "vignette",
+      "name": "vignette",
+      "group": "Texture",
+      "src": "clips/vignette.mp4",
+      "portrait": true,
+      "description": "Shared: darker corners."
+    },
+    {
+      "id": "halation",
+      "name": "halation",
+      "group": "Texture",
+      "src": "clips/halation.mp4",
+      "portrait": true,
+      "description": "Shared: a soft glow off the brightest areas."
+    },
+    {
+      "id": "light_spotlight",
+      "name": "spotlight",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_spotlight.mp4",
+      "portrait": true,
+      "description": "A warm pool of light from above on the person; the room falls away to near-black. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_rim",
+      "name": "rim light",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_rim.mp4",
+      "portrait": true,
+      "description": "Dark, cool scene; a thin bright outline traces the person. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_flashlight",
+      "name": "flashlight",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_flashlight.mp4",
+      "portrait": true,
+      "description": "A hard round beam on the face that drifts a little; everything else dark. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_golden_hour",
+      "name": "golden hour",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_golden_hour.mp4",
+      "portrait": true,
+      "description": "Low warm sun with leaf shadows dappled across the scene. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_neon",
+      "name": "neon",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_neon.mp4",
+      "portrait": true,
+      "description": "Hot magenta from one side, a cyan touch from the other, dark in between. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_projector",
+      "name": "projector",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_projector.mp4",
+      "portrait": true,
+      "description": "A bright lamp flaring behind the head through haze, teal room. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_under_light",
+      "name": "under light",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_under_light.mp4",
+      "portrait": true,
+      "description": "Light from below: the campfire or horror look. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_low_key",
+      "name": "low key",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_low_key.mp4",
+      "portrait": true,
+      "description": "Mostly shadow: one small key on the face, deep blacks. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_silhouette",
+      "name": "silhouette",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_silhouette.mp4",
+      "portrait": true,
+      "description": "Bright hazy background, the person a dark shape with a faint edge. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "cop_lights",
+      "name": "cop lights",
+      "group": "Lighting",
+      "src": "../../../_shared/signature/clips/cop_lights.mp4",
+      "portrait": true,
+      "description": "The room drops dark and red and blue police lights strobe across the person from both sides. Options (\"props\"): color, color2 (hex), speed (flashes per second, 2.2), push (1.08)."
+    },
+    {
+      "id": "color_grade",
+      "name": "colour grade",
+      "group": "Look",
+      "src": "../../../_shared/signature/clips/color_grade.mp4",
+      "portrait": true,
+      "description": "The look changes on a word: moody, warm, cool, black and white or pop fades in (or ripples out from a point). Options (\"props\"): grade (moody, warm, cool, bw, pop), style (fade or ripple), dur (seconds to arrive), x, y (ripple origin, 0–1). Also works as a footage \"look\"."
+    }
+  ]
+}

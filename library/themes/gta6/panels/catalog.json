@@ -1,0 +1,134 @@
+{
+  "id": "panels",
+  "title": "Overlays",
+  "summary": "See-through comic-page graphics made to sit on top of footage, shown here over the sample clip: gutters, angled panels, stickers, bubbles and outlined gradient lettering. They pop or slide in, stay alive while they are up, and flick away before their time ends. By default they keep to the top and bottom of the frame so the speaker's face stays clear.",
+  "usage": "In a footage storyboard: {\"piece\": \"panels/counter\", \"start\": 1.2, \"end\": 3.4, \"props\": {\"value\": 5, \"label\": \"WAYS TO EARN\", \"y\": 360}}. Positions are in 1080×1920 frame pixels. panels/face-tag follows the speaker automatically.",
+  "groups": [
+    "Frame",
+    "Titles",
+    "Callouts",
+    "Panels"
+  ],
+  "items": [
+    {
+      "id": "frame",
+      "name": "Comic frame",
+      "group": "Frame",
+      "piece": "panels/frame",
+      "description": "A thick pale gutter with ink keylines and slanted edges around the whole picture, with a title tab, an episode tag and a brush sign-off.",
+      "over": true
+    },
+    {
+      "id": "sun-wash",
+      "name": "Sun wash",
+      "group": "Frame",
+      "piece": "panels/sun-wash",
+      "description": "Sunset color bleeding in from the top and bottom edges with a corner sun flare and one passing light leak.",
+      "over": true
+    },
+    {
+      "id": "face-tag",
+      "name": "Face tag",
+      "group": "Frame",
+      "piece": "panels/face-tag",
+      "description": "A label and arrow that hover over the speaker and follow the face, with chunky corner marks around it.",
+      "over": true
+    },
+    {
+      "id": "location",
+      "name": "Location card",
+      "group": "Titles",
+      "piece": "panels/location",
+      "description": "A pin drops, the place is written in brush script over a painted underline, and a tag types the time.",
+      "over": true
+    },
+    {
+      "id": "stamp",
+      "name": "Stamp",
+      "group": "Titles",
+      "piece": "panels/stamp",
+      "description": "A rubber stamp thumped on at an angle with ink flecks, for a verdict.",
+      "over": true
+    },
+    {
+      "id": "water-shootout",
+      "name": "Water-pistol shoot-out",
+      "group": "Titles",
+      "piece": "panels/water-shootout",
+      "description": "Two toy water pistols slide in from the sides and squirt at stamped signs; each sign cracks, then blows apart on a comic BOOM. For knocking down objections (no apps, no editing). Pair with water_burst and explosion sounds.",
+      "over": true
+    },
+    {
+      "id": "counter",
+      "name": "Counter",
+      "group": "Callouts",
+      "piece": "panels/counter",
+      "description": "A big number that counts up on a slanted burst panel with a label tab.",
+      "over": true
+    },
+    {
+      "id": "cash",
+      "name": "Cash pop",
+      "group": "Callouts",
+      "piece": "panels/cash",
+      "description": "Banknotes fan out and coins jump while a money figure counts up in gold lettering.",
+      "over": true
+    },
+    {
+      "id": "heat",
+      "name": "Sun meter",
+      "group": "Callouts",
+      "piece": "panels/heat",
+      "description": "A row of suns lighting up one by one: a rating, a level, or progress through a count.",
+      "over": true
+    },
+    {
+      "id": "progress",
+      "name": "Road progress",
+      "group": "Callouts",
+      "piece": "panels/progress",
+      "description": "A strip of road fills with sunset color while a car rides the leading edge and the percentage counts up.",
+      "over": true
+    },
+    {
+      "id": "bubble",
+      "name": "Speech bubble",
+      "group": "Callouts",
+      "piece": "panels/bubble",
+      "description": "A comic speech bubble with its tail toward the speaker; the words type in.",
+      "over": true
+    },
+    {
+      "id": "pin",
+      "name": "Map pin",
+      "group": "Callouts",
+      "piece": "panels/pin",
+      "description": "A pin drops onto a point in the shot with a label strung to it.",
+      "over": true
+    },
+    {
+      "id": "list",
+      "name": "List strips",
+      "group": "Panels",
+      "piece": "panels/list",
+      "description": "A list dealt out one slanted strip at a time with numbered bursts, timed to the words.",
+      "over": true
+    },
+    {
+      "id": "collage",
+      "name": "Panel collage",
+      "group": "Panels",
+      "piece": "panels/collage",
+      "description": "Three angled panels slide in and lock together across the top, each with a small moving scene and a label.",
+      "over": true
+    },
+    {
+      "id": "split",
+      "name": "Split panels",
+      "group": "Panels",
+      "piece": "panels/split",
+      "description": "Two angled panels slide in from either side for a comparison, with a badge on the seam.",
+      "over": true
+    }
+  ]
+}

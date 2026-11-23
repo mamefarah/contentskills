@@ -1,0 +1,104 @@
+{
+  "id": "lottie",
+  "title": "Lottie",
+  "summary": "Small vector accents in the theme look: flat shapes with a fat ink outline and a hard offset shadow, generated from code in lottie/generate.mjs.",
+  "usage": "{\"piece\": \"lottie/burst-pop\"}. Files: library/themes/gta6/lottie/animations/.",
+  "groups": [
+    "Scenery",
+    "Status",
+    "Reactions"
+  ],
+  "items": [
+    {
+      "id": "sun-rise",
+      "name": "Sun rise",
+      "group": "Scenery",
+      "piece": "lottie/sun-rise",
+      "description": "A striped sun rises over teal water as its rays switch on."
+    },
+    {
+      "id": "palm-sway",
+      "name": "Palm sway",
+      "group": "Scenery",
+      "piece": "lottie/palm-sway",
+      "description": "A palm leaning in the breeze, inked, on a patch of sand."
+    },
+    {
+      "id": "wave-loop",
+      "name": "Wave loop",
+      "group": "Scenery",
+      "piece": "lottie/wave-loop",
+      "description": "Three inked wave lines sliding past each other."
+    },
+    {
+      "id": "sun-spinner",
+      "name": "Sun spinner",
+      "group": "Status",
+      "piece": "lottie/sun-spinner",
+      "description": "A sun whose rays turn while it breathes: loading, thinking, hold on."
+    },
+    {
+      "id": "beat-bars",
+      "name": "Beat bars",
+      "group": "Status",
+      "piece": "lottie/beat-bars",
+      "description": "Inked equaliser bars in sunset colours rising and falling."
+    },
+    {
+      "id": "speed-lines",
+      "name": "Speed lines",
+      "group": "Status",
+      "piece": "lottie/speed-lines",
+      "description": "Streaks rushing sideways: fast, hurry, in motion."
+    },
+    {
+      "id": "arrow-bounce",
+      "name": "Arrow bounce",
+      "group": "Status",
+      "piece": "lottie/arrow-bounce",
+      "description": "A fat arrow bouncing downward: look here, link below."
+    },
+    {
+      "id": "burst-pop",
+      "name": "Burst pop",
+      "group": "Reactions",
+      "piece": "lottie/burst-pop",
+      "description": "A starburst pops with a star inside and sparks flying."
+    },
+    {
+      "id": "check-stamp",
+      "name": "Check stamp",
+      "group": "Reactions",
+      "piece": "lottie/check-stamp",
+      "description": "A disc slams in and a tick is drawn across it."
+    },
+    {
+      "id": "heart-beat",
+      "name": "Heart beat",
+      "group": "Reactions",
+      "piece": "lottie/heart-beat",
+      "description": "A heart with a double beat and rings pulsing outward."
+    },
+    {
+      "id": "star-meter",
+      "name": "Star meter",
+      "group": "Reactions",
+      "piece": "lottie/star-meter",
+      "description": "Three stars popping into their slots one after another."
+    },
+    {
+      "id": "coin-flip",
+      "name": "Coin flip",
+      "group": "Reactions",
+      "piece": "lottie/coin-flip",
+      "description": "A gold coin flipping in the air above its shadow."
+    },
+    {
+      "id": "pin-drop",
+      "name": "Pin drop",
+      "group": "Reactions",
+      "piece": "lottie/pin-drop",
+      "description": "A map pin drops, squashes and sends out rings."
+    }
+  ]
+}

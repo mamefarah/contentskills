@@ -1,0 +1,7 @@
+{
+  "videos": [
+    {"file": "../../projects/my-video-modern/out/cut.mp4", "label": "modern"},
+    {"file": "../../projects/my-video-gta6/out/cut.mp4", "label": "gta6"}
+  ],
+  "audio": 1
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ui/instagram",
+  "title": "Instagram-style app UI",
+  "summary": "Generic Instagram-style app screens for talking-head footage: the comments sheet with a keyword typed and posted plus the auto-DM notification, a phone card swiping through reel covers with view counts, and a reel-insights card that counts up. Drawn in code (no logos or real app assets); the user's handle and photo are props. Any footage storyboard borrows a piece with \"theme\": \"ui/instagram\".",
+  "categories": [
+    "overlays",
+    "fonts"
+  ],
+  "pieceFonts": [
+    "500 20px \"Inter Tight\"",
+    "600 20px \"Inter Tight\"",
+    "700 20px \"Inter Tight\"",
+    "800 20px \"Inter Tight\""
+  ],
+  "colors": {
+    "bg": "#FFFFFF",
+    "text": "#262626",
+    "muted": "#737373",
+    "line": "#DBDBDB",
+    "blue": "#0095F6",
+    "accent": "#2F5BEA"
+  },
+  "frame": {
+    "background": "#FFFFFF",
+    "headingFont": "Inter Tight",
+    "headingColor": "#262626"
+  }
+}

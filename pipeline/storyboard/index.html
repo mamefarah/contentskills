@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Storyboard</title>
+<link rel="stylesheet" href="/dashboard/style.css">
+<link rel="stylesheet" href="storyboard.css">
+<link rel="stylesheet" href="/dashboard/theme-studio.css">
+</head>
+<body class="sb">
+<header class="bar">
+  <a class="back" href="/dashboard/">← Dashboard</a>
+  <h1 id="title">Storyboards</h1>
+  <ol class="steps" id="steps" hidden aria-label="Where this video is">
+    <li data-step="story"><i>1</i>Story</li>
+    <li data-step="pictures"><i>2</i>Pictures</li>
+    <li data-step="preview"><i>3</i>Preview</li>
+    <li data-step="video"><i>4</i>Your video</li>
+  </ol>
+  <nav class="links" id="links" hidden>
+    <a id="draft-link" title="The rough-draft player, for people who want every detail">Advanced</a>
+    <a id="review-link">Finished video</a>
+  </nav>
+</header>
+<main id="list" hidden></main>
+<main id="board" hidden>
+  <section class="stage">
+    <div class="voice" id="voice"></div>
+    <div class="phone"><div class="screen" id="screen"><iframe id="player" title="Preview of the video" tabindex="-1"></iframe>
+      <!-- the app safe zone (TikTok, Reels, Shorts): hidden unless "Show safe zones" is on; the shaded edges sit under the search bar, captions and buttons -->
+      <svg class="safe" id="safe" hidden viewBox="0 0 1080 1920" preserveAspectRatio="none" aria-hidden="true"><path class="out" fill-rule="evenodd" d="M0 0H1080V1920H0Z M35 220H1045V1160H945V1470H35Z"/><path class="line" d="M35 220H1045V1160H945V1470H35Z"/></svg></div></div>
+    <div class="strip" id="strip" title="Scenes: click or drag to jump"><i id="head"></i></div>
+    <div class="ctl">
+      <button id="play" type="button" class="primary">▶ Play</button>
+      <input id="scrub" type="range" min="0" max="1" step="0.01" value="0" aria-label="Scrub">
+      <output id="time">0.0 s</output>
+    </div>
+    <p class="hint">Space plays · ← → step · click a scene to watch it · <button id="safe-toggle" type="button" class="linkish" aria-pressed="false">Show safe zones</button></p>
+  </section>
+  <section class="scenes">
+    <div class="lead" id="lead"></div>
+    <ol id="scenes"></ol>
+  </section>
+</main>
+<footer class="actions" id="actions" hidden>
+  <div class="state" id="state"></div>
+  <div class="buttons">
+    <button type="button" id="copy">Copy message for Claude</button>
+    <label class="size"><input type="checkbox" id="quick"> Quick draft (half size)</label>
+    <div class="go">
+      <button type="button" id="approve" class="primary big">Make my video</button>
+      <small id="cost"></small>
+    </div>
+  </div>
+  <pre id="log" hidden></pre>
+</footer>
+<div id="toast" role="status" hidden></div>
+<script type="module" src="storyboard.js"></script>
+</body>
+</html>

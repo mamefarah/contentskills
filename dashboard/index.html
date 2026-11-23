@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Master dashboard · ContentSkills</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme-studio.css">
+</head>
+<body>
+<aside id="sidebar">
+  <a class="brand" href="#top"><span>ContentSkills</span>Master dashboard</a>
+  <section class="mine" aria-label="My videos">
+    <h2>My videos</h2>
+    <ol id="mine" data-limit="3"><li class="empty">Loading…</li></ol>
+    <div class="mine-foot"><a class="see-all" id="see-all" href="/dashboard/videos.html" hidden>See all</a><a class="gallery-link" href="/dashboard/gallery.html">Gallery</a></div>
+  </section>
+  <div class="lib-h"><h2>Library</h2><select id="themes" class="theme-pick" aria-label="Theme"></select></div>
+  <input id="search" type="search" placeholder="Filter pieces…" aria-label="Filter pieces">
+  <nav id="nav" aria-label="Categories"></nav>
+</aside>
+<main id="top">
+  <header class="hero">
+    <h1>The building blocks</h1>
+    <p id="tally">Loading the library…</p>
+  </header>
+  <div id="sections"></div>
+  <p id="empty" hidden>Nothing matches that filter.</p>
+</main>
+<dialog id="modal" aria-label="Piece detail">
+  <button class="close" aria-label="Close">×</button>
+  <div class="modal-body">
+    <div class="modal-stage" id="modal-stage"></div>
+    <div class="modal-info" id="modal-info"></div>
+  </div>
+</dialog>
+<script type="module" src="my-videos.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

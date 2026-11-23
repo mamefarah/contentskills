@@ -1,0 +1,29 @@
+{
+ "note": "Stretches cut from the video in the editor, one list per round, each on the timeline left by the rounds before it (pipeline/trim.mjs).",
+ "rounds": [
+  [
+   [
+    9.666666666666666,
+    9.9
+   ]
+  ],
+  [
+   [
+    6.233333333333333,
+    6.4
+   ]
+  ],
+  [
+   [
+    14.8,
+    15.133333333333333
+   ]
+  ],
+  [
+   [
+    14.333333333333334,
+    14.8
+   ]
+  ]
+ ]
+}

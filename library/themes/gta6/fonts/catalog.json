@@ -1,0 +1,269 @@
+{
+  "id": "fonts",
+  "title": "Fonts",
+  "summary": "Loud poster lettering for a comic-panel coast: fat display capitals that take a gradient fill and a heavy outline, comic shout faces, a tall condensed caption face, brush and sign-painter scripts, and a clean sans for small print. All bundled locally with open licenses.",
+  "usage": "The theme uses Bowlby One for headings and numbers, Anton for captions and labels, Kaushan Script for accents, Poppins for small print. The others are alternates.",
+  "groups": [
+    "Display",
+    "Comic",
+    "Caption",
+    "Script",
+    "Body"
+  ],
+  "items": [
+    {
+      "id": "bowlby-one",
+      "family": "Bowlby One",
+      "file": "files/BowlbyOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Theme heading and number face. Fat, rounded poster capitals that carry a gradient fill and a heavy outline.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "titan-one",
+      "family": "Titan One",
+      "file": "files/TitanOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Softer, bouncier alternate for friendly titles and sticker badges.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "lilita-one",
+      "family": "Lilita One",
+      "file": "files/LilitaOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Compact rounded display face; fits longer headlines than Bowlby One.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "bungee",
+      "family": "Bungee",
+      "file": "files/Bungee-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Signage capitals, built for storefronts and vertical signs.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "alfa-slab-one",
+      "family": "Alfa Slab One",
+      "file": "files/AlfaSlabOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Heavy slab serif for price tags, counters and motel-sign numerals.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "shrikhand",
+      "family": "Shrikhand",
+      "file": "files/Shrikhand-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Fat italic with flair, for one-word slams.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "racing-sans-one",
+      "family": "Racing Sans One",
+      "file": "files/RacingSansOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Fast forward-leaning face for speed, cars and countdowns.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "rubik-mono-one",
+      "family": "Rubik Mono One",
+      "file": "files/RubikMonoOne-Regular.ttf",
+      "group": "Display",
+      "weights": [
+        400
+      ],
+      "note": "Blocky monospaced capitals for short codes and tickers.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "bangers",
+      "family": "Bangers",
+      "file": "files/Bangers-Regular.ttf",
+      "group": "Comic",
+      "weights": [
+        400
+      ],
+      "note": "Classic comic-book shout lettering: speech bubbles, sound effects, punchlines.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "luckiest-guy",
+      "family": "Luckiest Guy",
+      "file": "files/LuckiestGuy-Regular.ttf",
+      "group": "Comic",
+      "weights": [
+        400
+      ],
+      "note": "Chunky hand-cut cartoon capitals; an alternate for bubbles and stickers.",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "permanent-marker",
+      "family": "Permanent Marker",
+      "file": "files/PermanentMarker-Regular.ttf",
+      "group": "Comic",
+      "weights": [
+        400
+      ],
+      "note": "Marker handwriting for scribbled notes and arrows.",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "anton",
+      "family": "Anton",
+      "file": "files/Anton-Regular.ttf",
+      "group": "Caption",
+      "weights": [
+        400
+      ],
+      "note": "Theme caption and label face. Tall, tight and loud; stays readable with an ink outline.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "bebas-neue",
+      "family": "Bebas Neue",
+      "file": "files/BebasNeue-Regular.ttf",
+      "group": "Caption",
+      "weights": [
+        400
+      ],
+      "note": "Lighter condensed capitals for kickers and small labels.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "barlow-condensed",
+      "family": "Barlow Condensed",
+      "file": "files/BarlowCondensed-ExtraBold.ttf",
+      "group": "Caption",
+      "weights": [
+        800
+      ],
+      "note": "Condensed grotesque with lowercase, for longer caption lines.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "passion-one",
+      "family": "Passion One",
+      "file": "files/PassionOne-Bold.ttf",
+      "group": "Caption",
+      "weights": [
+        700
+      ],
+      "note": "Rounded condensed bold; a warmer caption alternate.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "kaushan-script",
+      "family": "Kaushan Script",
+      "file": "files/KaushanScript-Regular.ttf",
+      "group": "Script",
+      "weights": [
+        400
+      ],
+      "note": "Theme accent script. Brush lettering for kickers, place names and sign-offs.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "mr-dafoe",
+      "family": "Mr Dafoe",
+      "file": "files/MrDafoe-Regular.ttf",
+      "group": "Script",
+      "weights": [
+        400
+      ],
+      "note": "Slanted sign-painter script with an eighties postcard feel.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "yellowtail",
+      "family": "Yellowtail",
+      "file": "files/Yellowtail-Regular.ttf",
+      "group": "Script",
+      "weights": [
+        400
+      ],
+      "note": "Flat-brush diner script, lighter than Kaushan.",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "pacifico",
+      "family": "Pacifico",
+      "file": "files/Pacifico-Regular.ttf",
+      "group": "Script",
+      "weights": [
+        400
+      ],
+      "note": "Round surf-shop script for relaxed moments.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "monoton",
+      "family": "Monoton",
+      "file": "files/Monoton-Regular.ttf",
+      "group": "Script",
+      "weights": [
+        400
+      ],
+      "note": "Triple-line neon tubing, for sign pieces only.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "poppins-semibold",
+      "family": "Poppins",
+      "file": "files/Poppins-SemiBold.ttf",
+      "group": "Body",
+      "weights": [
+        600
+      ],
+      "note": "Theme body face: clean geometric sans for small print, axis labels and notes.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "poppins-bold",
+      "family": "Poppins",
+      "file": "files/Poppins-Bold.ttf",
+      "group": "Body",
+      "weights": [
+        700
+      ],
+      "note": "Bold weight of the body face.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "outfit",
+      "family": "Outfit",
+      "file": "files/Outfit-Variable.ttf",
+      "group": "Body",
+      "weights": [
+        400,
+        800
+      ],
+      "note": "Variable geometric sans; an alternate body face with a full weight range.",
+      "license": "OFL-1.1"
+    }
+  ]
+}

@@ -1,0 +1,1041 @@
+{
+ "title": "The craziest Claude use case (in and out of GTA6)",
+ "theme": "gta6",
+ "captions": "panel-pop",
+ "footage": {
+  "file": "footage.mp4",
+  "duration": 36.167
+ },
+ "layouts": [
+  {
+   "at": 0,
+   "to": "full",
+   "ramp": 0
+  },
+  {
+   "at": 2.397,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.86
+   ]
+  },
+  {
+   "at": 5.29,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.84
+   ]
+  },
+  {
+   "at": 6.45,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.25,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.95
+   ]
+  },
+  {
+   "at": 9.895,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.84
+   ]
+  },
+  {
+   "at": 13.168,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.84
+   ]
+  },
+  {
+   "at": 14.333,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.84
+   ]
+  },
+  {
+   "at": 15.57,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.15,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.9
+   ]
+  },
+  {
+   "at": 17.335,
+   "to": "full",
+   "ramp": 0
+  },
+  {
+   "at": 18.5,
+   "to": "bottom",
+   "ramp": 0
+  },
+  {
+   "at": 21.531,
+   "to": "bottom",
+   "ramp": 0
+  },
+  {
+   "at": 24.778,
+   "to": "full",
+   "ramp": 0
+  },
+  {
+   "at": 26.761,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.05,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.86
+   ]
+  },
+  {
+   "at": 32.05,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.2,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.95
+   ]
+  },
+  {
+   "at": 34.332,
+   "to": "full",
+   "ramp": 0,
+   "zoom": 1.1,
+   "focus": 1,
+   "face": [
+    0.5,
+    0.78
+   ]
+  },
+  {
+   "at": 34.95,
+   "to": "bottom",
+   "ramp": 0.3,
+   "ease": "smooth"
+  }
+ ],
+ "zooms": [
+  {
+   "start": 17.41,
+   "end": 18.3,
+   "scale": 1.15,
+   "rampIn": 0,
+   "rampOut": 0.1
+  }
+ ],
+ "effects": [
+  {
+   "name": "gta6_poster",
+   "at": 0,
+   "seconds": 2.397,
+   "amount": 1,
+   "where": "all",
+   "props": {
+    "text": "THE CRAZIEST|CLAUDE USE CASE",
+    "label": "LOADING",
+    "slides": [
+     [
+      0,
+      0,
+      0.1,
+      0.38
+     ],
+     [
+      0.6,
+      0.86,
+      0.94,
+      1.2
+     ],
+     [
+      1.4,
+      1.64,
+      1.7,
+      1.96
+     ]
+    ],
+    "slideStyle": "wipe",
+    "before": "THE CRAZIEST|CLAUDE USE CASE",
+    "beforeFont": "Anton-Regular.ttf",
+    "beforeFill": "#1c1c1e",
+    "beforeBox": "#f5ff1f",
+    "beforePop": false
+   }
+  },
+  {
+   "name": "cel_shade",
+   "at": 5.29,
+   "seconds": 1.112,
+   "amount": 0.85,
+   "where": "all"
+  },
+  {
+   "name": "sunset_grade",
+   "at": 5.29,
+   "seconds": 1.112,
+   "amount": 0.7,
+   "where": "all"
+  },
+  {
+   "name": "pop_flash",
+   "at": 5.29,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  },
+  {
+   "name": "cel_shade",
+   "at": 6.45,
+   "seconds": 3.445,
+   "amount": 0.85,
+   "where": "all"
+  },
+  {
+   "name": "sunset_grade",
+   "at": 6.45,
+   "seconds": 3.445,
+   "amount": 0.7,
+   "where": "all"
+  },
+  {
+   "name": "pop_flash",
+   "at": 6.45,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  },
+  {
+   "name": "cel_shade",
+   "at": 15.57,
+   "seconds": 1.04,
+   "amount": 0.85,
+   "where": "all"
+  },
+  {
+   "name": "sunset_grade",
+   "at": 15.57,
+   "seconds": 1.04,
+   "amount": 0.7,
+   "where": "all"
+  },
+  {
+   "name": "pop_flash",
+   "at": 15.57,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  },
+  {
+   "name": "cop_lights",
+   "at": 15.57,
+   "seconds": 1.04,
+   "amount": 0.9,
+   "where": "all"
+  },
+  {
+   "name": "pop_flash",
+   "at": 18.5,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  },
+  {
+   "name": "pop_flash",
+   "at": 21.531,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  },
+  {
+   "name": "cel_shade",
+   "at": 32.05,
+   "seconds": 2.282,
+   "amount": 0.85,
+   "where": "all"
+  },
+  {
+   "name": "sunset_grade",
+   "at": 32.05,
+   "seconds": 2.282,
+   "amount": 0.7,
+   "where": "all"
+  },
+  {
+   "name": "pop_flash",
+   "at": 32.05,
+   "seconds": 0.25,
+   "amount": 0.6,
+   "where": "pulse"
+  }
+ ],
+ "transitions": [],
+ "overlays": [
+  {
+   "piece": "overlays/terminal",
+   "start": 2.42,
+   "end": 5.007,
+   "theme": "ui/claude",
+   "props": {
+    "open": true,
+    "command": "edit my video into a reel",
+    "file": "my-video.mov",
+    "reply": "Editing your video…",
+    "dropAt": 0.1200000000000001,
+    "typeAt": 1.58,
+    "typeFor": 0.65,
+    "sendAt": 2.29,
+    "y": 210,
+    "h": 660,
+    "size": 33
+   }
+  },
+  {
+   "piece": "three/palm-horizon",
+   "start": 5.29,
+   "end": 6.402,
+   "behind": "person",
+   "props": {}
+  },
+  {
+   "piece": "text/sticker",
+   "start": 5.29,
+   "end": 6.402,
+   "props": {
+    "text": "FIXED",
+    "ring": "EDITED BY CLAUDE",
+    "x": 800,
+    "y": 420,
+    "r": 170,
+    "color": "yellow",
+    "tilt": -10
+   }
+  },
+  {
+   "piece": "three/reel-billboards",
+   "start": 6.45,
+   "end": 9.895,
+   "behind": "person",
+   "props": {
+    "images": [
+     "/projects/talking-head/assets/reels/01.jpg",
+     "/projects/talking-head/assets/reels/02.jpg",
+     "/projects/talking-head/assets/reels/03.jpg",
+     "/projects/talking-head/assets/reels/04.jpg",
+     "/projects/talking-head/assets/reels/05.jpg"
+    ],
+    "speed": 30
+   }
+  },
+  {
+   "piece": "panels/stamp",
+   "start": 8.83,
+   "end": 9.895,
+   "props": {
+    "text": "STYLE LEARNED",
+    "sub": "FROM EVERY REEL",
+    "x": 540,
+    "y": 400,
+    "tilt": -8,
+    "color": "pink"
+   }
+  },
+  {
+   "piece": "overlays/screen-scroll",
+   "start": 9.895,
+   "end": 13.168,
+   "theme": "ui/reel-kit",
+   "props": {
+    "src": "/projects/talking-head/assets/storyboard-page-gta6.png",
+    "imgWidth": 1080,
+    "imgHeight": 5200,
+    "from": 0,
+    "to": 3500,
+    "stops": [
+     {
+      "at": 0.305,
+      "y": 1150
+     },
+     {
+      "at": 0.735,
+      "y": 2100
+     },
+     {
+      "at": 1.335,
+      "y": 2800
+     },
+     {
+      "at": 1.875,
+      "y": 2860,
+      "cx": 0.6,
+      "cy": 0.3
+     },
+     {
+      "at": 2.455,
+      "y": 3500,
+      "cx": 0.66,
+      "cy": 0.4
+     }
+    ],
+    "url": "localhost:4600/storyboard",
+    "title": "Storyboard"
+   }
+  },
+  {
+   "piece": "panels/water-shootout",
+   "start": 13.2,
+   "end": 14.333,
+   "props": {
+    "y": 430,
+    "gunX": 115,
+    "signs": [
+     {
+      "text": "NO APPS",
+      "color": "pink",
+      "tilt": -9,
+      "at": 0.07000000000000028,
+      "shots": [
+       0.33,
+       0.45,
+       0.57
+      ],
+      "boom": 0.72
+     },
+     {
+      "text": "NO EDITING",
+      "color": "yellow",
+      "tilt": 7,
+      "at": 0.8399999999999999,
+      "shots": [
+       1.08,
+       1.2,
+       1.32
+      ],
+      "boom": 1.45
+     }
+    ]
+   }
+  },
+  {
+   "piece": "three/cop-chase",
+   "start": 15.57,
+   "end": 16.61,
+   "behind": "person",
+   "props": {}
+  },
+  {
+   "piece": "three/drone-city",
+   "start": 16.61,
+   "end": 17.75,
+   "props": {
+    "seconds": 1.14
+   }
+  },
+  {
+   "piece": "text/keyword-slam",
+   "start": 16.61,
+   "end": 17.05,
+   "props": {
+    "word": "3D",
+    "kicker": "ADDED",
+    "y": 620,
+    "color": "hot",
+    "band": "candy"
+   }
+  },
+  {
+   "piece": "three/screen-city",
+   "start": 18.5,
+   "end": 21.531,
+   "behind": true,
+   "props": {
+    "times": [
+     0.95,
+     1.16,
+     1.37,
+     1.58,
+     1.79,
+     2,
+     2.21,
+     2.42,
+     2.63
+    ]
+   }
+  },
+  {
+   "piece": "three/chopper-sweep",
+   "start": 21.531,
+   "end": 24.778,
+   "behind": true,
+   "props": {}
+  },
+  {
+   "piece": "overlays/comment-dm",
+   "start": 21.6,
+   "end": 24.778,
+   "theme": "ui/instagram",
+   "props": {
+    "keyword": "LINK",
+    "message": "Here are all my links 🔗",
+    "postAt": 0.7900000000000027,
+    "noteAt": 1.9500000000000028,
+    "y": 330,
+    "viewer": "alex.rivera",
+    "viewerAvatar": "/library/ui/instagram/assets/avatar-placeholder.jpg"
+   }
+  },
+  {
+   "piece": "overlays/terminal",
+   "start": 26.7,
+   "end": 31.997,
+   "theme": "ui/claude",
+   "props": {
+    "command": "Setup blotato/contentskills",
+    "file": "my-video.mov",
+    "reply": "Setting up Blotato content skills…",
+    "launchAt": 0.9400000000000013,
+    "typeAt": 2.3599999999999994,
+    "typeFor": 1.740000000000002,
+    "sendAt": 4.199999999999999,
+    "dropAt": 4.399999999999999,
+    "y": 210,
+    "h": 680,
+    "size": 34
+   }
+  },
+  {
+   "piece": "three/sunset-drive",
+   "start": 32.05,
+   "end": 34.332,
+   "behind": "person",
+   "props": {}
+  },
+  {
+   "piece": "text/sticker",
+   "start": 32.15,
+   "end": 34.332,
+   "props": {
+    "text": "FULL TUTORIAL",
+    "ring": "EVERY STEP · WALKTHROUGH",
+    "x": 800,
+    "y": 400,
+    "r": 160,
+    "color": "hot",
+    "tilt": -8
+   }
+  },
+  {
+   "piece": "text/follow-card",
+   "start": 34.332,
+   "end": 35,
+   "props": {
+    "handle": "sabrina_ramonov",
+    "sub": "AI + CONTENT",
+    "w": 950,
+    "initial": "S",
+    "pressAt": 0.08800000000000097,
+    "y": 270
+   }
+  },
+  {
+   "piece": "overlays/comment-dm",
+   "start": 34.95,
+   "end": 36.167,
+   "theme": "ui/instagram",
+   "props": {
+    "keyword": "EDIT",
+    "message": "Here's the full tutorial",
+    "postAt": 0.3100000000000023,
+    "noteAt": 0.9500000000000028,
+    "y": 330
+   }
+  }
+ ],
+ "captionTrack": [
+  {
+   "start": 0,
+   "end": 2.397,
+   "hide": true
+  },
+  {
+   "start": 2.42,
+   "end": 5.007,
+   "hide": true
+  },
+  {
+   "start": 5.29,
+   "end": 6.402,
+   "hide": true
+  },
+  {
+   "start": 6.45,
+   "end": 9.895,
+   "hide": true
+  },
+  {
+   "start": 9.895,
+   "end": 10.15,
+   "hide": true
+  },
+  {
+   "start": 12.85,
+   "end": 13.168,
+   "hide": true
+  },
+  {
+   "start": 9.895,
+   "end": 13.168,
+   "dy": -25
+  },
+  {
+   "start": 13.27,
+   "end": 14.333,
+   "hide": true
+  },
+  {
+   "start": 15.57,
+   "end": 17.8,
+   "hide": true
+  },
+  {
+   "start": 18.45,
+   "end": 18.75,
+   "hide": true
+  },
+  {
+   "start": 21.4,
+   "end": 21.65,
+   "hide": true
+  },
+  {
+   "start": 21.4,
+   "end": 21.65,
+   "hide": true
+  },
+  {
+   "start": 21.6,
+   "end": 24.778,
+   "hide": true
+  },
+  {
+   "start": 24.778,
+   "end": 25,
+   "hide": true
+  },
+  {
+   "start": 32.05,
+   "end": 34.332,
+   "hide": true
+  },
+  {
+   "start": 34.332,
+   "end": 36.167,
+   "hide": true
+  }
+ ],
+ "sounds": [
+  {
+   "name": "sub_drop",
+   "at": 0,
+   "gain": -14
+  },
+  {
+   "name": "swish",
+   "at": 0.04,
+   "gain": -21
+  },
+  {
+   "name": "stamp",
+   "at": 0.6,
+   "gain": -16
+  },
+  {
+   "name": "swish",
+   "at": 0.87,
+   "gain": -22
+  },
+  {
+   "name": "swish",
+   "at": 1.63,
+   "gain": -22
+  },
+  {
+   "name": "thump",
+   "at": 1.96,
+   "gain": -15
+  },
+  {
+   "name": "pop",
+   "at": 2.54,
+   "gain": -18
+  },
+  {
+   "name": "key_run",
+   "at": 4,
+   "gain": -21
+  },
+  {
+   "name": "click",
+   "at": 4.71,
+   "gain": -16
+  },
+  {
+   "name": "whoosh_low",
+   "at": 4.99,
+   "gain": -18
+  },
+  {
+   "name": "sub_drop",
+   "at": 5.29,
+   "gain": -13
+  },
+  {
+   "name": "swish",
+   "at": 6.25,
+   "gain": -20
+  },
+  {
+   "name": "whoosh",
+   "at": 7.07,
+   "gain": -20
+  },
+  {
+   "name": "stamp",
+   "at": 8.83,
+   "gain": -14
+  },
+  {
+   "name": "shutter",
+   "at": 9.9,
+   "gain": -18
+  },
+  {
+   "name": "swish",
+   "at": 10.45,
+   "gain": -21
+  },
+  {
+   "name": "swish",
+   "at": 11.05,
+   "gain": -21
+  },
+  {
+   "name": "click",
+   "at": 11.77,
+   "gain": -16
+  },
+  {
+   "name": "pop_hi",
+   "at": 12.35,
+   "gain": -18
+  },
+  {
+   "name": "stamp",
+   "at": 13.27,
+   "gain": -14
+  },
+  {
+   "name": "water_burst",
+   "at": 13.53,
+   "gain": -15
+  },
+  {
+   "name": "explosion",
+   "at": 13.92,
+   "gain": -13
+  },
+  {
+   "name": "stamp",
+   "at": 14.04,
+   "gain": -14
+  },
+  {
+   "name": "water_burst",
+   "at": 14.28,
+   "gain": -15
+  },
+  {
+   "name": "explosion",
+   "at": 14.333,
+   "gain": -13
+  },
+  {
+   "name": "whoosh_fast",
+   "at": 15.52,
+   "gain": -18
+  },
+  {
+   "name": "siren",
+   "at": 15.57,
+   "gain": -24
+  },
+  {
+   "name": "trailer_hit",
+   "at": 16.61,
+   "gain": -15
+  },
+  {
+   "name": "whoosh_low",
+   "at": 16.82,
+   "gain": -18
+  },
+  {
+   "name": "whoosh_fast",
+   "at": 17.25,
+   "gain": -17
+  },
+  {
+   "name": "trailer_hit",
+   "at": 17.41,
+   "gain": -16
+  },
+  {
+   "name": "whoosh_fast",
+   "at": 18.45,
+   "gain": -18
+  },
+  {
+   "name": "tick",
+   "at": 19.45,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 19.66,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 19.87,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 20.08,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 20.29,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 20.5,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 20.71,
+   "gain": -20
+  },
+  {
+   "name": "tick",
+   "at": 20.92,
+   "gain": -20
+  },
+  {
+   "name": "ding",
+   "at": 21.09,
+   "gain": -16
+  },
+  {
+   "name": "tick",
+   "at": 21.13,
+   "gain": -20
+  },
+  {
+   "name": "click",
+   "at": 22.39,
+   "gain": -16
+  },
+  {
+   "name": "notif",
+   "at": 23.55,
+   "gain": -15
+  },
+  {
+   "name": "key_run",
+   "at": 27.64,
+   "gain": -20
+  },
+  {
+   "name": "key_run",
+   "at": 29.06,
+   "gain": -19
+  },
+  {
+   "name": "click",
+   "at": 30.9,
+   "gain": -16
+  },
+  {
+   "name": "thump",
+   "at": 31.55,
+   "gain": -15
+  },
+  {
+   "name": "whoosh_fast",
+   "at": 32,
+   "gain": -18
+  },
+  {
+   "name": "pop",
+   "at": 32.4,
+   "gain": -16
+  },
+  {
+   "name": "click",
+   "at": 34.42,
+   "gain": -15
+  },
+  {
+   "name": "ding",
+   "at": 34.5,
+   "gain": -16
+  },
+  {
+   "name": "click",
+   "at": 35.26,
+   "gain": -18
+  },
+  {
+   "name": "notif",
+   "at": 35.9,
+   "gain": -15
+  }
+ ],
+ "sections": [
+  {
+   "id": "hook",
+   "title": "Craziest use case",
+   "start": 0,
+   "end": 2.397,
+   "job": "hook"
+  },
+  {
+   "id": "prompt",
+   "title": "One prompt",
+   "start": 2.397,
+   "end": 5.007,
+   "job": "demo"
+  },
+  {
+   "id": "fixed",
+   "title": "Fixed everything",
+   "start": 5.007,
+   "end": 6.402,
+   "job": "proof"
+  },
+  {
+   "id": "style",
+   "title": "Learned my style",
+   "start": 6.402,
+   "end": 9.895,
+   "job": "proof"
+  },
+  {
+   "id": "storyboard",
+   "title": "Full storyboard",
+   "start": 9.895,
+   "end": 13.168,
+   "job": "demo"
+  },
+  {
+   "id": "no-apps",
+   "title": "No apps, no editing",
+   "start": 13.168,
+   "end": 14.333,
+   "job": "contrast"
+  },
+  {
+   "id": "sirens",
+   "title": "Sirens and 3D",
+   "start": 14.333,
+   "end": 17.335,
+   "job": "demo"
+  },
+  {
+   "id": "crazy",
+   "title": "Crazy part",
+   "start": 17.335,
+   "end": 18.425,
+   "job": "turn"
+  },
+  {
+   "id": "platforms",
+   "title": "Nine platforms",
+   "start": 18.425,
+   "end": 21.531,
+   "job": "payoff"
+  },
+  {
+   "id": "dm",
+   "title": "DM automations",
+   "start": 21.531,
+   "end": 24.778,
+   "job": "payoff"
+  },
+  {
+   "id": "hours",
+   "title": "20 hours a week",
+   "start": 24.778,
+   "end": 26.761,
+   "job": "proof"
+  },
+  {
+   "id": "setup",
+   "title": "How to set it up",
+   "start": 26.761,
+   "end": 31.997,
+   "job": "demo"
+  },
+  {
+   "id": "tutorial",
+   "title": "Full tutorial",
+   "start": 31.997,
+   "end": 34.332,
+   "job": "ask"
+  },
+  {
+   "id": "cta",
+   "title": "Follow + comment EDIT",
+   "start": 34.332,
+   "end": 36.167,
+   "job": "ask"
+  }
+ ]
+}

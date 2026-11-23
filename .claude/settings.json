@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "SessionStart": [{"hooks": [{"type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/pipeline/watch.mjs\" --hook", "timeout": 10}]}],
+    "UserPromptSubmit": [{"hooks": [{"type": "command", "command": "node \"$CLAUDE_PROJECT_DIR/pipeline/watch.mjs\" --hook", "timeout": 10}]}]
+  }
+}

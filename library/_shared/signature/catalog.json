@@ -1,0 +1,103 @@
+{
+  "id": "moments",
+  "title": "Effects",
+  "summary": "Scripted set pieces, the same in every theme. Unlike a filter (a look over the shot, any length, an amount dial), an effect brings its own content — title, cards, reels, a background — and its own few-second timeline, and takes over the frame while it plays.",
+  "usage": "In a footage storyboard, as an effect entry that spans the moment: {\"name\": \"gta6_poster\", \"at\": 0, \"seconds\": 3, \"where\": \"all\", \"amount\": 1, \"props\": {\"text\": \"CLAUDE|DID THIS\"}}. Engine: library/_shared/signature.py.",
+  "groups": [
+    "Hook",
+    "Above the head",
+    "Cutaway",
+    "End card",
+    "Style"
+  ],
+  "items": [
+    {
+      "id": "gta6_poster",
+      "name": "gta6 poster",
+      "group": "Hook",
+      "src": "clips/gta6_poster.mp4",
+      "portrait": true,
+      "description": "A game-cover poster of the person: cel shading on a sunset with a heavy outline, the hook in bold type and a loading spinner, then it snaps live. Options (\"props\"): text (hook lines split with |), label (LOADING), scale (the person's size, 0.6–1)."
+    },
+    {
+      "id": "text_behind_slice",
+      "name": "text behind, slice",
+      "group": "Hook",
+      "src": "clips/text_behind_slice.mp4",
+      "portrait": true,
+      "description": "A colour card with a big title behind the person; on the cue a cut line slices it and the halves slide apart to reveal the shot (a fixed look, the same in every theme). Prefer a title in the storyboard theme: a text overlay with \"behind\": \"person\" and \"exit\": \"slice\" (README: Behind the person, and the slice exit). Options (\"props\"): text (lines split with |), at (seconds in when it slices; 60% in), angle (-9), color (#2F5BEA), y (title bottom, 0–1; .37), stagger (.22)."
+    },
+    {
+      "id": "reel_flythrough",
+      "name": "reel fly-through",
+      "group": "Cutaway",
+      "src": "clips/reel_flythrough.mp4",
+      "portrait": true,
+      "description": "Full-screen cutaway: the shot shrinks into a card, the camera flies through playing reels, they stack into a column and the last card grows back to full screen. Options (\"props\"): clips (folder of reels; sample reels by default), text (titles \"Title::sub|…\"), sub, column (3), count (16), bg, bg2, look (\"gta6\"), seed. Give it 4–6 s."
+    },
+    {
+      "id": "ai_prompt",
+      "name": "ai prompt",
+      "group": "Above the head",
+      "src": "clips/ai_prompt.mp4",
+      "portrait": true,
+      "description": "A chat composer above the head types the ask as it is said, shows a slash-command suggestion, then sends and marks it Sent. Options (\"props\"): text (the ask, typed), label (To Claude), suggest (slash-command chip; \"\" hides it), type_end, send_at (seconds), accent, ink, paper. Card above the head."
+    },
+    {
+      "id": "edit_preview",
+      "name": "edit preview",
+      "group": "Cutaway",
+      "src": "clips/edit_preview.mp4",
+      "portrait": true,
+      "description": "Full-screen cutaway: the shot shrinks into an \"Editing with…\" card on the brand grid and plays sped up with a shimmer and a progress line, then grows back. Options (\"props\"): video (clip played sped up in the card; the shot itself by default), speed (3), text (Editing with reel-edit…), accent, highlight, background. Full-screen cutaway."
+    },
+    {
+      "id": "raw_vs_edit",
+      "name": "raw vs edit",
+      "group": "Cutaway",
+      "src": "clips/raw_vs_edit.mp4",
+      "portrait": true,
+      "description": "RAW and EDITED cards play the same moment side by side on the brand grid; the edited one (punch-in, grade, caption, title sticker) grows to full screen. Options (\"props\"): grow_at (seconds; 58% in), punch (edited zoom, 1.3), caption (*word* highlighted; \"\" = none), title (sticker; \"\" = none), color/accent, highlight, ink, background. Full-screen."
+    },
+    {
+      "id": "feed_scroll",
+      "name": "feed scroll",
+      "group": "Above the head",
+      "src": "clips/feed_scroll.mp4",
+      "portrait": true,
+      "description": "A phone-style card above the head swipes up through reels like the real feed, each with its view count. Options (\"props\"): clips (folder or |-list of reels/covers; sample reels by default), text (view counts with |), count (3), size (card width 0–1, .36), at (cover second, 1). Card above the head."
+    },
+    {
+      "id": "storyboard_pages",
+      "name": "storyboard pages",
+      "group": "Above the head",
+      "src": "clips/storyboard_pages.mp4",
+      "portrait": true,
+      "description": "Storyboard pages above the head: a thumbnail, each shot's line and a note per row; the pages flip. Options (\"props\"): text (shots \"line::note|…\", 3 per page), title, video + shots (thumbnail clip and seconds with |; the live shot by default), accent, ink, paper. Card above the head."
+    },
+    {
+      "id": "insights_zoom",
+      "name": "insights zoom",
+      "group": "Above the head",
+      "src": "clips/insights_zoom.mp4",
+      "portrait": true,
+      "description": "A reel-insights card slides in above the head, the numbers count up, the camera pushes into the views row and a highlighter sweeps under the number. Options (\"props\"): text (rows \"Label::value|…\", the first is highlighted), title (Reel insights), sub (Last 30 days), growth (38%), zoom (1.35), accent, highlight, ink, paper."
+    },
+    {
+      "id": "catalog_grid",
+      "name": "catalog grid",
+      "group": "End card",
+      "src": "clips/catalog_grid.mp4",
+      "portrait": true,
+      "description": "End card: Comment \"KEYWORD\" and a pill over a numbered grid of reels that fills in tile by tile. Options (\"props\"): text (keyword), total (15), sub, clips (tile pictures; sample reels by default), labels (|), cols (4), rows (3), step (.1), accent, highlight, ink, background. Full-screen end card."
+    },
+    {
+      "id": "lines_of_light",
+      "name": "lines of light",
+      "group": "Style",
+      "src": "clips/lines_of_light.mp4",
+      "portrait": true,
+      "description": "The room drops to near-black teal and thin neon lines (red and blue fringes, white core) draw an editing timeline behind the person; on the cue it is struck out and NO TIMELINE lands. Options (\"props\"): shape (timeline), at (seconds of the cue; 62% in), label (TIMELINE), text (NO TIMELINE), height (.2)."
+    }
+  ]
+}

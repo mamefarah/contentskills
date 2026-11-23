@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Piece stage</title>
+<style>
+  html,body{margin:0;height:100%;background:#151B36;overflow:hidden}
+  #stage{position:absolute;inset:0}
+  #stage>svg,#stage>canvas{display:block;width:100%;height:100%}
+  #error{position:absolute;inset:0;display:none;padding:24px;color:#FF786A;font:14px/1.5 ui-monospace,monospace;white-space:pre-wrap}
+</style>
+<div id="stage"></div><pre id="error"></pre>
+<script type="module">
+// Plays one library piece on its own, looping.
+//   /library/_shared/stage.html?theme=<theme>&piece=<category>/<name>[&t=<seconds>][&props=<json>]
+// With ?t= it shows that single moment and stays still. The parent page can also
+// post {seek: seconds} or {play: true} to scrub it.
+import {loadPiece} from './loader.js';
+const params = new URLSearchParams(location.search), id = params.get('piece'), el = document.getElementById('stage');
+try {
+  const piece = await loadPiece(el, id, params.has('props') ? JSON.parse(params.get('props')) : undefined, params.get('theme') || undefined);
+  if (params.has('clear')) document.documentElement.style.background = document.body.style.background = el.style.background = 'transparent';
+  if (piece.background) el.style.background = piece.background;
+  const hold = piece.loops ? 0 : 0.8;   // rest on the end state before repeating, unless the piece is a seamless loop
+  let playing = !params.has('t'), origin = performance.now(), last = 0;
+  const show = t => { last = Math.max(0, Math.min(piece.duration, t)); piece.seek(last); };
+  show(params.has('t') ? Number(params.get('t')) : 0);
+  window.piece = {duration: piece.duration, seek: show};
+  window.__ready = true;
+  parent.postMessage({piece: id, ready: true, duration: piece.duration}, '*');
+  addEventListener('message', e => {
+    if (typeof e.data?.seek === 'number') { playing = false; show(e.data.seek); }
+    if (e.data?.play) { playing = true; origin = performance.now() - last * 1000; }
+  });
+  requestAnimationFrame(function loop(now) {
+    if (playing) { show(((now - origin) / 1000) % (piece.duration + hold)); parent.postMessage({piece: id, t: last}, '*'); }
+    requestAnimationFrame(loop);
+  });
+} catch (error) {
+  const box = document.getElementById('error'); box.style.display = 'block'; box.textContent = String(error.stack || error);
+  window.__error = String(error);
+}
+</script>

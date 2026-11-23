@@ -1,0 +1,164 @@
+{
+ "id": "text",
+ "title": "Text animations",
+ "summary": "Title cards and text overlays in the modern editorial look: one huge white word in heavy Montserrat capitals that builds and drops out letter by letter in a scattered order through a translucent ghost, over charcoal and picture panels (strips, slots, mosaics, punch-in cards) in studio-light tones or your own stills.",
+ "usage": "Title cards fill the frame (square to 9:16): {\"background\": {\"piece\": \"text/headline-slam\", \"props\": {\"lines\": [\"YOUR\", \"WORDS\"]}}} or a footage \"cutaway\". Fields: charcoal (default), black, graphite, bone. Picture panels take tones (ember, teal, bone, rose, steel, ink, olive, cobalt, sand) or \"image\"/\"images\" (server paths to stills). Overlays are see-through, in 1080x1920 frame pixels: {\"piece\": \"text/keyword-slam\", \"start\": 1.2, \"end\": 3.4, \"props\": {\"word\": \"LISTEN\", \"y\": 1560}}; they leave letter by letter before `life` ends. Props match the other themes so storyboards can switch. Kit: library/themes/modern/kit.js.",
+ "groups": [
+  "Title cards",
+  "Overlays"
+ ],
+ "items": [
+  {
+   "id": "headline-slam",
+   "name": "Headline",
+   "group": "Title cards",
+   "piece": "text/headline-slam",
+   "description": "Three picture strips slide in from alternate ends with staggered edges; the headline builds letter by letter in a scattered order (ghost, then solid) across them, then drops out and the strips leave. images: stills for the strips.",
+   "tall": true
+  },
+  {
+   "id": "split-stack",
+   "name": "Split stack",
+   "group": "Title cards",
+   "piece": "text/split-stack",
+   "description": "Top word builds on charcoal; a picture slot opens below and widens to the edges and the bottom word builds over it. Caption under the top word, note at the foot.",
+   "tall": true
+  },
+  {
+   "id": "marquee-wall",
+   "name": "Marquee wall",
+   "group": "Title cards",
+   "piece": "text/marquee-wall",
+   "description": "A wall of heavy capitals in rows running opposite ways; one row snaps solid per beat while the rest stay ghosted.",
+   "tall": true
+  },
+  {
+   "id": "statement",
+   "name": "Statement",
+   "group": "Title cards",
+   "piece": "text/statement",
+   "description": "A sentence in heavy left-aligned capitals, one word per beat, each building letter by letter; emphasis words sit on a picture block that wipes in behind them. Tag, rule and foot.",
+   "tall": true
+  },
+  {
+   "id": "big-number",
+   "name": "Big number",
+   "group": "Title cards",
+   "piece": "text/big-number",
+   "description": "A picture card punches up from the middle to full frame on the beat while a huge figure counts up over it; kicker above, label and note below.",
+   "tall": true
+  },
+  {
+   "id": "quote-card",
+   "name": "Quote card",
+   "group": "Title cards",
+   "piece": "text/quote-card",
+   "description": "A narrow picture slot opens and widens at the top with a quote mark on it; the quote arrives a word per beat in heavy sentence case; rule and attribution.",
+   "tall": true
+  },
+  {
+   "id": "agenda",
+   "name": "Agenda",
+   "group": "Title cards",
+   "piece": "text/agenda",
+   "description": "Title builds at the top; each item lands on its beat with a picture-strip thumbnail wiping in, a mono number and heavy capitals.",
+   "tall": true
+  },
+  {
+   "id": "versus",
+   "name": "Versus",
+   "group": "Title cards",
+   "piece": "text/versus",
+   "description": "Upper and lower picture panels slide in from opposite sides; word A builds on top, word B below, VS in a charcoal tab on the seam.",
+   "tall": true
+  },
+  {
+   "id": "chapter",
+   "name": "Chapter",
+   "group": "Title cards",
+   "piece": "text/chapter",
+   "description": "A huge ghosted chapter number, a picture slot opening across the middle and the title building over it; kicker and note.",
+   "tall": true
+  },
+  {
+   "id": "countdown",
+   "name": "Countdown",
+   "group": "Title cards",
+   "piece": "text/countdown",
+   "description": "Each count punches a new picture card to full frame behind a huge digit that builds and drops out; GO on the last beat.",
+   "tall": true
+  },
+  {
+   "id": "end-card",
+   "name": "End card",
+   "group": "Title cards",
+   "piece": "text/end-card",
+   "description": "A 2x2 picture mosaic wipes in cell by cell; the closing lines build over it; action, handle and a strip of small type.",
+   "tall": true
+  },
+  {
+   "id": "keyword-slam",
+   "name": "Keyword slam",
+   "group": "Overlays",
+   "piece": "text/keyword-slam",
+   "description": "One huge white word, centred, building in a scattered order and dropping out letter by letter before it ends; small kicker. color: ink for bright footage; order: scatter/left/right/centre/edges.",
+   "over": true
+  },
+  {
+   "id": "highlight-swipe",
+   "name": "Highlight swipe",
+   "group": "Overlays",
+   "piece": "text/highlight-swipe",
+   "description": "A line of heavy type built word by word; the marked words get a solid charcoal block wiping in behind them.",
+   "over": true
+  },
+  {
+   "id": "lower-third",
+   "name": "Lower third",
+   "group": "Overlays",
+   "piece": "text/lower-third",
+   "description": "A charcoal strap slides in from the left; the name builds in heavy capitals, a hairline draws, the role types on.",
+   "over": true
+  },
+  {
+   "id": "side-text",
+   "name": "Side text",
+   "group": "Overlays",
+   "piece": "text/side-text",
+   "description": "Heavy capitals running up the frame edge, building letter by letter, with a small tracked sub line.",
+   "over": true
+  },
+  {
+   "id": "marquee-band",
+   "name": "Marquee band",
+   "group": "Overlays",
+   "piece": "text/marquee-band",
+   "description": "A charcoal band wipes across with heavy capitals running through it, solid and ghosted words alternating, and a white tab label.",
+   "over": true
+  },
+  {
+   "id": "corner-labels",
+   "name": "Corner labels",
+   "group": "Overlays",
+   "piece": "text/corner-labels",
+   "description": "Small tracked labels type on in the four corners in turn, each with a short hairline; optional heavy mark.",
+   "over": true
+  },
+  {
+   "id": "pip-frame",
+   "name": "Picture-in-picture frame",
+   "group": "Overlays",
+   "piece": "text/pip-frame",
+   "description": "A slot opens to a hairline frame (or charcoal card), corner ticks lock on, a white tab label and a running frame number.",
+   "over": true
+  },
+  {
+   "id": "sticker",
+   "name": "Sticker",
+   "group": "Overlays",
+   "piece": "text/sticker",
+   "description": "A white square tag punches in on the beat with the word in heavy charcoal capitals and a tracked line along its foot.",
+   "over": true
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "captions",
+  "title": "Captions",
+  "summary": "Seven caption styles in the modern look, playing over the sample clip with its real word timings: heavy white capitals with ghosted words to come, one huge word at a time building letter by letter, a scattered letter stagger, a charcoal block on the spoken word, quiet tracked credit lines and charcoal on white tabs for bright footage, and its reverse (white on charcoal tabs) for white screens.",
+  "usage": "In a storyboard: {\"captions\": \"heavy\"}. Styles: library/themes/modern/captions/styles.js.",
+  "groups": [
+    "Word highlight",
+    "Build-up",
+    "Quiet"
+  ],
+  "items": [
+    {
+      "id": "heavy",
+      "group": "Word highlight"
+    },
+    {
+      "id": "block",
+      "group": "Word highlight"
+    },
+    {
+      "id": "ink-tab",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "coal-tab",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "one-word",
+      "group": "Build-up"
+    },
+    {
+      "id": "letter-stagger",
+      "group": "Build-up"
+    },
+    {
+      "id": "credit",
+      "group": "Quiet"
+    }
+  ]
+}

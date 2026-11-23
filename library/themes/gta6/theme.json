@@ -1,0 +1,45 @@
+{
+  "id": "gta6",
+  "title": "GTA6",
+  "summary": "A comic-panel coastal sunset look inspired by GTA VI cover art: angled panels with thick pale gutters, hot pink-to-orange skies over teal water, inked outlines with flat cel shading, and chunky gradient lettering with a hard drop shadow. All original artwork drawn in code.",
+  "categories": [
+    "panels",
+    "text",
+    "effects",
+    "transitions",
+    "fonts",
+    "captions",
+    "voiceover",
+    "d3",
+    "three",
+    "lottie"
+  ],
+  "pieceFonts": [
+    "20px \"Bowlby One\"",
+    "20px Anton",
+    "20px \"Kaushan Script\"",
+    "20px Bangers",
+    "600 20px Poppins",
+    "700 20px Poppins"
+  ],
+  "look": {"surface":"#fff4e0","ink":"#190b33","dim":"#3b1a78","line":"#190b33","accent":"#ff3f97","accent2":"#ffd447","head":"Bowlby One","headWeight":400,"body":"Poppins","mono":"Poppins","card":"flat","radius":22},
+  "colors": {
+    "ink": "#190b33",
+    "paper": "#fff4e0",
+    "night": "#24104f",
+    "plum": "#3b1a78",
+    "violet": "#7a3cf0",
+    "pink": "#ff3f97",
+    "orange": "#ff8a30",
+    "yellow": "#ffd447",
+    "teal": "#12c4c0",
+    "aqua": "#6ff2e3",
+    "sky": "#4aa3ff",
+    "coral": "#ff6a5c"
+  },
+  "frame": {
+    "background": "linear-gradient(180deg,#3b1a78 0%,#7a3cf0 22%,#ff3f97 55%,#ff8a30 82%,#ffd447 100%)",
+    "headingFont": "\"Bowlby One\"",
+    "headingColor": "#fff4e0"
+  }
+}

@@ -1,0 +1,70 @@
+{
+ "sections": [
+  {
+   "id": "showcase",
+   "title": "Showcase: 100 looks, one take",
+   "summary": "The same white-fleece kitchen frame through 90 library pieces (effects, themes, light and filters, captions, text, 3D, charts, motion graphics and app UI, transitions), plus 10 frames from finished reels. Click a sheet to open it full size.",
+   "items": [
+    {
+     "title": "16:9 sheet (20 x 5)",
+     "src": "showcase/showcase-16x9.jpg",
+     "description": "The README image. Rows of 20, in the same order as the 10 x 10 sheet."
+    },
+    {
+     "title": "10 x 10 sheet",
+     "src": "showcase/showcase-10x10.jpg",
+     "description": "One category per row: 1 effects, 2 themes, 3 light and filters, 4 captions, 5 text, 6 3D, 7 charts, 8 motion graphics and app UI, 9 transitions, 10 finished reels."
+    }
+   ]
+  },
+  {
+   "id": "reels",
+   "title": "Finished reels",
+   "summary": "Whole reels made with this pipeline, chosen to show.",
+   "items": [
+    {
+     "title": "Claude edited this video",
+     "src": "reels/claude-edited-this-video.mp4",
+     "seconds": 46.8,
+     "description": "A 47-second talking-head reel, finished 21 Nov 2026 (quality check PASS): one raw take cut and edited by Claude, futuristic base theme in her Forest editorial style, 23 graphics borrowed from gta6, historical, modern and the Claude, Instagram and reel-kit UI kits, 10 zooms, 11 layout changes, 46 sound effects and the Effects gta6_poster, text_behind_slice, reel_flythrough plus cop_lights. Project: projects/edit-this-one."
+    },
+    {
+     "title": "Claude edited this whole video (Editorial)",
+     "src": "reels/claude-edited-this-video-editorial.mp4",
+     "seconds": 29.1,
+     "description": "A 29-second talking-head reel in the Editorial theme (maroon grid grounds): one raw take cut by Claude with 12 jump cuts, 21 graphics and 23 effects, including the real review dashboard, a GTA6-look before/after and her real Instagram reels. Project: projects/talking-head-2-editorial."
+    },
+    {
+     "title": "Claude edited this video (Modern)",
+     "src": "reels/claude-edited-this-video-modern.mp4",
+     "seconds": 46.6,
+     "description": "A 47-second talking-head reel in the Modern theme, finished 22 Nov 2026: the same raw take as \"Claude edited this video\", re-edited with a highlighter-yellow hook that drops into a GTA6 game-cover poster, a reel fly-through on an orange grid, a live Claude Code screen with her picture-in-picture, the video's own storyboard scrolling, GTA6 charts, glowing platform badges and an Instagram comment-to-DM; 34 graphics, 26 sound effects, an upbeat music lift on the first 5 seconds and the Effects cop_lights, exposure, gta6_poster, light_spotlight, reel_flythrough, slow_push, text_behind_slice. Project: projects/edit-this-one-modern."
+    },
+    {
+     "title": "The craziest Claude use case (GTA6 in and out)",
+     "src": "reels/craziest-claude-gta6.mp4",
+     "seconds": 36.2,
+     "description": "A 36-second talking-head reel, finished 22 Nov 2026 (quality check PASS): the \"craziest Claude use case\" take, cutting in and out of the GTA6 theme, with a title hook from the first frame, comic GTA6 set pieces, captions throughout and 52 sound effects (mix -13.1 LUFS, true peak -2.0 dBTP). Project: projects/craziest-claude-gta6."
+    },
+    {
+     "title": "career-ops: the AI that applies to jobs for you (faceless, mushroom narrator)",
+     "src": "reels/career-ops-mushroom.mp4",
+     "seconds": 44.2,
+     "description": "A 44-second faceless explainer in the Minimal theme (charcoal mode): 13 animated scenes with her ElevenLabs voice (multilingual v2, speed 1.1, -14 LUFS), a talking Lottie mushroom narrator lip-synced to the words, light Mixkit background music about 21 LU under her voice and recorded sound effects. Project: projects/career-ops."
+    },
+    {
+     "title": "Claude can now edit all your videos for free (contentskills how-to, mushroom narrator)",
+     "src": "reels/contentskills-howto.mp4",
+     "seconds": 42.5,
+     "description": "A 42-second faceless how-to in the Claude UI look (Minimal theme, charcoal and ivory): 24 phrase-length scenes with her ElevenLabs voice (multilingual v2, speed 1.1), the mushroom narrator bottom-left, and a hook where an orange wiper reveals the finished edits over her real raw clips. New pieces: real-wall, before-after, step-rail, app-pair, phone-talk, scene-deck, player-scrub, timeline-fix, face-scan, note-fly, clapper, timeline-kill. Project: projects/contentskills-howto."
+    },
+    {
+     "title": "20 Claude video effects (library showcase)",
+     "src": "reels/library-showcase-20.mp4",
+     "seconds": 72.8,
+     "description": "A 73-second effects showcase in the Claude app look (template effects-showcase, quality check PASS): each result is typed as /effect <name>, works in a chat card, then fills the screen, ending on Comment \"EDIT\" with a grid of all 20. 16 of the 20 show her talking with the effect applied (spatial-windows, gta6-poster, reel-flythrough, dna-helix, orbit, claude-code, behind-title, cube-spin, text-behind-slice, line-chart, wire-city, warp-tunnel, comment-dm, cash-rain, voxel-cube and net-globe behind her); 4 are 3D on their own (neon-terrain, plasma-orb, event-horizon, the d3 3D bar chart). New pieces: glass overlays/spatial-windows, futuristic d3/bar-city. Music: Mixkit \"Infected Mushroom Vibes\". Projects: projects/library-wow (with library-wow-src and library-wow-3d for the clips)."
+    }
+   ]
+  }
+ ]
+}

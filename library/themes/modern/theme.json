@@ -1,0 +1,31 @@
+{
+  "id": "modern",
+  "title": "Modern",
+  "summary": "Fast editorial opener style: a near-black charcoal canvas around full-bleed vertical pictures, colour only from the footage. The frame splits into 2-3 staggered vertical strips, a 2x2 mosaic, a slot that widens or a centred card that punches up to full frame on the beat. One huge white word in heavy geometric capitals (Montserrat 800) builds and drops out letter by letter in a scattered order, each letter passing through a translucent ghost. Small widely tracked Inter Tight labels, Space Mono frame numbers. Hard cuts, expo-out arrivals, a 0.2 s beat grid. Original work in the genre.",
+  "categories": ["overlays", "text", "effects", "transitions", "fonts", "captions", "voiceover", "d3", "three", "lottie"],
+  "pieceFonts": [
+    "800 20px Montserrat",
+    "900 20px Montserrat",
+    "600 20px \"Inter Tight\"",
+    "800 20px \"Inter Tight\"",
+    "700 20px \"Space Mono\"",
+    "400 20px \"Archivo Black\"",
+    "400 20px Anton"
+  ],
+  "look": {"surface":"#2b2b2e","ink":"#f5f5f2","dim":"#9a9a9f","line":"#5d5d62","accent":"#ff5a1f","accent2":"#e8e5de","head":"Montserrat","headWeight":800,"body":"Inter Tight","mono":"Space Mono","card":"flat","radius":28},
+  "colors": {
+    "bg": "#1c1c1e",
+    "ink": "#121213",
+    "graphite": "#2b2b2e",
+    "white": "#f5f5f2",
+    "bone": "#e8e5de",
+    "dim": "#9a9a9f",
+    "mute": "#5d5d62",
+    "signal": "#ff5a1f"
+  },
+  "frame": {
+    "background": "#1c1c1e",
+    "headingFont": "Montserrat",
+    "headingColor": "#f5f5f2"
+  }
+}

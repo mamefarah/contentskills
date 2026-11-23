@@ -1,0 +1,80 @@
+{
+ "id": "overlays",
+ "title": "Overlays",
+ "summary": "Shared pieces: drawn once, worn by every theme (its colours, fonts and card style from theme.json \"look\"). A theme's own piece of the same name wins.",
+ "usage": "{\"piece\": \"overlays/stat-card\", \"props\": {\"value\": 87, \"suffix\": \"%\", \"label\": \"...\"}}",
+ "groups": [
+  "Data",
+  "Marks",
+  "Media",
+  "Objects"
+ ],
+ "items": [
+  {
+   "id": "stat-card",
+   "name": "Stat card",
+   "group": "Data",
+   "piece": "overlays/stat-card",
+   "description": "A card with one big number that counts up and a label under it; an accent bar fills to the percentage. Props: value, prefix, suffix, label, decimals, x, y (top-left), w.",
+   "over": true
+  },
+  {
+   "id": "mark-circle",
+   "name": "Hand-drawn circle",
+   "group": "Marks",
+   "piece": "overlays/mark-circle",
+   "description": "A pen circle that draws itself around a word, number or button, in the theme's accent. Props: x, y (centre), w, h (size of the thing circled), at, draw (seconds), width. Never around the face.",
+   "over": true
+  },
+  {
+   "id": "picture",
+   "name": "Full-screen picture, slow push",
+   "group": "Media",
+   "piece": "overlays/picture",
+   "description": "A still picture filling the frame (cover-cropped) with a slow push-in, for a full-screen cutaway of a contact sheet, poster or screenshot. Props: src, zoom [from, to], focus [x, y] (0..1), fadeIn, ease ('linear' | 'inout'). Use with \"cutaway\": true."
+  },
+  {
+   "id": "water-glass",
+   "name": "Glass of water, draining or filling",
+   "group": "Objects",
+   "piece": "overlays/water-glass",
+   "description": "A drinking glass whose water level moves between two fills with a rippling surface and bubbles; a small line above, a big label landing under it. Levels show a state, no figures are printed. Props: from, to (0..1), at, dur, kicker, label, labelAt, warn (label in the accent), pour (a stream falls in while it fills), color (the water; the accent by default), cx, top, w, h."
+  },
+  {
+   "id": "stretch-figure",
+   "name": "Stick figure, stiff to stretched",
+   "group": "Objects",
+   "piece": "overlays/stretch-figure",
+   "description": "A front-on stick figure moving between two poses, 'stiff' (hunched, arms tucked in) and 'reach' (tall, arms overhead); a small line above, a big label landing under it. Shows a state, no figures are printed. Props: from, to (pose names), at, dur, kicker, label, labelAt, warn (pulsing marks on neck, back and knees; label in the accent), flow (dots run out along the limbs from flowAt), color (marks and dots; the accent by default), cx, ground, scale."
+  },
+  {
+   "id": "sun-window",
+   "name": "Window, curtains opening to the sun",
+   "group": "Objects",
+   "piece": "overlays/sun-window",
+   "description": "A window whose curtains slide open while the sun rises behind the glass and its rays turn on, daylight spilling under the sill; a small line above, a big label landing under it. How far the curtains are open shows a state, no figures are printed. Props: from, to (0..1 open), at, dur, kicker, label, labelAt, warn (label in the accent), color (the sun and daylight; the accent by default), cx, top, w, h."
+  },
+  {
+   "id": "pick-grid",
+   "name": "Pick grid",
+   "group": "Marks",
+   "piece": "overlays/pick-grid",
+   "description": "A grid of numbered option tiles for 'many options, pick one': tiles pop in, one lights up in the accent while the rest dim, then a few more light up crooked; a mono readout counts the picks (14 WAYS, 1 OF 14, 6 OF 14). Props: count, cols, x, y (top-left), w, one, oneAt, many, manyAt, manyStep, unit.",
+   "over": true
+  },
+  {
+   "id": "name-tag",
+   "name": "Name tag (HELLO, my name is)",
+   "group": "Objects",
+   "piece": "overlays/name-tag",
+   "description": "A 'HELLO, my name is' sticker badge: the name writes on, can slip away and be replaced (forgetAt + after, e.g. '???'), and a drawn rose can bloom on its corner (bloom [from, to]) for turning a name into a picture; a small line above, a big label landing under it. Props: name, at, dur, forgetAt, after, kicker, label, labelAt, warn, bloom, bloomAt, bloomDur, color, leaf, tilt, enter, cx, top, w, h."
+  },
+  {
+   "id": "speech-bubbles",
+   "name": "Speech bubbles (a short exchange)",
+   "group": "Objects",
+   "piece": "overlays/speech-bubbles",
+   "description": "A short spoken exchange as speech bubbles, the other person on the left and the reply on the right, each popping in from its tail at its moment; one marked word per line is drawn in the accent and underlined. A small line above, a big label under. Props: lines [{text, side, at, mark}], size, top, gap, max, kicker, label, labelAt, labelY, warn."
+  }
+ ]
+}

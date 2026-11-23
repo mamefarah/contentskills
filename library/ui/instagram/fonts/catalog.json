@@ -1,0 +1,5 @@
+{
+  "id": "fonts", "title": "Fonts", "summary": "Inter Tight, close to the app's own UI face. Bundled with its OFL licence in files/.", "usage": "Every piece uses Inter Tight.",
+  "groups": ["UI"],
+  "items": [{"id": "inter-tight", "family": "Inter Tight", "file": "files/InterTight-Variable.ttf", "group": "UI", "weights": [400, 800], "note": "UI face for the whole kit.", "license": "OFL-1.1"}]
+}

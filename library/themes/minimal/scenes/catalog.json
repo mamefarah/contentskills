@@ -1,0 +1,234 @@
+{
+ "id": "scenes",
+ "title": "Scenes",
+ "summary": "Full-frame hero scenes for shot storyboards: one product-UI object centred under the top caption line, dark or light canvas, timed by props (seconds from the shot start) so beats land on the spoken words.",
+ "usage": "Use as a shot's full-frame background: {\"background\": {\"piece\": \"scenes/score-ring\", \"props\": {\"mode\": \"light\", \"value\": 4.3, \"fillAt\": 0.4}}}. Every time prop (…At, at) is seconds from the start of the shot; a generator script can fill them from voice/voice.json word timings.",
+ "groups": [
+  "Canvas",
+  "Heroes",
+  "Cards",
+  "Data",
+  "Proof",
+  "Call to action"
+ ],
+ "items": [
+  {
+   "id": "backdrop",
+   "name": "Backdrop",
+   "group": "Canvas",
+   "piece": "scenes/backdrop",
+   "description": "The plain dark or light canvas with a breathing light at the hero spot."
+  },
+  {
+   "id": "glow-icon",
+   "name": "Glow icon",
+   "group": "Heroes",
+   "piece": "scenes/glow-icon",
+   "description": "A big app-icon tile with a breathing coloured glow, a price/name label that can be struck through, an optional stamp. User (2026-11-21): at most twice per video, and only where the thing IS an app/brand (the hook, the tool's name); never as a stand-in for an idea.",
+   "maxPerVideo": 2
+  },
+  {
+   "id": "star-counter",
+   "name": "Star counter",
+   "group": "Proof",
+   "piece": "scenes/star-counter",
+   "description": "A repo's logo tile with glow, its name, a giant star count ticking up and stat chips."
+  },
+  {
+   "id": "mail-card",
+   "name": "Mail card",
+   "group": "Cards",
+   "piece": "scenes/mail-card",
+   "description": "An email card (sender, subject, body sentence) with a chip and a stamp slamming across it."
+  },
+  {
+   "id": "reject-storm",
+   "name": "Rejection storm",
+   "group": "Cards",
+   "piece": "scenes/reject-storm",
+   "description": "Rejection notifications rain in from frame 0 and pile up, each with a red Rejected chip; a huge stamp slams across the pile with a red flash. A busy scroll-stopping hook."
+  },
+  {
+   "id": "job-stack",
+   "name": "Job stack",
+   "group": "Cards",
+   "piece": "scenes/job-stack",
+   "description": "Job-posting cards dealt into a fan, stamped one after another; optional glowing AI badge."
+  },
+  {
+   "id": "paste-link",
+   "name": "Paste link",
+   "group": "Cards",
+   "piece": "scenes/paste-link",
+   "description": "A big input: pointer clicks it, a link is pasted (⌘V chip, selection flash), a button pops and is pressed."
+  },
+  {
+   "id": "check-rows",
+   "name": "Check rows",
+   "group": "Cards",
+   "piece": "scenes/check-rows",
+   "description": "A running-job card whose rows pop in with a spinner turning into a status chip; optional struck-through badge. badge.big: a huge floating ghost with echo trails, a red no-sign slams over it, then it bursts into wisps."
+  },
+  {
+   "id": "score-ring",
+   "name": "Score ring",
+   "group": "Data",
+   "piece": "scenes/score-ring",
+   "description": "A 270° gauge filling to a score out of N with a threshold tick; green verdict chip above it, red stamp below it. Optional: docsAt (resume and role cards scanned and wired into the ring), matches (ticked reasons), burst (rays when the fill lands)."
+  },
+  {
+   "id": "triage",
+   "name": "Triage conveyor",
+   "group": "Data",
+   "piece": "scenes/triage",
+   "description": "Job cards stream up a conveyor; each is scored at a glowing judge line, low scores flash red and get flicked off left, high ones glow green and slide right; SKIP / APPLY counters tick and a stamp slams. Scores are illustrative."
+  },
+  {
+   "id": "tile-pool",
+   "name": "Tile pool",
+   "group": "Cards",
+   "piece": "scenes/tile-pool",
+   "description": "A titled card whose glowing icon tiles pop in one per spoken item; newest tile gets a focus ring."
+  },
+  {
+   "id": "doc-burst",
+   "name": "Document burst",
+   "piece": "scenes/doc-burst",
+   "description": "One source document in the middle fires out up to four output cards to the corners along moving dashed wires, each on its spoken word; lines type in, a tick lands, the source kicks and rings each time.",
+   "group": "Cards"
+  },
+  {
+   "id": "chip-cloud",
+   "name": "Chip cloud",
+   "group": "Data",
+   "piece": "scenes/chip-cloud",
+   "description": "A giant number ticking up, surrounded by name chips; named ones pop on their words in blue."
+  },
+  {
+   "id": "bubble-flood",
+   "name": "Bubble flood",
+   "piece": "scenes/bubble-flood",
+   "description": "An overwhelming flood of round company bubbles (letter marks, not real logos) pouring in faster and faster until they spill past the frame; a counter on a white plate ticks up and the named companies land as big pills on their words.",
+   "group": "Data"
+  },
+  {
+   "id": "submit-button",
+   "name": "Submit button",
+   "group": "Cards",
+   "piece": "scenes/submit-button",
+   "description": "A filled form; an AI pointer stops short of Submit (lock chip), then a 'You' pointer clicks it and it turns green."
+  },
+  {
+   "id": "funnel",
+   "name": "Funnel",
+   "group": "Data",
+   "piece": "scenes/funnel",
+   "description": "Stage rows popping on their words, numbers ticking and bars filling (square-root widths, numbers printed); stamp at the end."
+  },
+  {
+   "id": "screenshot",
+   "name": "Screenshot",
+   "group": "Proof",
+   "piece": "scenes/screenshot",
+   "description": "A real screenshot in a rounded window, slowly pushing in and panning, with chips popping under it."
+  },
+  {
+   "id": "comment-cta",
+   "name": "Comment CTA",
+   "group": "Call to action",
+   "piece": "scenes/comment-cta",
+   "description": "A comments panel: the keyword is typed and sent, lands highlighted at the top, a 'Sent! Check your DMs' reply pops."
+  },
+  {
+   "id": "step-rail",
+   "name": "Step rail",
+   "group": "Cards",
+   "piece": "scenes/step-rail",
+   "description": "A numbered list of steps building one row per beat; one row lights up and a stamp slaps across it (\"SKIPPED\") while the others dim."
+  },
+  {
+   "id": "app-pair",
+   "name": "App pair",
+   "group": "Heroes",
+   "piece": "scenes/app-pair",
+   "description": "Two app tiles with an italic \"or\" between: the first slides aside as the second springs in. For 'use this, or that'."
+  },
+  {
+   "id": "phone-talk",
+   "name": "Phone talk",
+   "group": "Cards",
+   "piece": "scenes/phone-talk",
+   "description": "A phone filming its user: a talking head-and-shoulders figure, REC dot and timer, live voice bars, a chip. For 'just talk to your phone'."
+  },
+  {
+   "id": "scene-deck",
+   "name": "Scene deck",
+   "group": "Cards",
+   "piece": "scenes/scene-deck",
+   "description": "Storyboard cards dealt on arcs from below into a grid, one per beat, the newest outlined. For 'scene by scene'."
+  },
+  {
+   "id": "timeline-fix",
+   "name": "Timeline fix",
+   "group": "Cards",
+   "piece": "scenes/timeline-fix",
+   "description": "A timeline of scene blocks with a sweeping playhead; a cursor taps one (Change chip), a fill runs over just that block, it turns green FIXED with a stopwatch."
+  },
+  {
+   "id": "face-scan",
+   "name": "Face scan",
+   "group": "Cards",
+   "piece": "scenes/face-scan",
+   "description": "A phone with a talking figure and a caption across its face; cyan brackets lock on, the caption slides off the face and turns green, checklist rows tick."
+  },
+  {
+   "id": "player-scrub",
+   "name": "Player scrub",
+   "group": "Cards",
+   "piece": "scenes/player-scrub",
+   "description": "A video player card: a cursor taps play, the picture cycles through scenes while the scrubber runs and time counts up."
+  },
+  {
+   "id": "note-fly",
+   "name": "Note fly",
+   "group": "Cards",
+   "piece": "scenes/note-fly",
+   "description": "A sticky note types itself, folds into a paper plane that flies on a dotted arc to a scene card, which flashes Updated."
+  },
+  {
+   "id": "clapper",
+   "name": "Clapper",
+   "group": "Heroes",
+   "piece": "scenes/clapper",
+   "description": "A film clapperboard (ROLE / NAME / TAKE) whose striped stick snaps shut with a flash on the word."
+  },
+  {
+   "id": "timeline-kill",
+   "name": "Timeline kill",
+   "group": "Cards",
+   "piece": "scenes/timeline-kill",
+   "description": "An old multi-track editing timeline scrubbing, slashed by a giant red X, then it tips over and drops out. Draw the negated thing, then kill it."
+  },
+  {
+   "id": "clip-wall",
+   "name": "Clip wall",
+   "group": "Heroes",
+   "piece": "scenes/clip-wall",
+   "description": "A wall of raw grey talking-head clips fans in; a Claude-orange beam sweeps across and each clip turns edited (colour, punch-in, caption, sticker, tick); optional stamp. For 'it edits all your videos'."
+  },
+  {
+   "id": "before-after",
+   "name": "Before / after",
+   "group": "Heroes",
+   "piece": "scenes/before-after",
+   "description": "One raw clip splits into Before (raw) and After (edited, playing), with an orange arrow between. For showing what an edit does."
+  },
+  {
+   "id": "real-wall",
+   "name": "Real clip wall",
+   "group": "Heroes",
+   "piece": "scenes/real-wall",
+   "description": "A wall of the user's real clips playing raw (desaturated, RAW tag); a Claude-orange wiper sweeps across and reveals each clip's finished edit behind the line, ticking each when done. Clips come as sprite strips (raw + edited)."
+  }
+ ]
+}

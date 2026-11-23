@@ -1,0 +1,1741 @@
+{
+ "title": "Claude can now edit all your videos for free",
+ "theme": "minimal",
+ "format": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30
+ },
+ "captions": "top-line",
+ "captionPlacement": "fixed",
+ "lead": 0,
+ "presenter": {
+  "name": "mushroom",
+  "x": 220,
+  "height": 460,
+  "bottom": -20,
+  "room": 0.8
+ },
+ "voice": {
+  "provider": "recorded",
+  "speed": 1.1,
+  "model": "eleven_multilingual_v2"
+ },
+ "sections": [
+  {
+   "id": "hook",
+   "title": "Hook",
+   "shots": [
+    "hook",
+    "how",
+    "skip",
+    "skipped"
+   ],
+   "job": "hook"
+  },
+  {
+   "id": "steps",
+   "title": "Five steps",
+   "shots": [
+    "one",
+    "chatgpt",
+    "type",
+    "install",
+    "two",
+    "inputs",
+    "phone",
+    "three",
+    "scenes",
+    "extras",
+    "four",
+    "play",
+    "change",
+    "fixes",
+    "five",
+    "face",
+    "note"
+   ],
+   "job": "demo"
+  },
+  {
+   "id": "ask",
+   "title": "Payoff and call to action",
+   "shots": [
+    "director",
+    "editor",
+    "cta"
+   ],
+   "job": "ask"
+  }
+ ],
+ "shots": [
+  {
+   "id": "hook",
+   "narration": "Claude can now edit all your videos for free.",
+   "duration": 2.154,
+   "emphasis": {
+    "claude": 1,
+    "edit": 2,
+    "free": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0,
+      "amp": 0.3
+     },
+     {
+      "at": 0.63,
+      "amp": 0.55
+     },
+     {
+      "at": 1.802,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": 0,
+     "gain": -14
+    },
+    {
+     "name": "impact",
+     "at": 0.63,
+     "gain": -15
+    },
+    {
+     "name": "sparkle",
+     "at": 1.252,
+     "gain": -18
+    },
+    {
+     "name": "stamp",
+     "at": 1.802,
+     "gain": -13
+    },
+    {
+     "name": "coin",
+     "at": 2.052,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/real-wall",
+      "props": {
+       "clips": [
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/0-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/0-edited.jpg"
+        },
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/1-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/1-edited.jpg"
+        },
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/2-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/2-edited.jpg"
+        },
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/3-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/3-edited.jpg"
+        },
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/4-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/4-edited.jpg"
+        },
+        {
+         "raw": "projects/faceless-ai-voice/assets/clips/5-raw.jpg",
+         "edited": "projects/faceless-ai-voice/assets/clips/5-edited.jpg"
+        }
+       ],
+       "clipW": 260,
+       "y": 100,
+       "editAt": 0.1,
+       "editDone": 1.552,
+       "stamp": "FREE",
+       "stampAt": 1.802,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "how",
+   "narration": "Here's exactly how I use it.",
+   "duration": 1.354,
+   "emphasis": {
+    "exactly": 2,
+    "how": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.631,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "swish",
+     "at": 0.298,
+     "gain": -16
+    },
+    {
+     "name": "thump",
+     "at": 0.631,
+     "gain": -15
+    },
+    {
+     "name": "sparkle",
+     "at": 1.038,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/before-after",
+      "props": {
+       "raw": "projects/faceless-ai-voice/assets/clips/big-raw.jpg",
+       "edited": "projects/faceless-ai-voice/assets/clips/big-edited.jpg",
+       "splitAt": 0.298,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "skip",
+   "narration": "And the step that makes your videos look good?",
+   "duration": 2.037,
+   "emphasis": {
+    "step": 1,
+    "good": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.311,
+      "amp": 0.3
+     },
+     {
+      "at": 1.559,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "pop",
+     "at": 0.05,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 0.3,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 0.55,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 0.8,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 1.05,
+     "gain": -18
+    },
+    {
+     "name": "thump",
+     "at": 1.559,
+     "gain": -15
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/step-rail",
+      "props": {
+       "title": "5 steps",
+       "steps": [
+        {
+         "label": "Install it",
+         "at": 0.05
+        },
+        {
+         "label": "Tell it",
+         "at": 0.3
+        },
+        {
+         "label": "It plans",
+         "at": 0.55
+        },
+        {
+         "label": "Preview it",
+         "at": 0.8
+        },
+        {
+         "label": "Make it",
+         "at": 1.05
+        }
+       ],
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "skipped",
+   "narration": "It's the one almost everyone skips.",
+   "duration": 1.719,
+   "emphasis": {
+    "everyone": 1,
+    "skips": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.757,
+      "amp": 0.3
+     },
+     {
+      "at": 1.223,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "stamp",
+     "at": 1.223,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/step-rail",
+      "props": {
+       "title": "5 steps",
+       "steps": [
+        {
+         "label": "Install it",
+         "at": 0
+        },
+        {
+         "label": "Tell it",
+         "at": 0
+        },
+        {
+         "label": "It plans",
+         "at": 0
+        },
+        {
+         "label": "Preview it",
+         "at": 0
+        },
+        {
+         "label": "Make it",
+         "at": 0
+        }
+       ],
+       "tagIndex": 3,
+       "tag": "SKIPPED",
+       "tagAt": 1.223,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "one",
+   "narration": "Step one. Open Claude Code,",
+   "duration": 1.957,
+   "emphasis": {
+    "one": 1,
+    "claude": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.501,
+      "amp": 0.3
+     },
+     {
+      "at": 1.294,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "click",
+     "at": 1.038,
+     "gain": -15
+    },
+    {
+     "name": "pop_hi",
+     "at": 1.294,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/glow-icon",
+      "props": {
+       "icon": "✳",
+       "tile": [
+        "#ff9a3d",
+        "#f05a14"
+       ],
+       "glow": "rgba(255,122,26,.75)",
+       "label": "Claude Code",
+       "sub": "step one",
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "chatgpt",
+   "narration": "or ChatGPT Work,",
+   "duration": 1.159,
+   "emphasis": {
+    "chatgpt": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.199,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "swish",
+     "at": 0.099,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/app-pair",
+      "props": {
+       "a": {
+        "icon": "✳",
+        "tile": [
+         "#ff9a3d",
+         "#f05a14"
+        ],
+        "label": "Claude Code"
+       },
+       "b": {
+        "icon": "icon:bolt",
+        "tile": [
+         "#34d399",
+         "#10a37f"
+        ],
+        "label": "ChatGPT Work"
+       },
+       "inAt": 0.099,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "type",
+   "narration": "and type: setup blotato contentskills.",
+   "duration": 2.728,
+   "emphasis": {
+    "type": 1,
+    "setup": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.617,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "key_run",
+     "at": 0.517,
+     "gain": -16
+    },
+    {
+     "name": "click",
+     "at": 2.097,
+     "gain": -15
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "overlays/terminal",
+      "theme": "ui/claude",
+      "props": {
+       "command": "setup blotato contentskills",
+       "reply": "Setting up Blotato content skills…",
+       "launchAt": 0,
+       "typeAt": 0.312,
+       "typeFor": 1.2,
+       "sendAt": 2.097,
+       "dropAt": 99,
+       "y": 440
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "install",
+   "narration": "It installs everything for you.",
+   "duration": 1.633,
+   "emphasis": {
+    "installs": 1,
+    "everything": 3
+   },
+   "tone": "light",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.278,
+      "amp": 0.3
+     },
+     {
+      "at": 0.631,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "ding",
+     "at": 0.278,
+     "gain": -19
+    },
+    {
+     "name": "ding",
+     "at": 0.631,
+     "gain": -19
+    },
+    {
+     "name": "ding",
+     "at": 1.291,
+     "gain": -19
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/check-rows",
+      "props": {
+       "title": "Setting up",
+       "sub": "contentskills · install",
+       "status": "running",
+       "settle": 0.25,
+       "badge": null,
+       "popAt": 0,
+       "rows": [
+        {
+         "icon": "bolt",
+         "label": "Video tools",
+         "chip": "READY",
+         "tone": "green",
+         "at": 0.278
+        },
+        {
+         "icon": "star",
+         "label": "Themes and effects",
+         "chip": "READY",
+         "tone": "green",
+         "at": 0.631
+        },
+        {
+         "icon": "doc",
+         "label": "Captions and voice",
+         "chip": "READY",
+         "tone": "green",
+         "at": 1.291
+        }
+       ],
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "two",
+   "narration": "Step two. Tell it what you want.",
+   "duration": 1.659,
+   "emphasis": {
+    "two": 1,
+    "tell": 2,
+    "want": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.188,
+      "amp": 0.3
+     },
+     {
+      "at": 0.732,
+      "amp": 0.55
+     },
+     {
+      "at": 1.359,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "key_run",
+     "at": 0.732,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 1.359,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "overlays/prompt",
+      "theme": "ui/claude",
+      "props": {
+       "text": "Make a video about my app",
+       "typeAt": 0.074,
+       "typeFor": 0.9,
+       "sendAt": 1.459,
+       "y": 820
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "inputs",
+   "narration": "A topic, a script, or a clip of you",
+   "duration": 1.862,
+   "emphasis": {
+    "topic": 1,
+    "script": 1,
+    "clip": 3
+   },
+   "tone": "light",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.205,
+      "amp": 0.3
+     },
+     {
+      "at": 0.682,
+      "amp": 0.3
+     },
+     {
+      "at": 1.268,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "pop",
+     "at": 0.205,
+     "gain": -15
+    },
+    {
+     "name": "pop",
+     "at": 0.682,
+     "gain": -15
+    },
+    {
+     "name": "pop",
+     "at": 1.268,
+     "gain": -15
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/tile-pool",
+      "props": {
+       "title": "Give it",
+       "sub": "any one of these",
+       "cols": 3,
+       "popAt": 0,
+       "tiles": [
+        {
+         "icon": "icon:star",
+         "label": "A topic",
+         "at": 0.205
+        },
+        {
+         "icon": "icon:doc",
+         "label": "A script",
+         "at": 0.682
+        },
+        {
+         "icon": "icon:user",
+         "label": "A clip of you",
+         "at": 1.268
+        }
+       ],
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "phone",
+   "narration": "talking straight to your phone.",
+   "duration": 1.364,
+   "emphasis": {
+    "talking": 1,
+    "phone": 3
+   },
+   "tone": "light",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.01,
+      "amp": 0.3
+     },
+     {
+      "at": 0.919,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "blip_up",
+     "at": 0.05,
+     "gain": -18
+    },
+    {
+     "name": "pop",
+     "at": 0.919,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/phone-talk",
+      "props": {
+       "chipText": "That works too",
+       "chipAt": 0.919,
+       "popAt": 0,
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "three",
+   "narration": "Step three. It plans your whole video,",
+   "duration": 1.808,
+   "emphasis": {
+    "three": 1,
+    "plans": 2,
+    "whole": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.279,
+      "amp": 0.3
+     },
+     {
+      "at": 0.776,
+      "amp": 0.55
+     },
+     {
+      "at": 1.207,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "key_run",
+     "at": 0.776,
+     "gain": -20
+    },
+    {
+     "name": "tick",
+     "at": 1.026,
+     "gain": -18
+    },
+    {
+     "name": "tick",
+     "at": 1.276,
+     "gain": -18
+    },
+    {
+     "name": "tick",
+     "at": 1.526,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "overlays/worklog",
+      "theme": "ui/claude",
+      "props": {
+       "title": "Planning your video...",
+       "label": "STORYBOARD",
+       "doneAt": 1.735,
+       "done": "Ready",
+       "steps": [
+        {
+         "label": "Write the scenes",
+         "detail": "",
+         "at": 0.149
+        },
+        {
+         "label": "Pick the graphics",
+         "detail": "",
+         "at": 0.776
+        },
+        {
+         "label": "Time them to your voice",
+         "detail": "",
+         "at": 1.207
+        },
+        {
+         "label": "Add the captions",
+         "detail": "",
+         "at": 1.435
+        }
+       ]
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "scenes",
+   "narration": "scene by scene,",
+   "duration": 0.848,
+   "emphasis": {
+    "scene": 2
+   },
+   "tone": "light",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.01,
+      "amp": 0.55
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "swish",
+     "at": 0.02,
+     "gain": -18
+    },
+    {
+     "name": "swish",
+     "at": 0.36,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/scene-deck",
+      "props": {
+       "cards": [
+        {
+         "label": "Hook",
+         "at": 0.02
+        },
+        {
+         "label": "Step 1",
+         "at": 0.19
+        },
+        {
+         "label": "Step 2",
+         "at": 0.36000000000000004
+        },
+        {
+         "label": "Ending",
+         "at": 0.53
+        }
+       ],
+       "popAt": 0,
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "extras",
+   "narration": "with animations, captions, music, and sound effects.",
+   "duration": 2.695,
+   "emphasis": {
+    "animations": 1,
+    "captions": 1,
+    "music": 1,
+    "effects": 3
+   },
+   "tone": "light",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.215,
+      "amp": 0.3
+     },
+     {
+      "at": 0.911,
+      "amp": 0.3
+     },
+     {
+      "at": 1.486,
+      "amp": 0.3
+     },
+     {
+      "at": 2.175,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "swish",
+     "at": 0.215,
+     "gain": -18
+    },
+    {
+     "name": "swish",
+     "at": 0.911,
+     "gain": -18
+    },
+    {
+     "name": "swish",
+     "at": 1.486,
+     "gain": -18
+    },
+    {
+     "name": "swish",
+     "at": 1.95,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/doc-burst",
+      "props": {
+       "source": "Your video",
+       "popAt": 0,
+       "items": [
+        {
+         "icon": "star",
+         "title": "Animations",
+         "sub": "every scene",
+         "at": 0.215
+        },
+        {
+         "icon": "doc",
+         "title": "Captions",
+         "sub": "word by word",
+         "at": 0.911
+        },
+        {
+         "icon": "bolt",
+         "title": "Music",
+         "sub": "under your voice",
+         "at": 1.486
+        },
+        {
+         "icon": "send",
+         "title": "Sound effects",
+         "sub": "on every beat",
+         "at": 1.95
+        }
+       ],
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "four",
+   "narration": "Step four. Open the preview,",
+   "duration": 1.483,
+   "emphasis": {
+    "four": 1,
+    "preview": 3
+   },
+   "tone": "light",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.277,
+      "amp": 0.3
+     },
+     {
+      "at": 1.057,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "click",
+     "at": 0.691,
+     "gain": -15
+    },
+    {
+     "name": "whoosh_fast",
+     "at": 1.057,
+     "gain": -18
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/screenshot",
+      "props": {
+       "src": "projects/faceless-ai-voice/assets/storyboard-page.png",
+       "aspect": 0.8533333333333334,
+       "title": "Your storyboard",
+       "height": 900,
+       "zoom": [
+        1,
+        1.15
+       ],
+       "from": [
+        0,
+        0
+       ],
+       "to": [
+        0,
+        0.2
+       ],
+       "moveFor": 1.4,
+       "chips": [
+        {
+         "text": "Your storyboard",
+         "tone": "blue",
+         "at": 1.057
+        }
+       ],
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "play",
+   "narration": "watch it play,",
+   "duration": 0.724,
+   "emphasis": {
+    "play": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.409,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "click",
+     "at": 0.359,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/player-scrub",
+      "props": {
+       "title": "Preview",
+       "playAt": 0.359,
+       "total": 42,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "change",
+   "narration": "and tap Change on any scene you don't like.",
+   "duration": 2.411,
+   "emphasis": {
+    "tap": 1,
+    "change": 3,
+    "scene": 1
+   },
+   "tone": "light",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.539,
+      "amp": 0.9
+     },
+     {
+      "at": 1.494,
+      "amp": 0.3
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "click",
+     "at": 0.539,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/timeline-fix",
+      "props": {
+       "title": "Your video",
+       "index": 1,
+       "markAt": 0.539,
+       "popAt": 0,
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "fixes",
+   "narration": "It fixes it in seconds.",
+   "duration": 1.233,
+   "emphasis": {
+    "fixes": 2,
+    "seconds": 3
+   },
+   "tone": "light",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.169,
+      "amp": 0.55
+     },
+     {
+      "at": 0.832,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "key_run",
+     "at": 0.169,
+     "gain": -19
+    },
+    {
+     "name": "ding",
+     "at": 0.832,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/timeline-fix",
+      "props": {
+       "title": "Your video",
+       "index": 1,
+       "markAt": -1,
+       "fixAt": 0.169,
+       "fixFor": 0.5,
+       "doneAt": 0.832,
+       "seconds": "3",
+       "popAt": -1,
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "five",
+   "narration": "Step five. Hit Make my video.",
+   "duration": 2.015,
+   "emphasis": {
+    "five": 1,
+    "hit": 2,
+    "video": 3
+   },
+   "tone": "light",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.368,
+      "amp": 0.3
+     },
+     {
+      "at": 0.746,
+      "amp": 0.55
+     },
+     {
+      "at": 1.642,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "pop_hi",
+     "at": 0.746,
+     "gain": -20
+    },
+    {
+     "name": "click",
+     "at": 1.642,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/submit-button",
+      "props": {
+       "title": "Your video",
+       "fields": [
+        "Script",
+        "Voice",
+        "Scenes",
+        "Captions"
+       ],
+       "button": "Make my video",
+       "done": "Making it…",
+       "lock": "Your call",
+       "ai": "Claude",
+       "you": "You",
+       "popAt": 0,
+       "fieldStep": 0.07,
+       "blockAt": 0.368,
+       "youAt": 1.642,
+       "mode": "claude"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "face",
+   "narration": "It checks that no text covers your face.",
+   "duration": 2.027,
+   "emphasis": {
+    "checks": 1,
+    "text": 1,
+    "face": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.227,
+      "amp": 0.3
+     },
+     {
+      "at": 0.807,
+      "amp": 0.3
+     },
+     {
+      "at": 1.696,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "blip_up",
+     "at": 0.227,
+     "gain": -17
+    },
+    {
+     "name": "swish",
+     "at": 1.596,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/face-scan",
+      "props": {
+       "caption": "BIG WORDS",
+       "scanAt": 0.227,
+       "moveAt": 1.596,
+       "rows": [
+        {
+         "label": "Face found",
+         "at": 0.807
+        },
+        {
+         "label": "Text off face",
+         "at": 1.696
+        }
+       ],
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "note",
+   "narration": "And if you want something different, just leave a note.",
+   "duration": 2.3,
+   "emphasis": {
+    "different": 2,
+    "note": 3
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 1.039,
+      "amp": 0.55
+     },
+     {
+      "at": 1.968,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "key_run",
+     "at": 0.579,
+     "gain": -18
+    },
+    {
+     "name": "pop_hi",
+     "at": 1.039,
+     "gain": -20
+    },
+    {
+     "name": "whoosh",
+     "at": 2.168,
+     "gain": -17
+    },
+    {
+     "name": "ding",
+     "at": 2.768,
+     "gain": -17
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/note-fly",
+      "props": {
+       "text": "make the hook faster",
+       "typeAt": 0.579,
+       "typeFor": 0.8,
+       "sendAt": 2.018,
+       "target": "Scene 1",
+       "done": "Updated",
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "director",
+   "narration": "You're the director now.",
+   "duration": 1.179,
+   "emphasis": {
+    "director": 3,
+    "now": 1
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.582,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "punch",
+     "at": 0.582,
+     "gain": -14
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/clapper",
+      "props": {
+       "role": "DIRECTOR",
+       "name": "YOU",
+       "scene": "SCENE 1",
+       "snapAt": 0.582,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "editor",
+   "narration": "Not the editor.",
+   "duration": 0.798,
+   "emphasis": {
+    "not": 1,
+    "editor": 3
+   },
+   "tone": "charcoal",
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.01,
+      "amp": 0.3
+     },
+     {
+      "at": 0.416,
+      "amp": 0.9
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "whoosh_fast",
+     "at": -0.12,
+     "gain": -16
+    },
+    {
+     "name": "glitch",
+     "at": 0.366,
+     "gain": -16
+    },
+    {
+     "name": "thump",
+     "at": 0.866,
+     "gain": -16
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/timeline-kill",
+      "props": {
+       "title": "Editing timeline",
+       "killAt": 0.366,
+       "popAt": 0,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  },
+  {
+   "id": "cta",
+   "narration": "Comment EDIT, and I'll send you the link!",
+   "duration": 3.294,
+   "emphasis": {
+    "edit": 3,
+    "link": 1
+   },
+   "tone": "charcoal",
+   "transition": {
+    "name": "punch_zoom",
+    "seconds": 0.2
+   },
+   "camera": {
+    "push": 0.05,
+    "kicks": [
+     {
+      "at": 0.453,
+      "amp": 0.9
+     },
+     {
+      "at": 1.594,
+      "amp": 0.3
+     }
+    ]
+   },
+   "sounds": [
+    {
+     "name": "key_run",
+     "at": 0.01,
+     "gain": -20
+    },
+    {
+     "name": "thump",
+     "at": 0.453,
+     "gain": -15
+    },
+    {
+     "name": "whoosh_fast",
+     "at": 0.77,
+     "gain": -17
+    },
+    {
+     "name": "ding",
+     "at": 1.185,
+     "gain": -15
+    }
+   ],
+   "candidates": [
+    {
+     "background": {
+      "piece": "scenes/comment-cta",
+      "props": {
+       "word": "EDIT",
+       "popAt": 0,
+       "typeAt": 0.01,
+       "sendAt": 0.77,
+       "replyAt": 1.185,
+       "mode": "charcoal"
+      }
+     },
+     "status": "usable"
+    }
+   ]
+  }
+ ]
+}

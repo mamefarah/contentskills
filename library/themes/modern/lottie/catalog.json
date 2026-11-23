@@ -1,0 +1,98 @@
+{
+ "id": "lottie",
+ "title": "Lottie",
+ "summary": "Small accents in the modern style, generated from code in lottie/generate.mjs: heavy white strokes with butt ends and mitred corners, picture strips filled with the kit's studio-light tones, ghost-then-solid arrivals, expo-out landings with a small overshoot on the 0.2 s beat. Charcoal ground; no glow, no round caps.",
+ "usage": "{\"piece\": \"lottie/underline-swipe\"}. Files: library/themes/modern/lottie/animations/ (regenerate with node library/themes/modern/lottie/generate.mjs).",
+ "groups": [
+  "Strokes",
+  "Marks",
+  "Data",
+  "Loops"
+ ],
+ "items": [
+  {
+   "id": "underline-swipe",
+   "name": "Underline swipe",
+   "group": "Strokes",
+   "piece": "lottie/underline-swipe",
+   "description": "A heavy white bar swipes in from the left over a ghost bar, holds, then wipes out to the right."
+  },
+  {
+   "id": "arrow",
+   "name": "Arrow",
+   "group": "Strokes",
+   "piece": "lottie/arrow",
+   "description": "A heavy arrow: the shaft draws, the head snaps open from its point, and the arrow nudges forward on the beat."
+  },
+  {
+   "id": "slash-wipe",
+   "name": "Slash wipe",
+   "group": "Strokes",
+   "piece": "lottie/slash-wipe",
+   "description": "A heavy diagonal slash slams in, holds on the centre for a beat, and leaves right with a ghost slash trailing."
+  },
+  {
+   "id": "ring-draw",
+   "name": "Ring draw",
+   "group": "Strokes",
+   "piece": "lottie/ring-draw",
+   "description": "A thick white ring draws round with a hairline ghost ring inside; a square tick lands at twelve o'clock."
+  },
+  {
+   "id": "plus",
+   "name": "Plus",
+   "group": "Marks",
+   "piece": "lottie/plus",
+   "description": "A heavy plus punches in with an overshoot and a ghost burst, then turns a quarter on the beat."
+  },
+  {
+   "id": "check",
+   "name": "Check",
+   "group": "Marks",
+   "piece": "lottie/check",
+   "description": "A thin square box snaps in through a ghost, then a heavy check draws inside and punches."
+  },
+  {
+   "id": "corner-brackets",
+   "name": "Corner brackets",
+   "group": "Marks",
+   "piece": "lottie/corner-brackets",
+   "description": "Four heavy corner brackets snap in from the centre to frame a subject, one after another, ghost then solid."
+  },
+  {
+   "id": "dot-grid",
+   "name": "Dot grid",
+   "group": "Marks",
+   "piece": "lottie/dot-grid",
+   "description": "A 5x5 grid of square dots arriving in a scattered order, each ghost first then solid with a small punch."
+  },
+  {
+   "id": "strip-reveal",
+   "name": "Strip reveal",
+   "group": "Data",
+   "piece": "lottie/strip-reveal",
+   "description": "Three studio-light picture strips with staggered edges slide in from alternate ends, hold, and leave the same way."
+  },
+  {
+   "id": "counter-ticks",
+   "name": "Counter ticks",
+   "group": "Data",
+   "piece": "lottie/counter-ticks",
+   "description": "A ruler of ticks lighting from ghost to white one after another, long ticks every fifth, a marker riding the front."
+  },
+  {
+   "id": "strip-bars",
+   "name": "Strip bars",
+   "group": "Loops",
+   "piece": "lottie/strip-bars",
+   "description": "Five picture-tone strips bouncing to the beat: each jumps on the grid, lands hard and eases down. Loops."
+  },
+  {
+   "id": "beat-square",
+   "name": "Beat square",
+   "group": "Loops",
+   "piece": "lottie/beat-square",
+   "description": "A solid white square punching on every beat with a ghost outline expanding off it. Loops."
+  }
+ ]
+}

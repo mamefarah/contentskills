@@ -1,0 +1,36 @@
+{
+  "id": "transitions",
+  "title": "Transitions",
+  "summary": "Hard, on-beat transitions in the editorial opener style, shown going from the sample clip (under the editorial grade) to a title card: seven of its own, where the frame itself rearranges on the charcoal canvas (strips that slide in or fall away, a 2x2 mosaic whose cells change one by one, a card that punches up, a slot that widens, letterbox bars that close on the beat, a white flash cut), and four from the shared set drawn with charcoal gutters instead of glowing rims.",
+  "usage": "On a shot (the transition INTO it from the shot before): {\"transition\": {\"name\": \"strip_wipe\", \"seconds\": 0.6}}. In a footage storyboard, at a cut such as the start of a full-screen cutaway: \"transitions\": [{\"name\": \"card_punch\", \"at\": 7.8, \"seconds\": 0.6}]. Keep them short (0.4-0.8 s) and on the beat. Engine: library/_shared/shader_transitions.py (moderngl); this theme's own shaders and its colours for the shared ones are in transitions/theme_transitions.py.",
+  "groups": [
+    "Strips",
+    "Frame",
+    "Cut",
+    "Moves"
+  ],
+  "items": [
+    {"id": "strip_wipe", "name": "strip wipe", "group": "Strips", "src": "clips/strip_wipe.mp4", "portrait": true,
+     "description": "The next shot arrives in three vertical strips sliding in from alternate ends in a scattered order, landing hard, with charcoal gutters until the last lands. The theme default."},
+    {"id": "strip_drop", "name": "strip drop", "group": "Strips", "src": "clips/strip_drop.mp4", "portrait": true,
+     "description": "The shot falls away in three vertical strips to alternate ends, accelerating; the next shot comes up from the charcoal underneath."},
+    {"id": "mosaic_flip", "name": "mosaic flip", "group": "Strips", "src": "clips/mosaic_flip.mp4", "portrait": true,
+     "description": "The frame opens into a 2x2 mosaic with charcoal gutters; the cells change to the next shot one at a time, each pushed in from the side, and the gutters close."},
+    {"id": "card_punch", "name": "card punch", "group": "Frame", "src": "clips/card_punch.mp4", "portrait": true,
+     "description": "The shot steps back into a centred card on charcoal, cuts to the next shot on the beat, and the card punches up to full frame with a small overshoot."},
+    {"id": "slot_open", "name": "slot open", "group": "Frame", "src": "clips/slot_open.mp4", "portrait": true,
+     "description": "Charcoal closes in from the sides to a narrow slot, the slot cuts to the next shot and widens back to full frame."},
+    {"id": "letterbox_snap", "name": "letterbox snap", "group": "Frame", "src": "clips/letterbox_snap.mp4", "portrait": true,
+     "description": "Letterbox bars close from top and bottom in three beats to a thin band with hairline rules, cut, and open again in three beats on the next shot."},
+    {"id": "flash_cut", "name": "flash cut", "group": "Cut", "src": "clips/flash_cut.mp4", "portrait": true,
+     "description": "The shot pushes in and blows out to white; the next hits slightly zoomed in black and white and settles to itself and its colour."},
+    {"id": "tile_flip", "name": "tile flip", "group": "Moves", "src": "clips/tile_flip.mp4", "portrait": true, "params": {"cols": 2},
+     "description": "Shared: a grid of cards turns over in a diagonal wave with the next shot on their backs, here two across with charcoal gutters."},
+    {"id": "accordion_fold", "name": "accordion fold", "group": "Moves", "src": "clips/accordion_fold.mp4", "portrait": true, "params": {"cols": 3},
+     "description": "Shared: the shot folds up like a concertina of three vertical panels toward the left edge, uncovering the next."},
+    {"id": "swing_doors", "name": "swing doors", "group": "Moves", "src": "clips/swing_doors.mp4", "portrait": true,
+     "description": "Shared: the shot splits down the middle into two doors that swing open away from the camera onto the next."},
+    {"id": "zoom_through", "name": "zoom through", "group": "Cut", "src": "clips/zoom_through.mp4", "portrait": true,
+     "description": "Shared: the camera flies through the shot into the next with a radial streak."}
+  ]
+}

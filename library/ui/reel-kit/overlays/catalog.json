@@ -1,0 +1,102 @@
+{
+  "id": "overlays",
+  "title": "Reel kit cards",
+  "summary": "Reel-kit cards for talking-head footage, 1080x1920, kept in the top safe area above the face. Every piece takes the brand colours as props: accent (#2F5BEA), highlight (#FFE03C), ink (#16181D), paper (#F3F2EF), background (grid | solid). edit-preview and raw-vs-edit draw only what sits around the clip: the clip's card or split is a storyboard layout.",
+  "usage": "ai-prompt: {\"piece\": \"overlays/ai-prompt\", \"theme\": \"ui/reel-kit\", \"start\": 1.0, \"end\": 3.2, \"props\": {\"text\": \"turn this into a reel\"}}. edit-preview: layouts [{\"at\": S, \"x\": 238, \"y\": 365, \"width\": 605, \"height\": 1075, \"radius\": 65, \"shadow\": 1, \"backdrop\": \"#2F5BEA\", \"ramp\": 0.4, \"ease\": \"smooth\"}, {\"at\": E - 0.4, \"to\": \"full\", \"ramp\": 0.4, \"ease\": \"smooth\"}] with overlays/backdrop (\"behind\": true) and overlays/edit-preview over it, both S..E. raw-vs-edit: layouts [{\"at\": S, \"to\": \"split\", \"x\": 552, \"second\": {\"x\": 48, \"y\": 480, \"width\": 480, \"height\": 800, \"raw\": true}, \"ramp\": 0.3}, {\"at\": S + G, \"to\": \"full\", \"ramp\": 0.45, \"ease\": \"smooth\"}], a zoom over S..E for the edit's punch-in, overlays/backdrop behind S..S+G+0.45 and overlays/raw-vs-edit over with \"growAt\": G. catalog-grid is a full-frame end card (it draws the backdrop itself).",
+  "items": [
+    {
+      "id": "backdrop",
+      "name": "Theme backdrop",
+      "group": "Reel kit",
+      "piece": "overlays/backdrop",
+      "description": "The reel kit background: accent colour, soft top-light and a drifting graph-paper grid (background: solid drops the grid). Use it with \"behind\": true under a card or split layout. Props: fadeIn, fadeOutTime (seconds; 0 = hard).",
+      "over": true
+    },
+    {
+      "id": "platform-orbit",
+      "name": "Platforms orbiting you",
+      "group": "Reel kit",
+      "piece": "overlays/platform-orbit",
+      "description": "Nine round platform badges spin in a tilted ring around your head: the front passes below the chin, the back above the head, never over the face. For depth use it twice: half \"back\" with \"behind\": \"person\", and half \"front\" on top. Follows the face. Props: rise (px to lift the ring), platforms (instagram, tiktok, youtube, x, linkedin, facebook, threads, pinterest, bluesky), half, turns, size, around (\"chin\", default: the ring passes below the chin; \"head\": a flatter halo ring at the crown, round the head).",
+      "over": true
+    },
+    {
+      "id": "strike-checklist",
+      "name": "Crossed-off checklist",
+      "group": "Reel kit",
+      "piece": "overlays/strike-checklist",
+      "over": true,
+      "description": "Big modern white uppercase items above the head, each crossed out with a red stroke (its box gets a cross) on its strike time. No card. Props: items [{label, at, strike}], x, y, size, color, strikeColor."
+    },
+    {
+      "id": "app-strike",
+      "name": "No apps, no editing (pictures)",
+      "group": "Reel kit",
+      "piece": "overlays/app-strike",
+      "over": true,
+      "description": "\"No apps, no editing\" shown, not written: TikTok, Edits and CapCut app tiles (simple original icons) pop in and get red crosses, then slide away for a video-editor timeline (clips, waveform, moving playhead) that gets a red slash. One band above the head or below the chin. Props: y (band top), height (timeline height, default 290), apps [{name, kind, at, strike}], swap, strike, strikeColor."
+    },
+    {
+      "id": "screen-scroll",
+      "name": "Screen recording (scrolling page)",
+      "group": "Reel kit",
+      "piece": "overlays/screen-scroll",
+      "description": "A browser window filling the frame scrolls down a tall screenshot (ease in and out) with a cursor, like a screen recording. Props: src, imgWidth, imgHeight, from, to, url, dark."
+    },
+    {
+      "id": "proof-deck",
+      "name": "Proof deck hook",
+      "group": "Reel kit",
+      "piece": "overlays/proof-deck",
+      "description": "Hook that shows the payoff first: stills from the finished edit are dealt like tilted cards behind the person (layer 'back', behind: 'person', with the blue grid), while a headline (white line, yellow-boxed second line) and a hand-drawn arrow pointing at the speaker play in front (layer 'front'). Props: images, tags, step, dealAt, headline 'LINE 1|LINE 2', line2At, arrowAt, y, size, arrow {from, to, bend}."
+    }
+  ],
+  "retiredNote": "Retired pieces: the full versions are now Effects (library/_shared/signature/catalog.json, named in \"replacedBy\"). Do not use these in new storyboards; they stay only so older projects still re-make unchanged.",
+  "retired": [
+    {
+      "id": "ai-prompt",
+      "name": "AI prompt",
+      "group": "Reel kit",
+      "piece": "overlays/ai-prompt",
+      "description": "A chat composer above your head types your ask (text) as you say it, shows a slash-command suggestion chip (suggest, '' hides it), then sends: the button turns into a check and Sent appears. Props: text, label (To Claude), suggest, typeEnd, sendAt (seconds), x, y, width.",
+      "over": true,
+      "replacedBy": "ai_prompt"
+    },
+    {
+      "id": "storyboard-pages",
+      "name": "Storyboard pages",
+      "group": "Reel kit",
+      "piece": "overlays/storyboard-pages",
+      "description": "Claude's plan as storyboard pages above your head: per shot a thumbnail, the spoken line in serif italic and a note; three to a page, pages flip over the overlay's life. Props: rows [{line, note, image}] (or \"line::note\" strings), images (thumbnail addresses from the server root, by row), title, perPage.",
+      "over": true,
+      "replacedBy": "storyboard_pages"
+    },
+    {
+      "id": "catalog-grid",
+      "name": "Catalog grid end card",
+      "group": "Reel kit",
+      "piece": "overlays/catalog-grid",
+      "description": "End card on the theme background: Comment “KEYWORD” with a highlight pill (and I'll send all N effects), then a numbered grid of your effects or reels fills in tile by tile with labels; '+N more' when total exceeds the grid. Props: keyword, total, sub, labels, images (addresses from the server root), cols (4), rows (3), step.",
+      "over": true,
+      "replacedBy": "catalog_grid"
+    },
+    {
+      "id": "edit-preview",
+      "name": "Editing with… card",
+      "group": "Reel kit",
+      "piece": "overlays/edit-preview",
+      "description": "The frame around your clip while a layout holds it in a card: spinner and \"Editing with reel-edit…\" above it, a SPED UP 3× pill, a shimmer sweep and a progress line along the bottom. Props: title, label, shimmer, card {x, y, width, height, radius} (must match the layout window). Pair with overlays/backdrop behind.",
+      "over": true,
+      "replacedBy": "edit_preview"
+    },
+    {
+      "id": "raw-vs-edit",
+      "name": "RAW vs EDITED labels",
+      "group": "Reel kit",
+      "piece": "overlays/raw-vs-edit",
+      "description": "RAW and EDITED tags for a split layout plus the edit's own caption (*word* on the highlight) and tilted title sticker on the EDITED window; growAt grows them with the window to full frame while the tags fade. Props: raw, edited {x, y, width, height}, caption, title, growAt, growRamp, rawLabel, editedLabel.",
+      "over": true,
+      "replacedBy": "raw_vs_edit"
+    }
+  ]
+}

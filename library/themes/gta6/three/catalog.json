@@ -1,0 +1,97 @@
+{
+  "id": "three",
+  "title": "Three.js",
+  "summary": "Low-poly 3D drawn like a comic panel: flat cel shading in three hard bands with violet shadows and a warm rim, ink outlines from a hand-written edge pass, halftone skies and a striped sun.",
+  "usage": "{\"piece\": \"three/sunset-drive\"}. Files: library/themes/gta6/three/pieces/.",
+  "groups": [
+    "Scenes",
+    "Objects",
+    "Backdrops"
+  ],
+  "items": [
+    {
+      "id": "sunset-drive",
+      "name": "Sunset drive",
+      "group": "Scenes",
+      "piece": "three/sunset-drive",
+      "description": "A low-poly car on a coast road, palms sweeping past, a striped sun dead ahead."
+    },
+    {
+      "id": "coast-skyline",
+      "name": "Coast skyline",
+      "group": "Scenes",
+      "piece": "three/coast-skyline",
+      "description": "Stepped pastel towers with lit windows behind sand, palms and water, as the camera drifts along the shore."
+    },
+    {
+      "id": "speedboat",
+      "name": "Speedboat",
+      "group": "Scenes",
+      "piece": "three/speedboat",
+      "description": "A speedboat throwing a white V wake across teal water toward a far shoreline."
+    },
+    {
+      "id": "chopper-sweep",
+      "name": "Chopper sweep",
+      "group": "Scenes",
+      "piece": "three/chopper-sweep",
+      "description": "A helicopter circling over lit city blocks at night, sweeping a spotlight."
+    },
+    {
+      "id": "neon-sign",
+      "name": "Neon sign",
+      "group": "Objects",
+      "piece": "three/neon-sign",
+      "description": "A palm, a sun and a line of script switching on tube by tube on a brick wall."
+    },
+    {
+      "id": "coin-spin",
+      "name": "Coin spin",
+      "group": "Objects",
+      "piece": "three/coin-spin",
+      "description": "A fat gold coin spinning in front of a sunburst with smaller coins circling."
+    },
+    {
+      "id": "palm-horizon",
+      "name": "Palm horizon",
+      "group": "Backdrops",
+      "piece": "three/palm-horizon",
+      "description": "Rows of palms sliding past a huge striped sun at different speeds, with birds."
+    },
+    {
+      "id": "cash-rain",
+      "name": "Cash rain",
+      "group": "Backdrops",
+      "piece": "three/cash-rain",
+      "description": "Banknotes and coins tumbling down in front of a turning sunburst."
+    },
+    {
+      "id": "reel-billboards",
+      "name": "Reel billboards",
+      "group": "Scenes",
+      "piece": "three/reel-billboards",
+      "description": "Driving a sunset coast road lined with billboards, each showing one of the creator's real reel covers (props.images: URLs; they repeat), rushing past on both sides. props.speed. Not a loop."
+    },
+    {
+      "id": "cop-chase",
+      "name": "Cop chase",
+      "group": "Scenes",
+      "piece": "three/cop-chase",
+      "description": "Two low-poly police cruisers tearing down a night road toward the camera, light bars strobing red and blue, palms and towers whipping past. props.strobe (flashes a second). Loops."
+    },
+    {
+      "id": "screen-city",
+      "name": "Screen city",
+      "group": "Scenes",
+      "piece": "three/screen-city",
+      "description": "A dusk skyline where giant rooftop screens switch on one after another, one per platform, in that platform's colour with a short mark (props.platforms [{mark, name, color}], props.times). Simple lettering, not logo artwork."
+    },
+    {
+      "id": "drone-city",
+      "name": "Drone city flight",
+      "group": "Scenes",
+      "piece": "three/drone-city",
+      "description": "An FPV drone flight: street level looking up at a pink tower, lifting past its roof while swinging round over the whole city, then banking into a dive down an avenue of towers and palms. Full frame. props.seconds = the flight's length."
+    }
+  ]
+}

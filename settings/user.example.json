@@ -1,0 +1,16 @@
+{
+  "_about": "Copy to settings/user.json (git-ignored) and change what you like. Only the keys you set override settings/defaults.json.",
+  "me": {
+    "name": "Alex Rivera",
+    "handle": "alexmakes",
+    "role": "Founder · Example Co",
+    "brand": "Example Co",
+    "keyword": "GUIDE"
+  },
+  "audio": {
+    "voiceLufs": -13
+  },
+  "style": {
+    "cookiesBrowser": "chrome"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "_about": "An example of a style profile: your look, laid over any theme. Copy to style/profile.json (git-ignored) and edit, or let `npm run style -- from <reel>` then `npm run style -- use <name>` write it. `prefs` are tastes learnt from your review notes (`npm run style -- learn \"...\"`); agents read prefs, notes and pace before writing a storyboard.",
+  "name": "Example: clean dark",
+  "made": "2026-01-01",
+  "colors": {
+    "accent": "#FFD23F",
+    "accent2": "#3BCEAC",
+    "accent3": "#F5F5F2",
+    "ink": "#16161A",
+    "paper": "#F5F5F2"
+  },
+  "fonts": {
+    "display": "Montserrat",
+    "text": "Inter Tight"
+  },
+  "captions": {
+    "font": "Montserrat",
+    "weight": 800,
+    "size": 6.4,
+    "case": "none",
+    "color": "#F5F5F2",
+    "tracking": -0.01,
+    "highlight": {
+      "mode": "color",
+      "color": "#FFD23F"
+    },
+    "background": {
+      "mode": "box",
+      "color": "#16161A",
+      "opacity": 0.97,
+      "radius": 0.06
+    },
+    "future": "show",
+    "words": 3,
+    "shadow": false
+  },
+  "grade": {
+    "warmth": 0,
+    "saturation": 0,
+    "contrast": 0.05,
+    "brightness": 0,
+    "fade": 0,
+    "grain": 0,
+    "vignette": 0.1
+  },
+  "pace": {
+    "cutsPerSecond": 0.4,
+    "medianShot": 2.0,
+    "textOnScreen": 0.5
+  },
+  "notes": [
+    "colors: accent = the colour that pops, ink = the dark surface, paper = the light one."
+  ],
+  "prefs": [
+    {
+      "note": "fewer graphics: two per section at most",
+      "date": "2026-01-01",
+      "project": "modern-demo"
+    }
+  ]
+}

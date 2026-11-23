@@ -1,0 +1,8 @@
+{
+  "id": "fonts", "title": "Fonts", "summary": "Inter Tight for every label (Inter Tight is Inter's tighter cut) and Instrument Serif Italic for the spoken lines on the storyboard pages. Both bundled with their OFL licences in files/.", "usage": "Pieces pick the font; nothing to set.",
+  "groups": ["UI", "Serif"],
+  "items": [
+    {"id": "inter-tight", "family": "Inter Tight", "file": "files/InterTight-Variable.ttf", "group": "UI", "weights": [400, 800], "note": "Every label, number and caption.", "license": "OFL-1.1"},
+    {"id": "instrument-serif-italic", "family": "Instrument Serif Italic", "file": "files/InstrumentSerif-Italic.ttf", "group": "Serif", "weights": [400], "note": "The quoted lines on storyboard-pages.", "license": "OFL-1.1"}
+  ]
+}

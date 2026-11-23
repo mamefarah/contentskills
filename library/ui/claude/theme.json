@@ -1,0 +1,32 @@
+{
+  "id": "ui/claude",
+  "title": "Claude app",
+  "summary": "The Claude app (Code tab, dark) as on-screen UI: the composer with a clip attached, slash-command autocomplete, the keyboard, and the chat while Claude works. Always looks like the real app, whatever the video's base theme. Used by the effects-showcase template; any footage storyboard can borrow its pieces with \"theme\": \"ui/claude\".",
+  "categories": [
+    "overlays",
+    "fonts"
+  ],
+  "pieceFonts": [
+    "400 20px \"Inter\"",
+    "500 20px \"Inter\"",
+    "700 20px \"Inter\"",
+    "400 20px \"Source Serif 4\"",
+    "500 20px \"Source Serif 4\"",
+    "400 20px \"Inter Tight\"",
+    "500 20px \"Inter Tight\"",
+    "700 20px \"Inter Tight\""
+  ],
+  "colors": {
+    "bg": "#181818",
+    "surface": "#2a2a2a",
+    "surface2": "#3b3b3b",
+    "text": "#efefef",
+    "muted": "#9b9b9b",
+    "orange": "#d97757"
+  },
+  "frame": {
+    "background": "#181818",
+    "headingFont": "Inter Tight",
+    "headingColor": "#efefef"
+  }
+}

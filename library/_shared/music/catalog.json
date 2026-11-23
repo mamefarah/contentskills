@@ -1,0 +1,6 @@
+{
+  "id": "music",
+  "title": "Music beds",
+  "summary": "Background music beds. None ship with the project: add your own. Put an mp3 you have the right to use in this folder and add an entry here ({\"id\", \"file\", \"seconds\", \"beatAt\", \"mood\"}). Then set one per storyboard: \"music\": {\"name\": \"<id>\", \"start\": 13, \"gain\": -12, \"duck\": 7}. start = seconds into the track (skip the intro: use the item's beatAt), gain = dB against the speaking level, duck = dB it dips during speech.",
+  "items": []
+}

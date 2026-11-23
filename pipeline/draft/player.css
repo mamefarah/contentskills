@@ -1,0 +1,54 @@
+body.draft{display:grid;grid-template-columns:minmax(0,1fr) 440px;height:100vh;overflow:hidden}
+#viewer{position:relative;background:#08061a;overflow:hidden}
+/* The frame is always laid out at full video size and scaled to fit, so the draft is pixel-for-pixel the final layout. */
+#frame{position:absolute;left:50%;top:50%;transform-origin:center;background:#151B36;overflow:hidden}
+.shot{position:absolute;inset:0;visibility:hidden}
+.shot.on{visibility:visible}
+.shot .bg{position:absolute;inset:0}
+.shot .bg>*{display:block;width:100%;height:100%}
+.shot .heading{position:absolute;left:70px;right:70px;top:150px;height:200px;display:grid;place-items:center;text-align:center;font:84px/1.05 var(--heading-font,"Archivo Black");color:var(--heading-color,#FFF1D8);text-transform:uppercase;text-shadow:0 6px 24px #0008}
+.shot .visual{position:absolute;left:60px;top:380px;width:960px;height:960px;border-radius:40px;overflow:hidden;background:#151B36}
+.shot .visual>*{display:block;width:100%;height:100%}
+.shot .flag{position:absolute;left:60px;top:60px;padding:10px 22px;border-radius:999px;font:700 30px Manrope;letter-spacing:.08em;text-transform:uppercase;background:#171426cc;color:#FFD16E}
+.shot .flag.rejected{color:#FF786A}
+.shot .flag.usable{color:#54D8D0}
+.shot .flag[hidden]{display:none}
+#captions{position:absolute;inset:0}
+
+#panel{background:var(--navy);border-left:1px solid var(--line);padding:26px 22px;overflow:auto;display:flex;flex-direction:column;gap:14px}
+#panel h1{font:750 28px/1.1 "Dash Text";letter-spacing:-.02em;margin:0}
+#panel p{margin:0;color:var(--muted);font-size:13.5px}
+.back{color:var(--cyan);text-decoration:none;font-size:13px}
+#shots{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+#shots li{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--panel);cursor:pointer}
+#shots li.current{border-color:var(--cyan)}
+#shots li.skipped{opacity:.45}
+#shots .top{display:flex;justify-content:space-between;gap:8px;font:500 12px "Dash Mono";color:var(--cyan)}
+#shots .top span:last-child{color:var(--muted)}
+#shots q{display:block;margin:6px 0 10px;quotes:none;font-size:14px;color:var(--cream)}
+.cand{border-top:1px solid var(--line);padding:9px 0 3px;display:flex;flex-direction:column;gap:6px}
+.cand .line{display:flex;align-items:center;gap:8px;justify-content:space-between}
+.cand .name{flex:1;min-width:0;text-align:left;border:0;background:none;padding:0;font:500 12px "Dash Mono";color:var(--muted);overflow-wrap:anywhere}
+.cand .name:hover{color:var(--cream)}
+.cand.shown .name{color:var(--cream)}
+.cand.shown .name::before{content:"▸ ";color:var(--cyan)}
+.incut{flex:none;font:600 10.5px "Dash Text";letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--cyan);padding:2px 8px;border-radius:999px}
+.use{flex:none;font-size:11.5px;font-weight:600;padding:2px 9px;border-radius:999px;border:1px solid var(--cyan);background:none;color:var(--cyan)}
+.use:hover{background:var(--cyan);color:var(--ink)}
+.marks{display:flex;gap:6px}
+.marks button{flex:1;padding:5px 0;border-radius:7px;border:1px solid var(--line);background:none;color:var(--muted);font-size:12.5px;font-weight:600;text-transform:capitalize}
+.marks button[aria-pressed=true]{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.marks button[data-status=usable][aria-pressed=true]{background:var(--cyan);border-color:var(--cyan)}
+.marks button[data-status=rejected][aria-pressed=true]{background:var(--danger);border-color:var(--danger)}
+#panel .foot{margin-top:auto}
+.projects{display:flex;flex-direction:column;gap:10px}
+.projects a{display:block;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);color:var(--cream);text-decoration:none;font-weight:700}
+.projects a span{display:block;font-weight:400;color:var(--muted);font-size:13px}
+
+/* Render mode: just the frame at exact size, top-left, for the combiner's screenshots. */
+body.render{display:block;overflow:hidden;background:#151B36}
+body.render #panel{display:none}
+body.render #viewer{position:static;overflow:visible}
+body.render #frame{left:0;top:0;transform:none}
+body.render .flag{display:none}
+@media(max-width:900px){body.draft{grid-template-columns:1fr;grid-template-rows:60vh auto;height:auto;overflow:auto}}

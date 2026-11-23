@@ -1,0 +1,37 @@
+{
+  "name": "contentskills",
+  "description": "Make short vertical videos with a coding agent: faceless narrated videos and talking-head edits, rendered locally.",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "setup": "node pipeline/setup.mjs",
+    "dashboard": "node dashboard/serve.mjs",
+    "link": "node pipeline/link.mjs",
+    "check": "node pipeline/check.mjs",
+    "voice": "node pipeline/voice.mjs",
+    "stills": "node pipeline/stills.mjs",
+    "sketch": "node pipeline/sketch.mjs",
+    "mark": "node pipeline/mark.mjs",
+    "combine": "node pipeline/combine.mjs",
+    "make": "node pipeline/make.mjs",
+    "approve": "node pipeline/approve.mjs",
+    "template": "node pipeline/template.mjs",
+    "qa": "node pipeline/qa.mjs",
+    "footage": "node pipeline/footage.mjs",
+    "cut": "node pipeline/cut.mjs",
+    "transcribe": "node pipeline/transcribe.mjs",
+    "lottie": "node pipeline/lottie.mjs",
+    "frames": "node pipeline/frames.mjs",
+    "review": "node pipeline/review.mjs",
+    "sfx": "node pipeline/py.mjs library/_shared/sfx/generate.py",
+    "style": "node pipeline/style.mjs",
+    "pace": "node pipeline/py.mjs pipeline/pace.py",
+    "watch": "node pipeline/watch.mjs",
+    "patch": "node pipeline/patch.mjs",
+    "undo": "node pipeline/undo.mjs"
+  }
+}

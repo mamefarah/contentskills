@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery · ContentSkills</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .gallery-main{margin-left:var(--side);padding:34px 40px 80px}
+  .gallery-main section{margin-top:42px}
+  .gallery-main h2{font:750 26px/1.1 "Dash Text";letter-spacing:-.02em;margin:0 0 6px;display:flex;gap:10px;align-items:center}
+  .gallery-main h2 .made{font:600 11px "Dash Text";letter-spacing:.12em;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .gallery-main .summary{color:var(--muted);margin:0 0 18px;max-width:780px}
+  .reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:18px}
+  .reel{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .reel video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;display:block;cursor:pointer}
+  .reel.wide{grid-column:1/-1}
+  .reel.wide img{width:100%;display:block;cursor:zoom-in;background:#000}
+  .reel .info{padding:10px 12px 12px}
+  .reel .info b{display:block;font-weight:700}
+  .reel .info span{display:block;color:var(--muted);font-size:13px;line-height:1.4;margin-top:3px}
+  .reel .info code{color:var(--yellow)}
+  #gallery-nav a{display:block;padding:8px 10px;border-radius:8px;color:var(--cream);text-decoration:none;font-weight:600}
+  #gallery-nav a:hover{background:var(--panel)}
+  @media (max-width:760px){#sidebar{position:static;width:auto}.gallery-main{margin-left:0;padding:20px 16px}}
+</style>
+<link rel="stylesheet" href="theme-studio.css">
+<style>.reel{border:0;border-radius:16px;box-shadow:var(--shadow)}.reel .info code{color:var(--muted)}.gallery-main h2 .made{border:0;background:var(--panel-2)}</style>
+</head>
+<body>
+<aside id="sidebar">
+  <a class="brand" href="/dashboard/"><span>ContentSkills</span>Gallery</a>
+  <nav id="gallery-nav" aria-label="Sections"></nav>
+  <a class="jump" href="/dashboard/">← Building blocks</a>
+  <a class="jump next" href="/pipeline/review/">Review videos →</a>
+  <p class="foot">Finished example videos in <code>gallery/</code>, listed in <code>gallery/index.json</code>. Hover to play, click for sound and full screen.</p>
+</aside>
+<main class="gallery-main" id="top">
+  <header class="hero"><h1>Gallery</h1><p id="tally">Loading…</p></header>
+  <div id="sections"></div>
+</main>
+<script type="module">
+const h = (tag, attrs = {}, ...kids) => { const el = document.createElement(tag); for (const [k, v] of Object.entries(attrs)) { if (v == null) continue; if (k === 'muted') { el.muted = el.defaultMuted = true; el.setAttribute('muted', ''); } else if (k.startsWith('on')) el.addEventListener(k.slice(2), v); else el.setAttribute(k, v === true ? '' : v); } el.append(...kids.filter(c => c != null && c !== '')); return el; };
+const {sections} = await (await fetch('/gallery/index.json')).json();
+let count = 0;
+for (const section of sections) {
+  document.getElementById('gallery-nav').append(h('a', {href: '#' + section.id}, section.title));
+  const grid = h('div', {class: 'reels'});
+  for (const item of section.items) {
+    if (/\.(jpe?g|png|webp)$/i.test(item.src)) {
+      const src = '/gallery/' + item.src;
+      grid.append(h('div', {class: 'reel wide'}, h('a', {href: src, target: '_blank'}, h('img', {src, alt: item.title, loading: 'lazy'})), h('div', {class: 'info'}, h('b', {}, item.title), item.description ? h('span', {}, item.description) : null)));
+      continue;
+    }
+    count++;
+    const video = h('video', {src: '/gallery/' + item.src, muted: true, loop: true, playsinline: true, preload: 'metadata'});
+    video.addEventListener('mouseenter', () => video.play().catch(() => {}));
+    video.addEventListener('mouseleave', () => { if (video.muted) video.pause(); });
+    video.addEventListener('click', () => { video.muted = false; video.controls = true; video.play(); video.requestFullscreen?.().catch(() => {}); });
+    grid.append(h('div', {class: 'reel'}, video, h('div', {class: 'info'}, h('b', {}, item.title), item.description ? h('span', {}, item.description) : null, h('span', {}, h('code', {}, item.seconds + ' s')))));
+  }
+  document.getElementById('sections').append(h('section', {id: section.id}, h('h2', {}, section.title, h('span', {class: 'made'}, 'MADE WITH ' + section.made)), h('p', {class: 'summary'}, section.summary), grid));
+}
+document.getElementById('tally').textContent = `${count} finished videos in ${sections.length} sections.`;
+</script>
+</body>
+</html>

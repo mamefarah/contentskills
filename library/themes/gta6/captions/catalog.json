@@ -1,0 +1,42 @@
+{
+  "id": "captions",
+  "title": "Captions",
+  "summary": "Six caption styles in the comic look, playing over the sample clip with its real word timings: inked capitals, gradient lettering, tabs, bubbles and brush script.",
+  "usage": "In a storyboard: {\"captions\": \"panel-pop\"}. Styles: library/themes/gta6/captions/styles.js.",
+  "groups": [
+    "Word highlight",
+    "Build-up"
+  ],
+  "items": [
+    {
+      "id": "panel-pop",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "gradient-shout",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "marker",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "speech",
+      "group": "Word highlight",
+      "backed": true
+    },
+    {
+      "id": "slam-word",
+      "group": "Build-up",
+      "backed": true
+    },
+    {
+      "id": "brush-strip",
+      "group": "Build-up",
+      "backed": true
+    }
+  ]
+}

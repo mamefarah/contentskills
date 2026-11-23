@@ -1,0 +1,13 @@
+{
+  "id": "fonts",
+  "title": "Fonts",
+  "summary": "One clean neutral sans for everything, an italic serif for the odd accent word, and a small mono for subtitles under card titles. All bundled locally with open licences.",
+  "usage": "Kit names: F.sans = Inter (UI text 500-700, the top caption line, giant numbers at 800), F.serif = \"Instrument Serif Italic\" (accent words and sub-lines; the file is the italic, so set font-style normal), F.mono = \"JetBrains Mono\" (tiny subtitles, URLs, counters in chips), F.tight = \"Inter Tight\" (tracked small capitals labels).",
+  "groups": ["Sans", "Serif", "Mono"],
+  "items": [
+    {"id": "inter", "family": "Inter", "file": "files/Inter-Variable.ttf", "group": "Sans", "weights": [100, 900], "note": "Theme face: the top caption line, card titles, chips, giant ticking numbers (800).", "license": "OFL-1.1"},
+    {"id": "inter-tight", "family": "Inter Tight", "file": "files/InterTight-Variable.ttf", "group": "Sans", "weights": [100, 900], "note": "Small widely tracked capitals for labels above numbers (STARS ON GITHUB).", "license": "OFL-1.1"},
+    {"id": "instrument-serif-italic", "family": "Instrument Serif Italic", "file": "files/InstrumentSerif-Italic.ttf", "group": "Serif", "weights": [400], "note": "Accent words in the caption line and italic sub-lines under numbers.", "license": "OFL-1.1"},
+    {"id": "jetbrains-mono", "family": "JetBrains Mono", "file": "files/JetBrainsMono-Variable.ttf", "group": "Mono", "weights": [100, 800], "note": "Tiny subtitles under card titles, URLs and terminal-ish details.", "license": "OFL-1.1"}
+  ]
+}

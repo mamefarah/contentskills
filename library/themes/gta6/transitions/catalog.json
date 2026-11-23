@@ -1,0 +1,100 @@
+{
+  "id": "transitions",
+  "title": "Transitions",
+  "summary": "GPU shader transitions between two shots, shown going from the sample clip to a graphics frame. Comic-panel moves with cream gutters and ink lines, plus sun, brush and print dissolves in the theme colours.",
+  "usage": "On a shot (the transition INTO it from the shot before): {\"transition\": {\"name\": \"panel_slide\", \"seconds\": 0.6}}. In a footage storyboard, at a cut such as the start of a full-screen cutaway: \"transitions\": [{\"name\": \"panel_wipe\", \"at\": 7.8, \"seconds\": 0.5}]. Engine: library/_shared/shader_transitions.py (moderngl).",
+  "groups": [
+    "Panels",
+    "Sun and ink"
+  ],
+  "items": [
+    {
+      "id": "panel_wipe",
+      "name": "panel wipe",
+      "group": "Panels",
+      "src": "clips/panel_wipe.mp4",
+      "portrait": true,
+      "description": "An angled comic-panel edge crosses the frame: ink line, thick cream gutter, ink line, with the next shot behind it."
+    },
+    {
+      "id": "panel_slide",
+      "name": "panel slide",
+      "group": "Panels",
+      "src": "clips/panel_slide.mp4",
+      "portrait": true,
+      "description": "The next shot arrives as four angled panels sliding in from alternating sides, each with a cream gutter and ink outline."
+    },
+    {
+      "id": "page_turn",
+      "name": "page turn",
+      "group": "Panels",
+      "src": "clips/page_turn.mp4",
+      "portrait": true,
+      "description": "The page lifts from the bottom corner, curls over as pale paper and peels away to the shot underneath."
+    },
+    {
+      "id": "sunset_blinds",
+      "name": "sunset blinds",
+      "group": "Panels",
+      "src": "clips/sunset_blinds.mp4",
+      "portrait": true,
+      "description": "Angled slats flip over one after another, showing strips of sunset between them as they turn."
+    },
+    {
+      "id": "slice_slide",
+      "name": "slice slide",
+      "group": "Panels",
+      "src": "clips/slice_slide.mp4",
+      "portrait": true,
+      "description": "Horizontal strips slide off to alternate sides."
+    },
+    {
+      "id": "swing_doors",
+      "name": "swing doors",
+      "group": "Panels",
+      "src": "clips/swing_doors.mp4",
+      "portrait": true,
+      "description": "The picture splits down the middle and swings open like doors."
+    },
+    {
+      "id": "sun_burn",
+      "name": "sun burn",
+      "group": "Sun and ink",
+      "src": "clips/sun_burn.mp4",
+      "portrait": true,
+      "description": "A sun disc grows from a point and burns through: ink rim, pink, orange, yellow, white-hot, then the next shot."
+    },
+    {
+      "id": "ink_swipe",
+      "name": "ink swipe",
+      "group": "Sun and ink",
+      "src": "clips/ink_swipe.mp4",
+      "portrait": true,
+      "description": "A loaded brush drags a pink-to-yellow band across behind a ragged ink edge."
+    },
+    {
+      "id": "halftone_dissolve",
+      "name": "halftone dissolve",
+      "group": "Sun and ink",
+      "src": "clips/halftone_dissolve.mp4",
+      "portrait": true,
+      "description": "Ink-rimmed dots on a print screen grow from one corner until they join."
+    },
+    {
+      "id": "luma_melt",
+      "name": "luma melt",
+      "group": "Sun and ink",
+      "src": "clips/luma_melt.mp4",
+      "portrait": true,
+      "description": "The picture runs down the frame like wet paint, bright areas first."
+    },
+    {
+      "id": "zoom_through",
+      "name": "zoom through",
+      "group": "Sun and ink",
+      "src": "clips/zoom_through.mp4",
+      "portrait": true,
+      "description": "A fast push through the middle of one shot into the next."
+    }
+  ]
+}

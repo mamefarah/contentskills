@@ -1,0 +1,8 @@
+{
+  "id": "captions",
+  "title": "Captions",
+  "summary": "The caption is the headline: one line of narration at the top, revealed word by word out of a soft blur, key words bold white, italic serif or on a blue highlight.",
+  "usage": "In a storyboard: {\"captions\": \"top-line\", \"captionPlacement\": \"fixed\"}. Per shot: \"emphasis\": {\"word\": 1|2|3} (bold, serif, blue highlight) and \"tone\": \"light\" on light shots. Styles: library/themes/minimal/captions/styles.js.",
+  "groups": ["Top line"],
+  "items": [{"id": "top-line", "name": "Top line", "group": "Top line", "piece": "captions/top-line", "description": "One line at the top, word by word; emphasis levels bold / serif / blue highlight; dark ink on light shots."}]
+}

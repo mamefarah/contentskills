@@ -1,0 +1,32 @@
+{
+  "_about": "Defaults for everyone. Do not edit to make it yours: put your own values in settings/user.json (git-ignored; copy settings/user.example.json). Anything you set there wins over this file, key by key.",
+  "me": {
+    "name": "Your Name",
+    "handle": "yourhandle",
+    "role": "Creator",
+    "brand": "",
+    "keyword": "GUIDE",
+    "avatar": ""
+  },
+  "audio": {
+    "voiceLufs": -14,
+    "truePeak": -1.5,
+    "music": {
+      "gain": -15,
+      "max": -10,
+      "duck": 6
+    },
+    "effects": {
+      "gain": -14,
+      "offset": 6,
+      "max": -4,
+      "duck": 4
+    }
+  },
+  "captions": {
+    "bottom": 1650
+  },
+  "style": {
+    "cookiesBrowser": ""
+  }
+}

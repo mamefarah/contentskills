@@ -1,0 +1,21 @@
+{
+  "id": "fonts",
+  "title": "Fonts",
+  "summary": "Heavy geometric and grotesque sans for one huge white word on charcoal, a clean compact sans for small labels and credits, and a mono for frame numbers. All bundled locally with open licences.",
+  "usage": "The theme sets its big word in Montserrat 800 capitals with light tracking (about .06em), small labels in Inter Tight 600 widely tracked capitals, and counters and frame numbers in Space Mono Bold. Archivo Black, Unbounded, Syne and Anton are alternates for the big word; Outfit, DM Sans, Space Grotesk and Manrope for sentence-case notes; Bebas Neue for tall condensed numerals. Kit names: F.head = Montserrat, F.sans = Inter Tight, F.mono = Space Mono.",
+  "groups": ["Display", "Sans", "Mono"],
+  "items": [
+    {"id": "montserrat", "family": "Montserrat", "file": "files/Montserrat-Variable.ttf", "group": "Display", "weights": [100, 900], "note": "Theme heading face at weight 800: the one huge centred word, set in capitals that build and drop out letter by letter.", "license": "OFL-1.1"},
+    {"id": "inter-tight", "family": "Inter Tight", "file": "files/InterTight-Variable.ttf", "group": "Sans", "weights": [100, 900], "note": "Theme label face: small widely tracked capitals for credits, kickers and captions (600), lists in heavy weight (800).", "license": "OFL-1.1"},
+    {"id": "space-mono", "family": "Space Mono", "file": "files/SpaceMono-Bold.ttf", "group": "Mono", "weights": [700], "note": "Frame numbers, counters and resolution tags.", "license": "OFL-1.1"},
+    {"id": "archivo-black", "family": "Archivo Black", "file": "files/ArchivoBlack-Regular.ttf", "group": "Display", "weights": [400], "note": "Grotesque alternate for the big word: heavier and tighter than Montserrat.", "license": "OFL-1.1"},
+    {"id": "unbounded", "family": "Unbounded", "file": "files/Unbounded-Variable.ttf", "group": "Display", "weights": [200, 900], "note": "Wide rounded geometric alternate for one short word.", "license": "OFL-1.1"},
+    {"id": "syne", "family": "Syne", "file": "files/Syne-Variable.ttf", "group": "Display", "weights": [400, 800], "note": "Editorial display alternate with a fashion-magazine edge at 800.", "license": "OFL-1.1"},
+    {"id": "anton", "family": "Anton", "file": "files/Anton-Regular.ttf", "group": "Display", "weights": [400], "note": "Condensed grotesque for tall stacked words that fill a narrow strip.", "license": "OFL-1.1"},
+    {"id": "bebas-neue", "family": "Bebas Neue", "file": "files/BebasNeue-Regular.ttf", "group": "Display", "weights": [400], "note": "Condensed caps for huge numerals in a stat.", "license": "OFL-1.1"},
+    {"id": "outfit", "family": "Outfit", "file": "files/Outfit-Variable.ttf", "group": "Sans", "weights": [100, 900], "note": "Geometric sans for sentence-case notes and captions.", "license": "OFL-1.1"},
+    {"id": "dm-sans", "family": "DM Sans", "file": "files/DMSans-Variable.ttf", "group": "Sans", "weights": [100, 900], "note": "Quiet low-contrast sans for longer lines.", "license": "OFL-1.1"},
+    {"id": "space-grotesk", "family": "Space Grotesk", "file": "files/SpaceGrotesk-Variable.ttf", "group": "Sans", "weights": [300, 700], "note": "Grotesk with character for quotes and notes.", "license": "OFL-1.1"},
+    {"id": "manrope", "family": "Manrope", "file": "files/Manrope-Variable.ttf", "group": "Sans", "weights": [200, 800], "note": "Light modern sans for sentence-case credits.", "license": "OFL-1.1"}
+  ]
+}

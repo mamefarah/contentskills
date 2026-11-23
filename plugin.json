@@ -1,0 +1,13 @@
+{
+  "name": "contentskills",
+  "version": "1.0.0",
+  "description": "ContentSkills by Blotato: make and publish content with a coding agent. Short vertical videos (faceless narrated videos and talking-head edits, rendered locally) plus writing skills: brand brief, post writer, grader, hooks, repurpose and scheduling.",
+  "author": {
+    "name": "Blotato",
+    "url": "https://www.blotato.com"
+  },
+  "homepage": "https://www.blotato.com/contentskills",
+  "repository": "https://github.com/blotato/contentskills",
+  "license": "AGPL-3.0-only",
+  "skills": "./skills/"
+}

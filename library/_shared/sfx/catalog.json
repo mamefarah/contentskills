@@ -1,0 +1,250 @@
+{
+  "id": "sfx",
+  "title": "Sound effects",
+  "summary": "Short sound effects shared by every theme, all synthesized in code (generate.py and generate_extra.py: numpy only, no samples), so they can be shared freely. Each file peaks at -3 dBFS; a storyboard sets how loud each one plays.",
+  "usage": "In a footage storyboard: \"sounds\": [{\"name\": \"whoosh\", \"at\": 3.8, \"gain\": -14}]. gain is dB (default -14); the voice is never changed.",
+  "groups": [
+    "Colour",
+    "Hits",
+    "Interface",
+    "Moves",
+    "Rewards"
+  ],
+  "items": [
+    {
+      "id": "whoosh",
+      "name": "Whoosh",
+      "group": "Moves",
+      "file": "whoosh.wav",
+      "seconds": 0.36,
+      "description": "A filtered-noise sweep that swells and falls away: the standard move for a transition or a layout change."
+    },
+    {
+      "id": "whoosh_fast",
+      "name": "Fast whoosh",
+      "group": "Moves",
+      "file": "whoosh_fast.wav",
+      "seconds": 0.2,
+      "description": "A shorter, brighter sweep for whips and punch-ins."
+    },
+    {
+      "id": "whoosh_low",
+      "name": "Low whoosh",
+      "group": "Moves",
+      "file": "whoosh_low.wav",
+      "seconds": 0.5,
+      "description": "A darker, longer sweep for a card or panel sliding in."
+    },
+    {
+      "id": "swish",
+      "name": "Swish",
+      "group": "Moves",
+      "file": "swish.wav",
+      "seconds": 0.15,
+      "description": "A thin, airy flick for small things arriving: a word, a tab, a line."
+    },
+    {
+      "id": "riser",
+      "name": "Riser",
+      "group": "Moves",
+      "file": "riser.wav",
+      "seconds": 0.8,
+      "description": "Noise and a tone climbing for most of a second: end it on a cut or a hit."
+    },
+    {
+      "id": "pop",
+      "name": "Pop",
+      "group": "Interface",
+      "file": "pop.wav",
+      "seconds": 0.12,
+      "description": "A soft blip that drops in pitch, for a graphic popping in."
+    },
+    {
+      "id": "pop_hi",
+      "name": "High pop",
+      "group": "Interface",
+      "file": "pop_hi.wav",
+      "seconds": 0.1,
+      "description": "The same, smaller and higher: for the second and third things in a row."
+    },
+    {
+      "id": "click",
+      "name": "Click",
+      "group": "Interface",
+      "file": "click.wav",
+      "seconds": 0.03,
+      "description": "A short interface click: a button, a toggle, a cursor press."
+    },
+    {
+      "id": "tick",
+      "name": "Key tick",
+      "group": "Interface",
+      "file": "tick.wav",
+      "seconds": 0.045,
+      "description": "One quiet keyboard tick, for a letter typed or a counter stepping."
+    },
+    {
+      "id": "key_run",
+      "name": "Typing run",
+      "group": "Interface",
+      "file": "key_run.wav",
+      "seconds": 0.8,
+      "description": "Ten irregular key ticks over 0.8 seconds, for a line being typed."
+    },
+    {
+      "id": "shutter",
+      "name": "Shutter",
+      "group": "Interface",
+      "file": "shutter.wav",
+      "seconds": 0.12,
+      "description": "Two close clicks like a camera shutter: a still, a snapshot, a cut."
+    },
+    {
+      "id": "ding",
+      "name": "Ding",
+      "group": "Interface",
+      "file": "ding.wav",
+      "seconds": 0.7,
+      "description": "A soft small bell: sent, done, confirmed."
+    },
+    {
+      "id": "blip_up",
+      "name": "Blip up",
+      "group": "Interface",
+      "file": "blip_up.wav",
+      "seconds": 0.3,
+      "description": "Two rising notes: success, switched on."
+    },
+    {
+      "id": "thump",
+      "name": "Thump",
+      "group": "Hits",
+      "file": "thump.wav",
+      "seconds": 0.32,
+      "description": "A soft low impact with a fast decay, under a slam or a hard cut."
+    },
+    {
+      "id": "impact",
+      "name": "Impact",
+      "group": "Hits",
+      "file": "impact.wav",
+      "seconds": 0.34,
+      "description": "The thump with a short burst of noise on top: the loud hit, once or twice a video."
+    },
+    {
+      "id": "sub_drop",
+      "name": "Sub drop",
+      "group": "Hits",
+      "file": "sub_drop.wav",
+      "seconds": 0.4,
+      "description": "A low sine falling in pitch: weight under a big number or a title landing."
+    },
+    {
+      "id": "siren",
+      "name": "Siren",
+      "group": "Colour",
+      "file": "siren.wav",
+      "seconds": 1.0,
+      "description": "One second of a gentle two-tone wail, mellow rather than piercing."
+    },
+    {
+      "id": "trailer_hit",
+      "name": "Trailer hit",
+      "group": "Hits",
+      "file": "trailer_hit.wav",
+      "seconds": 1.4,
+      "description": "A long low boom with a crack on top and a dark tail: the one big moment of a video."
+    },
+    {
+      "id": "stamp",
+      "name": "Stamp",
+      "group": "Hits",
+      "file": "stamp.wav",
+      "seconds": 0.22,
+      "description": "A short dry thud with a slap of noise: a stamp, a label slammed down."
+    },
+    {
+      "id": "punch",
+      "name": "Punch",
+      "group": "Hits",
+      "file": "punch.wav",
+      "seconds": 0.2,
+      "description": "A tight low hit for a word punched in or a hard zoom."
+    },
+    {
+      "id": "notif",
+      "name": "Notification",
+      "group": "Interface",
+      "file": "notif.wav",
+      "seconds": 0.45,
+      "description": "Two soft rising notes: a message arriving."
+    },
+    {
+      "id": "reject",
+      "name": "Reject",
+      "group": "Interface",
+      "file": "reject.wav",
+      "seconds": 0.45,
+      "description": "Two falling buzzy notes: wrong, crossed out, denied."
+    },
+    {
+      "id": "glitch",
+      "name": "Glitch",
+      "group": "Colour",
+      "file": "glitch.wav",
+      "seconds": 0.36,
+      "description": "A third of a second of gated noise and a stepped tone: a digital stutter."
+    },
+    {
+      "id": "coin",
+      "name": "Coin",
+      "group": "Rewards",
+      "file": "coin.wav",
+      "seconds": 0.5,
+      "description": "Two bright notes, the second ringing: money, a point scored."
+    },
+    {
+      "id": "win",
+      "name": "Win",
+      "group": "Rewards",
+      "file": "win.wav",
+      "seconds": 0.8,
+      "description": "A quick four-note rise: done, success, the payoff."
+    },
+    {
+      "id": "sparkle",
+      "name": "Sparkle",
+      "group": "Rewards",
+      "file": "sparkle.wav",
+      "seconds": 0.7,
+      "description": "Nine tiny high pings scattered over half a second: a shine on a reveal."
+    },
+    {
+      "id": "water_shot",
+      "name": "Water pistol shot",
+      "group": "Hits",
+      "file": "water_shot.wav",
+      "seconds": 0.32,
+      "description": "A toy water pistol firing once: plastic snap, wet squirt, small pop. Not a real gun.",
+      "source": "synth"
+    },
+    {
+      "id": "water_burst",
+      "name": "Water pistol burst",
+      "group": "Hits",
+      "file": "water_burst.wav",
+      "seconds": 0.55,
+      "description": "Three quick water-pistol shots in 0.2 s, for a cartoon shoot-out.",
+      "source": "synth"
+    },
+    {
+      "id": "explosion",
+      "name": "Cartoon explosion",
+      "group": "Hits",
+      "file": "explosion.wav",
+      "seconds": 1.1,
+      "description": "A punchy comic explosion: crack, low boom and a rumble with a little debris. A sign blowing apart.",
+      "source": "synth"
+    }
+  ]
+}

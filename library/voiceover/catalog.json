@@ -1,0 +1,39 @@
+{
+  "id": "voiceover",
+  "title": "Voiceover",
+  "summary": "Narration generated with Kokoro, the free local voice the pipeline uses by default, so voices can be compared by ear.",
+  "usage": "Kokoro is the default: no \"voice\" entry needed in a storyboard. Run npm run voice <project>.",
+  "groups": [
+    "Local (free)"
+  ],
+  "items": [
+    {
+      "id": "kokoro-af-maple-host",
+      "name": "Kokoro af_maple · host read",
+      "group": "Local (free)",
+      "src": "samples/kokoro-af-maple-host.mp3",
+      "provider": "Kokoro (local)",
+      "voice": "af_maple",
+      "model": "Kokoro-82M v1.1",
+      "settings": "default speed",
+      "seconds": 30.4,
+      "wpm": null,
+      "script": "Rae Vega pilot narration.",
+      "note": "Free local text-to-speech, no account or key needed."
+    },
+    {
+      "id": "kokoro-af-maple-fast",
+      "name": "Kokoro af_maple · fast read",
+      "group": "Local (free)",
+      "src": "samples/kokoro-af-maple-fast.mp3",
+      "provider": "Kokoro (local)",
+      "voice": "af_maple",
+      "model": "Kokoro-82M v1.1",
+      "settings": "speed 1.15",
+      "seconds": 39.6,
+      "wpm": 183,
+      "script": "That's a three. This neural network calls it an eight. Here's how that wrong answer helps it learn…",
+      "note": "The same local voice pushed to about 183 words per minute."
+    }
+  ]
+}

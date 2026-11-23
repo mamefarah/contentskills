@@ -1,0 +1,13 @@
+{
+  "id": "transitions",
+  "title": "Transitions",
+  "summary": "Soft, fast cuts: a short zoom-blur push, a blur dissolve, a white dip (into a light shot) and a punch-in. Keep them 0.2-0.4 s.",
+  "usage": "On a shot: {\"transition\": {\"name\": \"blur_dissolve\", \"seconds\": 0.3}}. Shaders: transitions/theme_transitions.py.",
+  "groups": ["Soft", "Hits"],
+  "items": [
+    {"id": "blur_dissolve", "name": "blur dissolve", "group": "Soft", "description": "The shot goes soft as the next comes up out of the same blur."},
+    {"id": "soft_zoom", "name": "soft zoom", "group": "Soft", "description": "A short soft zoom-blur push into the next shot."},
+    {"id": "white_dip", "name": "white dip", "group": "Soft", "description": "A quick dip through white: for the switch into a light shot."},
+    {"id": "punch_zoom", "name": "punch zoom", "group": "Hits", "description": "A fast punch-in onto the next shot, for a hard beat."}
+  ]
+}

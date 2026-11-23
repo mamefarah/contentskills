@@ -1,0 +1,203 @@
+/* The storyboard page (the animatic). Colours and fonts come from /dashboard/style.css. Built for a 16:9 computer
+   screen: a phone-size preview on the left, the scenes as a comic strip on the right, one action bar at the bottom. */
+body.sb{min-height:100vh;margin:0;--bar:60px;--foot:84px;--stage:min(460px,calc((100vh - var(--bar) - var(--foot) - 190px) * 9 / 16))}
+.sb [hidden]{display:none!important}
+.sb main{margin:0;max-width:none;padding:0}
+.sb section{margin:0;padding-top:0}
+.sb button,.sb select,.sb textarea,.sb input{font:inherit;color:inherit}
+.sb button{border:1px solid var(--line);background:var(--panel-2);border-radius:9px;padding:7px 12px;font-weight:600;font-size:13px;line-height:1.2;cursor:pointer}
+.sb button:hover{border-color:var(--accent)}
+.sb button:disabled{opacity:.4;cursor:not-allowed;border-color:var(--line)}
+.sb button:focus-visible,.sb textarea:focus-visible,.sb a:focus-visible,.sb input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sb button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.sb button.primary:hover:not(:disabled){filter:brightness(1.08)}
+.sb button.quiet{background:none;border-color:transparent;color:var(--muted)}
+.sb button.quiet:hover{color:var(--cream)}
+
+/* header: title and the four steps */
+.bar{position:sticky;top:0;z-index:5;height:var(--bar);display:flex;align-items:center;gap:20px;padding:0 24px;background:var(--navy);border-bottom:1px solid var(--line)}
+.bar .back{color:var(--muted);text-decoration:none;font-weight:600;font-size:13px;white-space:nowrap}
+.bar .back:hover{color:var(--cream)}
+.bar h1{margin:0;font:750 18px/1.1 "Dash Text";letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto}
+.steps{display:flex;gap:4px;list-style:none;margin:0 auto;padding:4px;border-radius:999px;background:var(--ink);border:1px solid var(--line);flex:none}
+.steps li{display:flex;align-items:center;gap:7px;padding:5px 12px 5px 6px;border-radius:999px;font:600 12.5px "Dash Text";color:var(--muted);white-space:nowrap}
+.steps i{font-style:normal;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);font-size:11px}
+.steps li.done{color:var(--cream)}.steps li.done i{background:var(--panel-2);border-color:var(--panel-2);font-size:0}.steps li.done i::after{content:"✓";font-size:11px;color:var(--accent)}
+.steps li.now{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 45%,transparent)}.steps li.now i{border-color:var(--accent-ink)}
+.bar .links{display:flex;gap:16px;flex:none}
+.bar .links a{color:var(--muted);text-decoration:none;font-weight:600;font-size:12.5px}
+.bar .links a:hover{color:var(--accent)}
+.pill{display:inline-block;padding:4px 11px;border-radius:999px;font:600 12px/1.3 "Dash Text";background:var(--panel-2);color:var(--muted);white-space:nowrap}
+.pill.ok{background:#0f3d2a;color:#8ff0bd}.pill.todo{background:#4a1640;color:#ff9fe6}.pill.wait{background:#0f3550;color:var(--accent)}.pill.run{background:#132a55;color:var(--blue)}
+
+/* the list of videos */
+#list{max-width:1180px;margin:0 auto!important;padding:40px 24px 80px!important}
+.intro h2{font:750 34px/1.05 "Dash Text";letter-spacing:-.02em;margin:0 0 8px}.intro p{color:var(--muted);margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card-link{display:flex;flex-direction:column;gap:8px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);color:var(--cream);text-decoration:none}
+.card-link:hover{border-color:var(--accent)}
+.card-link .meta{color:var(--muted);font-size:13px}.card-link .pill{align-self:flex-start}
+
+/* one video: preview left, comic strip right */
+#board{display:grid;grid-template-columns:calc(var(--stage) + 56px) minmax(0,1fr);padding-bottom:calc(var(--foot) + 30px)}
+.stage{position:sticky;top:var(--bar);align-self:start;height:calc(100vh - var(--bar) - var(--foot));padding:18px 28px!important;display:flex;flex-direction:column;align-items:center;gap:10px;border-right:1px solid var(--line);background:color-mix(in srgb,var(--ink) 70%,transparent)}
+.stage>*{flex:none}
+.voice{width:var(--stage);display:flex;justify-content:center}
+.tag{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:999px;background:var(--panel-2);color:var(--muted);font:600 12px/1.3 "Dash Text"}
+.tag.own{color:var(--accent)}.tag em{font-style:normal;font-weight:500;color:var(--muted)}
+.phone{padding:7px;border-radius:30px;background:#06041a;border:1px solid #3a2c8a;box-shadow:0 20px 60px rgba(0,0,0,.55),0 0 40px #6a3dff40}
+.screen{position:relative;width:var(--stage);aspect-ratio:9/16;border-radius:23px;overflow:hidden;background:#000}
+.screen iframe{position:absolute;left:0;top:0;width:1080px;height:1920px;border:0;transform-origin:0 0;pointer-events:none}
+.screen .safe{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.screen .safe .out{fill:rgba(0,0,0,.22)}
+.screen .safe[hidden]{display:none}
+.screen .safe .line{fill:none;stroke:rgba(255,255,255,.55);stroke-width:3;stroke-dasharray:14 10;vector-effect:non-scaling-stroke}
+.hint .linkish{all:unset;cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.hint .linkish[aria-pressed=true]{font-weight:600}
+.strip{position:relative;width:calc(var(--stage) + 14px);height:26px;border-radius:7px;background:var(--panel-2);cursor:pointer;touch-action:none;user-select:none;overflow:hidden}
+.strip b{position:absolute;top:0;bottom:0;display:flex;align-items:center;justify-content:center;font:600 10.5px "Dash Mono";color:var(--muted);border-right:1px solid var(--ink);box-sizing:border-box;overflow:hidden;white-space:nowrap}
+.strip b.liked{color:var(--accent)}
+.strip b.has-notes{box-shadow:inset 0 -3px 0 var(--danger)}
+.strip b.current{background:color-mix(in srgb,var(--accent) 26%,transparent);color:var(--cream)}
+.strip #head{position:absolute;top:-2px;bottom:-2px;width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 6px rgba(0,0,0,.6);pointer-events:none}
+.ctl{display:flex;align-items:center;gap:10px;width:calc(var(--stage) + 14px)}
+.ctl button{min-width:92px}
+.ctl input{flex:1;accent-color:var(--accent)}
+.ctl output{font:500 12px "Dash Mono";color:var(--muted);white-space:nowrap}
+.hint{margin:0;color:var(--muted);font-size:11.5px;text-align:center}
+
+.scenes{padding:22px 28px 0!important;min-width:0}
+.hook-row{list-style:none;margin:0 0 12px;padding:0}
+#scenes{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+
+/* a scene panel: picture on top, the words under it, two buttons */
+.scene{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);overflow:hidden;transition:border-color .15s}
+.scene.current{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 0 26px color-mix(in srgb,var(--accent) 28%,transparent)}
+.scene.asked{border-color:color-mix(in srgb,var(--danger) 60%,var(--line))}
+.pic-wrap{position:relative}
+.pic{display:block;width:100%;aspect-ratio:9/16;padding:0!important;border:0!important;border-radius:0!important;background-color:#08061a!important;background-repeat:no-repeat;cursor:pointer}
+.pic:hover{filter:brightness(1.12)}
+.pic .wait{display:grid;place-items:center;height:100%;padding:16px;color:var(--muted);font:500 12.5px/1.4 "Dash Text";background:repeating-linear-gradient(135deg,#100b2a 0 12px,#120c2e 12px 24px)}
+.pic.footage .wait{font-size:26px;background:#0c0820}
+.pic.live{position:relative;overflow:hidden}
+.pic.live .thumb{position:absolute;left:0;top:0;width:1080px;height:1920px;border:0;transform-origin:0 0;pointer-events:none}
+.pic.live .wait{position:absolute;inset:0;height:auto}
+.pic.live.loaded .wait{display:none}
+.num{position:absolute;left:8px;top:8px;min-width:24px;height:24px;padding:0 7px;border-radius:999px;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);font:700 12px/24px "Dash Text";text-align:center;color:#fff}
+.badge{position:absolute;right:8px;top:8px;padding:3px 9px;border-radius:999px;font:700 11px/18px "Dash Text";backdrop-filter:blur(4px)}
+.badge.ok{background:rgba(8,40,28,.85);color:var(--accent)}
+.badge.new{background:var(--blue);color:#06102a;box-shadow:0 0 12px color-mix(in srgb,var(--blue) 55%,transparent)}
+.badge.ask{background:var(--pink);color:#fff;box-shadow:0 0 12px color-mix(in srgb,var(--pink) 55%,transparent)}
+.text{display:flex;flex-direction:column;gap:8px;padding:12px;flex:1}
+.text q{quotes:"“" "”";font-size:14.5px;line-height:1.4;color:var(--cream)}
+.text .when{font:500 11px "Dash Mono";color:var(--muted)}
+.asks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.asks li{position:relative;padding:7px 26px 7px 9px;border-radius:8px;background:var(--panel-2);border-left:3px solid var(--danger);font-size:13px;line-height:1.35}
+.asks li.done{border-left-color:#3fbf7f;opacity:.75}
+.asks em{display:block;font-style:normal;color:var(--muted);font-size:12px;margin-top:3px}
+.asks .x{position:absolute;right:3px;top:3px;padding:0 6px!important;border:0!important;background:none!important;color:var(--muted);font-size:16px}
+.asks .x:hover{color:var(--danger)}
+
+/* the hook: scene 1, bigger and side by side */
+.scene.hook{flex-direction:row;border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.scene.hook .pic-wrap{width:170px;flex:none}
+.scene.hook .text{padding:18px 20px;gap:12px}
+.scene.hook q{font-size:22px;line-height:1.3;font-weight:600}
+.hook-q{margin:0;padding:9px 12px;border-radius:9px;background:color-mix(in srgb,var(--accent) 10%,var(--panel-2));color:var(--cream);font-size:13.5px;line-height:1.45}
+.hook-q b{color:var(--accent)}
+.scene.hook .feedback{max-width:520px}
+
+/* the action bar */
+.actions{position:fixed;left:0;right:0;bottom:0;z-index:6;min-height:var(--foot);padding:12px 24px;background:var(--navy);border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 24px;align-items:center}
+.actions .state{font-size:14px;color:var(--muted);line-height:1.45}.actions .state b{color:var(--cream)}.actions .state a{color:var(--accent);font-weight:600}.actions .state .bad{color:var(--danger)}
+.actions .buttons{display:flex;gap:14px;align-items:center}
+.size{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12.5px;white-space:nowrap;cursor:pointer}
+.size input{accent-color:var(--accent)}
+.go{display:flex;flex-direction:column;align-items:flex-end;gap:4px}
+.go small{color:var(--muted);font-size:11.5px;white-space:nowrap}
+.sb button.big{padding:12px 26px;font-size:15px;border-radius:11px}
+#log{grid-column:1/-1;margin:0;max-height:150px;overflow:auto;padding:10px 12px;border-radius:8px;background:var(--ink);border:1px solid var(--line);font:12px/1.45 "Dash Mono";color:var(--muted);white-space:pre-wrap}
+#toast{position:fixed;left:50%;bottom:calc(var(--foot) + 20px);transform:translateX(-50%);z-index:9;padding:10px 16px;border-radius:10px;background:var(--cream);color:var(--ink);font-weight:600;font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+#toast.bad{background:var(--danger);color:#fff}
+
+@media (max-width:980px){
+  .steps li{padding-right:8px}.steps li:not(.now){font-size:0;gap:0}.bar .links{display:none}
+}
+@media (max-width:760px){
+  #board{grid-template-columns:1fr}.stage{position:static;height:auto;border-right:0}
+  .scene.hook{flex-direction:column}.scene.hook .pic-wrap{width:auto}
+  .actions{grid-template-columns:1fr}.actions .buttons{flex-wrap:wrap}
+}
+
+/* how it works, above the scenes */
+.howto{list-style:none;margin:0 0 18px;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px 26px;border-radius:var(--radius);background:color-mix(in srgb,var(--accent) 7%,var(--panel));border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line))}
+.howto li{display:flex;align-items:center;gap:9px;font-size:14px;color:var(--cream)}
+.howto b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-size:13px;flex:none}
+.howto em{font-style:normal;font-weight:700;color:var(--accent)}
+
+/* feedback under every scene: always there, one click or one line */
+.feedback{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:4px}
+.sb .good{width:100%;padding:9px 10px;border-radius:10px;border:1.5px solid var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);font-size:14px;font-weight:700}
+.sb .good:hover{background:color-mix(in srgb,var(--accent) 24%,transparent)}
+.sb .good.on{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 16px color-mix(in srgb,var(--accent) 40%,transparent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+.sb .chip{padding:5px 10px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--pink) 55%,var(--line));background:color-mix(in srgb,var(--pink) 8%,transparent);color:var(--cream);font-size:12px;font-weight:600}
+.sb .chip:hover{background:color-mix(in srgb,var(--pink) 28%,transparent);border-color:var(--pink)}
+.say{display:flex;gap:6px;align-items:flex-end}
+.say textarea{flex:1;min-width:0;min-height:38px;resize:none;overflow:hidden;padding:9px 11px;border-radius:10px;border:1.5px solid color-mix(in srgb,var(--cream) 22%,var(--line));background:var(--ink);font-size:13px;line-height:1.35}
+.say textarea:hover{border-color:color-mix(in srgb,var(--cream) 40%,var(--line))}
+.say textarea:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent)}
+.say textarea::placeholder{color:var(--muted)}
+.sb .send{padding:9px 13px;border-radius:10px;font-weight:700}
+.sb .send:disabled{background:var(--panel-2);border-color:var(--line);color:var(--muted);box-shadow:none;opacity:1}
+
+/* one column: each scene is a row (picture | words + feedback), so the user just scrolls down the list */
+.scenes{max-width:980px}
+.scene,.scene.hook{flex-direction:row;align-items:stretch;scroll-margin:90px}
+.scene .pic-wrap,.scene.hook .pic-wrap{width:128px;flex:none}
+.scene .pic{height:100%;min-height:100%}
+.scene .text,.scene.hook .text{padding:14px 18px;gap:8px}
+.scene q,.scene.hook q{font-size:17px;line-height:1.35;font-weight:600}
+.scene .feedback{display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-areas:"good chips" "say say";gap:8px 10px;align-items:center;margin-top:6px}
+.scene .feedback .good{grid-area:good;width:auto;padding:8px 16px}
+.scene .feedback .chips{grid-area:chips}
+.scene .feedback .say{grid-area:say}
+.scene.hook .feedback{max-width:none}
+.scene .pic-wrap,.scene.hook .pic-wrap{width:112px}
+.scene .pic{aspect-ratio:auto;min-height:200px}
+.scene .badge{top:auto;right:6px;bottom:8px;left:6px;justify-content:center;text-align:center;font-size:10.5px;padding:4px 6px}
+
+/* decluttered: only what they need. No voice tag, hints, step pills, quick-draft box or time stamps. */
+.voice,.hint,#steps,#draft-link,.size{display:none!important}
+body.sb{--stage:min(480px,calc((100vh - var(--bar) - var(--foot) - 120px) * 9 / 16))}
+.stage{justify-content:center}
+.scene .text,.scene.hook .text{justify-content:center;gap:10px}
+.scene .feedback{display:flex;gap:8px;align-items:center;margin-top:2px}
+.scene .feedback .say{flex:1;min-width:0}
+.scene .feedback .good{flex:none;width:auto;padding:9px 16px}
+.scene .pic{min-height:150px}
+.scene .pic-wrap,.scene.hook .pic-wrap{width:96px}
+.scene.hook{border-color:var(--line)}
+.actions .state{font-size:15px}
+.scene .feedback{flex-direction:row;align-self:stretch;width:100%}
+.scene .badge.ok{display:none}
+.scene .badge{font-size:10px;padding:3px 4px}
+.scene .badge.ask{display:none}
+
+/* footage: what the scene's edit is, and its rendered preview playing in the card */
+.scene .edit{display:block;margin:-2px 0 10px;color:var(--cyan);font:600 13px/1.35 "Dash Text",system-ui,sans-serif}
+.pic{position:relative;overflow:hidden}
+.pic video.clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000}
+
+/* footage scenes: a bigger picture, the scene over time as a frame strip, and a note box that saves itself */
+.scene .pic-wrap,.scene.hook .pic-wrap{width:190px}
+.scene .frames{margin:2px 0 4px}
+.scene .frames img{display:block;width:100%;max-width:560px;border-radius:10px;cursor:pointer;border:1px solid var(--line)}
+.scene .feedback{display:block!important}
+.scene .feedback .say{display:flex;align-items:flex-start;gap:10px}
+.scene .feedback textarea{flex:1}
+.scene .feedback .saved{flex:none;min-width:64px;padding-top:12px;color:var(--muted);font-size:12.5px;font-weight:600}
+.pic video.clip.hover{pointer-events:none}
+/* the scene picture keeps the phone's shape (9:16) instead of stretching to the card's height */
+.scene .pic-wrap,.scene.hook .pic-wrap{align-self:flex-start}
+.scene .pic,.scene.hook .pic{height:auto!important;min-height:0!important;aspect-ratio:9/16!important}

@@ -1,0 +1,230 @@
+{
+ "source": "../../../Downloads/craziest-claude-use-case.MOV",
+ "output": "clean.mp4",
+ "fps": 30,
+ "duration": {
+  "before": 79.689,
+  "after": 36.167
+ },
+ "settings": {
+  "gap": 0.15,
+  "padIn": 0.07,
+  "padOut": 0.1,
+  "audioFade": 0.008,
+  "highpassHz": 80,
+  "targetLufs": -14,
+  "truePeakCeiling": -1.5
+ },
+ "cuts": [
+  4.133,
+  6.233,
+  6.266,
+  9.5,
+  12.8,
+  14.333,
+  14.366,
+  15.766,
+  16.933,
+  18.2,
+  24.4,
+  26.4,
+  31.633
+ ],
+ "segments": [
+  {
+   "in": 0,
+   "out": 4.133,
+   "at": 0,
+   "length": 4.133,
+   "text": "This is the craziest Claude use case I've ever seen. I just dropped my video into Claude,"
+  },
+  {
+   "in": 4.367,
+   "out": 6.467,
+   "at": 4.133,
+   "length": 2.1,
+   "text": "typed one prompt, and it fixed everything."
+  },
+  {
+   "in": 6.634,
+   "out": 6.667,
+   "at": 6.233,
+   "length": 0.033,
+   "text": "typed one prompt, and it fixed everything."
+  },
+  {
+   "in": 12,
+   "out": 15.233,
+   "at": 6.266,
+   "length": 3.233,
+   "text": "First they pulled in all the reels I've ever posted and learned my style. Then it shows me the full storyboard so I can just tell it what I like."
+  },
+  {
+   "in": 15.467,
+   "out": 18.767,
+   "at": 9.5,
+   "length": 3.3,
+   "text": "First they pulled in all the reels I've ever posted and learned my style. Then it shows me the full storyboard so I can just tell it what I like."
+  },
+  {
+   "in": 23.167,
+   "out": 24.7,
+   "at": 12.8,
+   "length": 1.533,
+   "text": "No apps, no editing. Watch this."
+  },
+  {
+   "in": 25.5,
+   "out": 25.534,
+   "at": 14.333,
+   "length": 0.034,
+   "text": "No apps, no editing. Watch this."
+  },
+  {
+   "in": 28.833,
+   "out": 30.233,
+   "at": 14.366,
+   "length": 1.4,
+   "text": "Claude, add some sirens,"
+  },
+  {
+   "in": 30.433,
+   "out": 31.6,
+   "at": 15.766,
+   "length": 1.167,
+   "text": "add some 3D."
+  },
+  {
+   "in": 31.767,
+   "out": 33.034,
+   "at": 16.933,
+   "length": 1.267,
+   "text": "Now here's the crazy part."
+  },
+  {
+   "in": 37.767,
+   "out": 43.967,
+   "at": 18.2,
+   "length": 6.2,
+   "text": "Claude automatically posted to nine social media platforms and set up DM automations to send everyone my links."
+  },
+  {
+   "in": 45.867,
+   "out": 47.867,
+   "at": 24.4,
+   "length": 2,
+   "text": "Literally saved me 20 hours a week."
+  },
+  {
+   "in": 69.2,
+   "out": 74.433,
+   "at": 26.4,
+   "length": 5.233,
+   "text": "To set this up, just open Claude code and type setup blotato content skills and drop in your video."
+  },
+  {
+   "in": 74.733,
+   "out": 79.266,
+   "at": 31.633,
+   "length": 4.533,
+   "text": "I made a full tutorial walking through everything. Hit follow and comment edit and I'll send it over."
+  }
+ ],
+ "removed": [],
+ "pauses": [
+  {
+   "from": 4.133,
+   "to": 4.367
+  },
+  {
+   "from": 6.667,
+   "to": 12
+  },
+  {
+   "from": 18.767,
+   "to": 23.167
+  },
+  {
+   "from": 25.533,
+   "to": 28.833
+  },
+  {
+   "from": 30.233,
+   "to": 30.433
+  },
+  {
+   "from": 31.6,
+   "to": 31.767
+  },
+  {
+   "from": 33.033,
+   "to": 37.767
+  },
+  {
+   "from": 43.967,
+   "to": 45.867
+  },
+  {
+   "from": 47.867,
+   "to": 69.2
+  },
+  {
+   "from": 74.433,
+   "to": 74.733
+  },
+  {
+   "from": 79.267,
+   "to": 79.689
+  }
+ ],
+ "audio": {
+  "before": {
+   "lufs": -23.55,
+   "truePeak": -6.72,
+   "range": 5
+  },
+  "after": {
+   "lufs": -14.13,
+   "truePeak": -2.25,
+   "range": 2.9
+  }
+ },
+ "trims": [
+  {
+   "when": "2026-11-22T17:32:21.012Z",
+   "removed": [
+    [
+     9.666666666666666,
+     9.9
+    ]
+   ]
+  },
+  {
+   "when": "2026-11-22T18:44:49.059Z",
+   "removed": [
+    [
+     6.233333333333333,
+     6.4
+    ]
+   ]
+  },
+  {
+   "when": "2026-11-22T20:55:44.005Z",
+   "removed": [
+    [
+     14.8,
+     15.133333333333333
+    ]
+   ]
+  },
+  {
+   "when": "2026-11-22T20:57:57.518Z",
+   "removed": [
+    [
+     14.333333333333334,
+     14.8
+    ]
+   ]
+  }
+ ]
+}

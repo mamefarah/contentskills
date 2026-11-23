@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Review · ContentSkills</title>
+<link rel="stylesheet" href="/dashboard/style.css">
+<link rel="stylesheet" href="review.css">
+<link rel="stylesheet" href="/dashboard/theme-studio.css">
+</head>
+<body class="review">
+<header id="bar">
+  <a class="back" href="/dashboard/">← Dashboard</a>
+  <div class="what"><span class="eyebrow">Review</span><b id="title">Loading…</b></div>
+  <span class="grow"></span>
+  <span id="counts" hidden></span>
+  <label class="field" id="version-field" hidden>Watching <select id="version" aria-label="Which version to watch"></select></label>
+  <span id="older" hidden></span>
+  <button id="remake" class="remake" hidden title="Claude applies every open note and makes a new version (this one is kept)">Make a new version</button>
+  <button id="finish" class="finish" hidden title="Happy with it? Saves this version as your final video and downloads it">Finish video ✓</button>
+  <span id="final" class="final-badge" hidden><b>✓ Finished</b><a id="final-dl" class="dl" href="#" download>Download video ↓</a><button id="reopen" title="Take it back to editing">Keep editing</button></span>
+  <a class="link" id="draft-link" href="/pipeline/draft/" hidden>Rough draft →</a>
+  <a class="link" id="all-link" href="/pipeline/review/" hidden>All projects</a>
+</header>
+
+<div id="list" hidden></div>
+<aside id="apply" hidden aria-live="polite">
+  <button id="apply-close" aria-label="Hide">×</button>
+  <b id="apply-title"></b>
+  <p id="apply-last"></p>
+  <details id="apply-more"><summary>What Claude is doing (also in the terminal running npm run dashboard)</summary><pre id="apply-log"></pre></details>
+</aside>
+
+<div id="app" hidden>
+  <div id="stage">
+    <div id="screen">
+      <video id="video" playsinline preload="auto"></video>
+      <div id="novideo" hidden></div>
+      <div id="now"></div>
+    </div>
+    <div id="scrub"><input id="seek" type="range" min="0" max="1" step="0.001" value="0" aria-label="Scrub"><output id="clock">0.00 s</output></div>
+    <div id="transport">
+      <button id="back1" title="Back one frame (←)" aria-label="Back one frame">◂</button>
+      <button id="play" class="primary" title="Play / pause (space)">Play</button>
+      <button id="fwd1" title="Forward one frame (→)" aria-label="Forward one frame">▸</button>
+      <span class="grow"></span>
+      <button id="loop" aria-pressed="false" title="Loop the selection (L)">Loop</button>
+      <button id="mute" aria-pressed="false" title="Mute">Sound</button>
+      <select id="speed" aria-label="Speed" title="Speed">
+        <option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="side">
+    <div id="top">
+      <div id="inspector" class="panel">
+        <div class="head"><span class="eyebrow">New note</span><button id="clear" class="quiet" hidden title="Clear the selection (Esc)">Clear</button></div>
+        <div id="selection"></div>
+        <form id="composer" hidden>
+          <textarea id="note" rows="2" placeholder="What should change? e.g. make this chart bigger" aria-label="Note"></textarea>
+          <div id="shots" class="shots" hidden></div>
+          <div class="row"><button type="button" id="save-apply" class="primary" title="⌘↵ · Save the note and let Claude change just this part of the video now. Keep reviewing: other parts can be changed at the same time.">Fix Now</button><button type="submit" id="save" title="Save the note to the to-do list without changing the video yet" class="quiet">Add TODO</button><button type="button" id="shot" class="quiet" title="Attach the frame on screen to this note (saved in the project's review-shots/)">Add Screenshot</button><button type="button" id="cancel" class="quiet" hidden>Cancel</button><span class="hint" id="composer-hint">⌘↵ to fix now</span></div>
+        </form>
+        <div id="here"></div>
+      </div>
+      <div id="marks" class="panel">
+        <div class="head"><span class="eyebrow">Notes</span><span id="mark-count" class="count"></span><span class="grow"></span>
+          <div class="chips small" id="filter"><button class="chip" data-filter="open" aria-pressed="true">To do</button><button class="chip" data-filter="all" aria-pressed="false">All</button></div></div>
+        <div id="mark-list"></div>
+        <details id="history" class="history" hidden><summary>Changes you can undo <span id="history-count"></span></summary><ol id="history-list"></ol></details>
+      </div>
+    </div>
+    <div id="timeline" class="panel">
+      <div class="toolbar">
+        <span class="eyebrow">Timeline</span>
+        <button id="range-mode" aria-pressed="false" title="Drag on the timeline to select any range (or hold shift and drag)">Mark range</button>
+        <span id="trim-tools"><button type="button" id="trim-head" title="Cut from the start of this scene up to the playhead">✂ Cut start → here</button><button type="button" id="trim-tail" title="Cut from the playhead to the end of this scene">✂ Cut here → end</button></span>
+        <span id="trimbar" hidden><span id="trim-sum"></span><button id="trim-apply" class="primary" title="Cut these out of the video now (a few seconds). Every graphic stays on its word; nothing is re-made.">Apply trims</button><button id="trim-reset" class="quiet">Undo</button></span>
+        <span id="trim-status" hidden></span>
+        <span class="hint" id="keys">Click a section · shift-drag any range · double-click an item · space · ←/→ frame · ↑/↓ section · M mark · L loop</span>
+        <span class="grow"></span>
+        <button type="button" id="rows-toggle" aria-pressed="false" title="Show every timeline row (graphics, layout, zooms, sounds, captions, words) or only sections and effects">Show all rows</button>
+        <label class="field">Zoom <input id="zoom" type="range" min="1" max="12" step="0.1" value="1" aria-label="Zoom the timeline"></label>
+      </div>
+      <div id="tl">
+        <div id="labels"></div>
+        <div id="scroll"><div id="track"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="toast" hidden></div>
+<script type="module" src="review.js"></script>
+</body>
+</html>

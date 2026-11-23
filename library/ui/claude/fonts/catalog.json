@@ -1,0 +1,72 @@
+{
+  "id": "fonts",
+  "title": "Fonts",
+  "summary": "Inter for the Claude app UI (tabs, buttons, your messages, the composer) and Source Serif 4 for Claude's replies, the closest free stand-ins for Anthropic Sans and Anthropic Serif; JetBrains Mono for Claude Code in the terminal; Instrument Serif for a style card.",
+  "usage": "UI text uses Inter (ui.js F); anything Claude says uses Source Serif 4 (ui.js FS, say()). Inter Tight stays for older pieces and frames.",
+  "groups": [
+    "UI",
+    "Terminal",
+    "Accent"
+  ],
+  "items": [
+    {
+      "id": "inter",
+      "family": "Inter",
+      "file": "files/Inter-Variable.ttf",
+      "group": "UI",
+      "weights": [
+        400,
+        700
+      ],
+      "note": "UI face: tabs, buttons, your message pills, the composer. Stand-in for Anthropic Sans.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "source-serif-4",
+      "family": "Source Serif 4",
+      "file": "files/SourceSerif4-Variable.ttf",
+      "group": "UI",
+      "weights": [
+        400,
+        600
+      ],
+      "note": "Claude's replies (the app's default serif chat font). Stand-in for Anthropic Serif.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "inter-tight",
+      "family": "Inter Tight",
+      "file": "files/InterTight-Variable.ttf",
+      "group": "UI",
+      "weights": [
+        400,
+        700
+      ],
+      "note": "UI face for the whole theme.",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "jetbrains-mono",
+      "family": "JetBrains Mono",
+      "file": "files/JetBrainsMono-Variable.ttf",
+      "group": "Terminal",
+      "weights": [
+        400,
+        700
+      ],
+      "note": "Claude Code in the terminal (overlays/terminal).",
+      "license": "OFL-1.1"
+    },
+    {
+      "id": "instrument-serif",
+      "family": "Instrument Serif",
+      "file": "files/InstrumentSerif-Regular.ttf",
+      "group": "Accent",
+      "weights": [
+        400
+      ],
+      "note": "The display face on a style card (overlays/style-scan).",
+      "license": "OFL-1.1"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "d3",
+ "title": "Diagrams",
+ "summary": "Editorial charts on 1000x1000 cards: charcoal ground, the title as the theme's big word (heavy Montserrat capitals building letter by letter through a ghost), a hairline rule, tiny tracked labels, Space Mono figures, and fills made of studio-light picture tones (strips, panels, mosaics). Everything lands on the 0.2 s beat with expo-out snaps. Pass \"clear\": true to float a card over footage. Sample data is illustrative.",
+ "usage": "{\"piece\": \"d3/bar-chart\", \"props\": {\"title\": \"...\", \"unit\": \"...\", \"items\": [{\"label\": \"...\", \"value\": 1}]}}. Optional: tones (kit tone names per series), note (footer, false to hide), index (top-right number). Files: library/themes/modern/d3/pieces/.",
+ "groups": [
+  "Charts",
+  "Shares",
+  "Readouts",
+  "Sequences"
+ ],
+ "items": [
+  {
+   "id": "bar-chart",
+   "name": "Bar chart",
+   "group": "Charts",
+   "piece": "d3/bar-chart",
+   "description": "Bars as studio-tone picture strips snapping up from the baseline one by one on the beat, values counting up above them; the tallest value in white."
+  },
+  {
+   "id": "line-chart",
+   "name": "Line chart",
+   "group": "Charts",
+   "piece": "d3/line-chart",
+   "description": "A heavy white trend line drawn over hairline gridlines with a tone picture filling the area under it; square point marks, the last value counting up big at the top left."
+  },
+  {
+   "id": "level-columns",
+   "name": "Level columns",
+   "group": "Charts",
+   "piece": "d3/level-columns",
+   "description": "Comparison columns as tall picture strips with staggered tops sliding in from alternate ends; charcoal pours down each to its level, marked by a white line and a heavy percentage."
+  },
+  {
+   "id": "ranking",
+   "name": "Ranking",
+   "group": "Charts",
+   "piece": "d3/ranking",
+   "description": "Editorial ranked rows: Space Mono rank, heavy name, value on the right and a picture-tone bar sized by value; rows land from the left one beat apart."
+  },
+  {
+   "id": "donut",
+   "name": "Donut",
+   "group": "Shares",
+   "piece": "d3/donut",
+   "description": "Shares as one bold ring of tone-filled segments sweeping round from twelve o'clock; the biggest share counts up huge in the centre, legend row below."
+  },
+  {
+   "id": "percent-strips",
+   "name": "Percent strips",
+   "group": "Shares",
+   "piece": "d3/percent-strips",
+   "description": "Percentages as rows of fifty thin vertical strips; the filled share shows a studio-light picture through the strips while the percentage counts up."
+  },
+  {
+   "id": "versus",
+   "name": "Versus",
+   "group": "Shares",
+   "piece": "d3/versus",
+   "description": "Two picture strips side by side sliding in from opposite ends, each with its label and heavy value; a charcoal VS block on the seam and a split bar of shares below."
+  },
+  {
+   "id": "big-number",
+   "name": "Big number",
+   "group": "Readouts",
+   "piece": "d3/big-number",
+   "description": "One huge heavy figure counting up over three picture strips under a charcoal veil, with a tracked caption. images: stills for the strips."
+  },
+  {
+   "id": "mosaic-stat",
+   "name": "Mosaic stats",
+   "group": "Readouts",
+   "piece": "d3/mosaic-stat",
+   "description": "Four stats in a 2x2 picture mosaic: cells wipe in from their outer edges, then each figure counts up in heavy white with a tracked caption. images: stills for the cells."
+  },
+  {
+   "id": "timeline",
+   "name": "Timeline",
+   "group": "Sequences",
+   "piece": "d3/timeline",
+   "description": "A contact-sheet timeline: a square marker jumps event to event on the beat, wiping in a tall picture thumbnail above the rule and turning each year from ghost to solid."
+  }
+ ]
+}

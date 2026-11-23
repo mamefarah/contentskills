@@ -1,0 +1,247 @@
+{
+  "id": "effects",
+  "title": "Filters",
+  "summary": "Sun-soaked treatments shown on the sample clip: a sunset grade as the base look, comic-ink and print looks that turn footage into a drawn panel, warm light for accents and quick moves for cuts. Previews run at full strength; use far less in a video.",
+  "usage": "In a footage storyboard: {\"footage\": {\"look\": {\"name\": \"sunset_grade\", \"amount\": 0.6}}} and {\"name\": \"pop_flash\", \"at\": 2.4, \"seconds\": 0.25, \"amount\": 0.6}. On a shot candidate: {\"effect\": {\"name\": \"comic_ink\", \"amount\": 0.8, \"where\": \"in\"}}. Engine: library/_shared/effects_engine.py (OpenCV).",
+  "groups": [
+    "Look",
+    "Print",
+    "Light",
+    "Cuts",
+    "Lighting"
+  ],
+  "items": [
+    {
+      "id": "sunset_grade",
+      "name": "sunset grade",
+      "group": "Look",
+      "src": "clips/sunset_grade.mp4",
+      "portrait": true,
+      "description": "The theme base look: richer colour, warm highlights, violet shadows and a faint pink wash from the top. Use around 0.6 on footage."
+    },
+    {
+      "id": "sun_bloom",
+      "name": "sun bloom",
+      "group": "Look",
+      "src": "clips/sun_bloom.mp4",
+      "portrait": true,
+      "description": "Film warmth: highlights spill orange, then pink, and the blacks lift a touch."
+    },
+    {
+      "id": "vhs_vacation",
+      "name": "vhs vacation",
+      "group": "Look",
+      "src": "clips/vhs_vacation.mp4",
+      "portrait": true,
+      "description": "A holiday tape left in the sun: faded and warm, colour smeared sideways, a soft tracking band."
+    },
+    {
+      "id": "halation",
+      "name": "halation",
+      "group": "Look",
+      "src": "clips/halation.mp4",
+      "portrait": true,
+      "description": "Bright areas glow red-orange, like light bleeding through film."
+    },
+    {
+      "id": "vignette",
+      "name": "vignette",
+      "group": "Look",
+      "src": "clips/vignette.mp4",
+      "portrait": true,
+      "description": "Darkens the corners to hold the eye in the middle."
+    },
+    {
+      "id": "grain",
+      "name": "grain",
+      "group": "Look",
+      "src": "clips/grain.mp4",
+      "portrait": true,
+      "description": "Fine film grain."
+    },
+    {
+      "id": "comic_ink",
+      "name": "comic ink",
+      "group": "Print",
+      "src": "clips/comic_ink.mp4",
+      "portrait": true,
+      "description": "Flat posterised colour with dark ink outlines: the picture redrawn as a comic panel."
+    },
+    {
+      "id": "cel_shade",
+      "name": "cel shade",
+      "group": "Print",
+      "src": "clips/cel_shade.mp4",
+      "portrait": true,
+      "description": "Smooth cel bands with a thin ink line and a warm rim on the highlights. Gentler than comic ink."
+    },
+    {
+      "id": "halftone_print",
+      "name": "halftone print",
+      "group": "Print",
+      "src": "clips/halftone_print.mp4",
+      "portrait": true,
+      "description": "Four-colour dot screens on cream paper, like cheap offset print."
+    },
+    {
+      "id": "pop_flash",
+      "name": "pop flash",
+      "group": "Light",
+      "src": "clips/pop_flash.mp4",
+      "portrait": true,
+      "description": "A flash in the theme colours, pink at the top through orange to yellow. For cuts and slams."
+    },
+    {
+      "id": "light_leak",
+      "name": "light leak",
+      "group": "Light",
+      "src": "clips/light_leak.mp4",
+      "portrait": true,
+      "description": "A warm streak of light drifts across the frame."
+    },
+    {
+      "id": "film_burn",
+      "name": "film burn",
+      "group": "Light",
+      "src": "clips/film_burn.mp4",
+      "portrait": true,
+      "description": "A hot orange burn travels across the picture."
+    },
+    {
+      "id": "bloom",
+      "name": "bloom",
+      "group": "Light",
+      "src": "clips/bloom.mp4",
+      "portrait": true,
+      "description": "Highlights glow softly."
+    },
+    {
+      "id": "whip",
+      "name": "whip",
+      "group": "Cuts",
+      "src": "clips/whip.mp4",
+      "portrait": true,
+      "description": "A fast sideways blur, as if the camera whipped round."
+    },
+    {
+      "id": "zoom_blur",
+      "name": "zoom blur",
+      "group": "Cuts",
+      "src": "clips/zoom_blur.mp4",
+      "portrait": true,
+      "description": "The picture rushes toward the viewer."
+    },
+    {
+      "id": "camera_shake",
+      "name": "camera shake",
+      "group": "Cuts",
+      "src": "clips/camera_shake.mp4",
+      "portrait": true,
+      "description": "A handheld jolt for impacts."
+    },
+    {
+      "id": "ripple",
+      "name": "ripple",
+      "group": "Cuts",
+      "src": "clips/ripple.mp4",
+      "portrait": true,
+      "description": "Rings spread from the centre like a stone dropped in water."
+    },
+    {
+      "id": "chromatic",
+      "name": "chromatic",
+      "group": "Cuts",
+      "src": "clips/chromatic.mp4",
+      "portrait": true,
+      "description": "Colour fringes toward the edges, like a cheap lens."
+    },
+    {
+      "id": "light_spotlight",
+      "name": "spotlight",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_spotlight.mp4",
+      "portrait": true,
+      "description": "A warm pool of light from above on the person; the room falls away to near-black. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_rim",
+      "name": "rim light",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_rim.mp4",
+      "portrait": true,
+      "description": "Dark, cool scene; a thin bright outline traces the person. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_flashlight",
+      "name": "flashlight",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_flashlight.mp4",
+      "portrait": true,
+      "description": "A hard round beam on the face that drifts a little; everything else dark. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_golden_hour",
+      "name": "golden hour",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_golden_hour.mp4",
+      "portrait": true,
+      "description": "Low warm sun with leaf shadows dappled across the scene. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_neon",
+      "name": "neon",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_neon.mp4",
+      "portrait": true,
+      "description": "Hot magenta from one side, a cyan touch from the other, dark in between. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_projector",
+      "name": "projector",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_projector.mp4",
+      "portrait": true,
+      "description": "A bright lamp flaring behind the head through haze, teal room. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_under_light",
+      "name": "under light",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_under_light.mp4",
+      "portrait": true,
+      "description": "Light from below: the campfire or horror look. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_low_key",
+      "name": "low key",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_low_key.mp4",
+      "portrait": true,
+      "description": "Mostly shadow: one small key on the face, deep blacks. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "light_silhouette",
+      "name": "silhouette",
+      "group": "Lighting",
+      "src": "../../../_shared/lighting/clips/light_silhouette.mp4",
+      "portrait": true,
+      "description": "Bright hazy background, the person a dark shape with a faint edge. Finds the person in each frame; use 0.6–1 over a whole clip or a section."
+    },
+    {
+      "id": "cop_lights",
+      "name": "cop lights",
+      "group": "Lighting",
+      "src": "../../../_shared/signature/clips/cop_lights.mp4",
+      "portrait": true,
+      "description": "The room drops dark and red and blue police lights strobe across the person from both sides. Options (\"props\"): color, color2 (hex), speed (flashes per second, 2.2), push (1.08)."
+    },
+    {
+      "id": "color_grade",
+      "name": "colour grade",
+      "group": "Look",
+      "src": "../../../_shared/signature/clips/color_grade.mp4",
+      "portrait": true,
+      "description": "The look changes on a word: moody, warm, cool, black and white or pop fades in (or ripples out from a point). Options (\"props\"): grade (moody, warm, cool, bw, pop), style (fade or ripple), dur (seconds to arrive), x, y (ripple origin, 0–1). Also works as a footage \"look\"."
+    }
+  ]
+}

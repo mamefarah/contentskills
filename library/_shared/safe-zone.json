@@ -1,0 +1,4 @@
+{
+  "_about": "Where TikTok, Reels and Shorts draw their own UI on a 1080x1920 frame: the top 220 px (search bar), the bottom 450 px (caption, name, buttons), 35 px each side, and the button column right of x 945 below y 1160. Graphics stay inside left..right, top..bottom; captions may go down to captionBottom. One source for library/_shared/placement.js, pipeline/qa.py, library/_shared/signature.py and pipeline/draft/player.js.",
+  "left": 35, "top": 220, "right": 1045, "rightLow": 945, "split": 1160, "bottom": 1470, "captionBottom": 1660
+}

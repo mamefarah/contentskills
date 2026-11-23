@@ -1,0 +1,17 @@
+{
+  "name": "contentskills",
+  "owner": {
+    "name": "Blotato",
+    "url": "https://www.blotato.com"
+  },
+  "plugins": [
+    {
+      "name": "contentskills",
+      "source": "./",
+      "description": "ContentSkills by Blotato: videos made locally, plus skills for writing, grading, repurposing and scheduling posts."
+    }
+  ],
+  "metadata": {
+    "description": "ContentSkills by Blotato: skills for making short vertical videos with a coding agent."
+  }
+}

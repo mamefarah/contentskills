@@ -1,0 +1,29 @@
+{
+  "id": "ui/reel-kit",
+  "title": "Reel kit",
+  "summary": "The user's light \"reel kit\" cards as on-screen UI for talking-head footage: the theme backdrop, a platform orbit, a strike-through checklist and a scrolling screen. (The chat composer, storyboard pages, \"Editing with…\" card, RAW / EDITED split and comment-for-all end card are now full Effects: ai_prompt, storyboard_pages, edit_preview, raw_vs_edit, catalog_grid; the old overlay versions are retired, kept only for older projects.) One brand look set by props (accent #2F5BEA, highlight #FFE03C, ink, paper, background grid|solid). Any footage storyboard borrows a piece with \"theme\": \"ui/reel-kit\".",
+  "categories": [
+    "overlays",
+    "fonts"
+  ],
+  "pieceFonts": [
+    "500 20px \"Inter Tight\"",
+    "600 20px \"Inter Tight\"",
+    "700 20px \"Inter Tight\"",
+    "800 20px \"Inter Tight\"",
+    "400 20px \"Instrument Serif Italic\""
+  ],
+  "colors": {
+    "accent": "#2F5BEA",
+    "highlight": "#FFE03C",
+    "ink": "#16181D",
+    "paper": "#F3F2EF",
+    "card": "#FFFFFF",
+    "muted": "#707682"
+  },
+  "frame": {
+    "background": "#2F5BEA",
+    "headingFont": "Inter Tight",
+    "headingColor": "#FFFFFF"
+  }
+}

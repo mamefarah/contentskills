@@ -1,0 +1,97 @@
+{
+  "id": "d3",
+  "title": "D3.js",
+  "summary": "Data diagrams drawn as comic panels: an angled card with a pale gutter and hard shadow over a sunset backdrop, inked shapes with gradient fills, and titles in outlined lettering. Use them full-screen as cutaways, or pass \"clear\": true to float the card over footage.",
+  "usage": "{\"piece\": \"d3/bar-chart\", \"props\": {\"title\": \"…\", \"items\": […]}}. Files: library/themes/gta6/d3/pieces/.",
+  "groups": [
+    "Charts",
+    "Figures",
+    "Diagrams"
+  ],
+  "items": [
+    {
+      "id": "bar-chart",
+      "name": "Bar chart",
+      "group": "Charts",
+      "piece": "d3/bar-chart",
+      "description": "Chunky inked bars with gradient fills and hard shadows; values pop on top."
+    },
+    {
+      "id": "line-chart",
+      "name": "Line chart",
+      "group": "Charts",
+      "piece": "d3/line-chart",
+      "description": "A fat inked trend line over a gradient fill, the last value on a burst."
+    },
+    {
+      "id": "donut",
+      "name": "Donut",
+      "group": "Charts",
+      "piece": "d3/donut",
+      "description": "Shares of a whole as fat ring segments sweeping round, the largest called out in the middle."
+    },
+    {
+      "id": "ranking",
+      "name": "Ranking",
+      "group": "Charts",
+      "piece": "d3/ranking",
+      "description": "Horizontal bars racing out from numbered bursts."
+    },
+    {
+      "id": "funnel",
+      "name": "Funnel",
+      "group": "Charts",
+      "piece": "d3/funnel",
+      "description": "Stacked slanted slabs dropping into place, each narrower than the last."
+    },
+    {
+      "id": "pictogram",
+      "name": "Pictogram",
+      "group": "Charts",
+      "piece": "d3/pictogram",
+      "description": "So many out of a group, as a grid of little suns lighting up."
+    },
+    {
+      "id": "versus",
+      "name": "Versus",
+      "group": "Figures",
+      "piece": "d3/versus",
+      "description": "Two figures head to head on slanted plates with a VS burst."
+    },
+    {
+      "id": "big-number",
+      "name": "Big number",
+      "group": "Figures",
+      "piece": "d3/big-number",
+      "description": "One huge figure slammed onto a turning burst, with a sticker note."
+    },
+    {
+      "id": "speedo",
+      "name": "Speedometer",
+      "group": "Figures",
+      "piece": "d3/speedo",
+      "description": "A dashboard dial whose needle swings to the value and trembles."
+    },
+    {
+      "id": "steps",
+      "name": "Step panels",
+      "group": "Diagrams",
+      "piece": "d3/steps",
+      "description": "A process as illustrated comic panels joined by fat arrows."
+    },
+    {
+      "id": "timeline",
+      "name": "Road timeline",
+      "group": "Diagrams",
+      "piece": "d3/timeline",
+      "description": "A coast road with a car driving it and a pin dropping at each milestone."
+    },
+    {
+      "id": "coast-map",
+      "name": "Coast map",
+      "group": "Diagrams",
+      "piece": "d3/coast-map",
+      "description": "An invented coastline with pins dropping on named spots."
+    }
+  ]
+}

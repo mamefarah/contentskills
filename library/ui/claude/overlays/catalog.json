@@ -1,0 +1,95 @@
+{
+  "id": "overlays",
+  "title": "Claude app screens",
+  "summary": "Full-screen app states. They read like a screen recording of the Claude app, so the result of a command can appear inside the chat.",
+  "usage": "composer: {\"piece\": \"overlays/composer\", \"theme\": \"ui/claude\", \"props\": {\"command\": \"/effects\", \"name\": \"glitch\"}}. chat: {\"piece\": \"overlays/chat\", \"theme\": \"ui/claude\", \"behind\": true} with a layout card at x 30, y 545, 632 x 1125 for the result. prompt and worklog are floating cards for any footage storyboard: {\"piece\": \"overlays/prompt\", \"theme\": \"ui/claude\", \"props\": {\"text\": \"Turn this into a reel\", \"y\": 1150}}.",
+  "items": [
+    {
+      "id": "composer",
+      "name": "Composer",
+      "group": "Claude app",
+      "piece": "overlays/composer",
+      "description": "The composer with your clip attached: types the slash command with autocomplete, then the command's argument, presses the keys and sends (0.95 s). With \"menu\" ([[command, description], ...]) and \"hold\" the slash-command list shows first.",
+      "over": true
+    },
+    {
+      "id": "chat",
+      "name": "Chat, working",
+      "group": "Claude app",
+      "piece": "overlays/chat",
+      "description": "The chat after sending: your command as a pill, a spinning Claude spark with \"Editing with <name>...\" and SPED UP, and the reply bar. Put the clip in a card window over its dark card. With \"reply\" it is a plain answer that streams in word by word.",
+      "over": true
+    },
+    {
+      "id": "greeting",
+      "name": "New chat, typing",
+      "group": "Claude app",
+      "piece": "overlays/greeting",
+      "description": "A new chat: the spark and a greeting, a short message (a comment keyword) typed key by key and sent (0.95 s).",
+      "over": true
+    },
+    {
+      "id": "endcard",
+      "name": "End card grid",
+      "group": "Claude app",
+      "piece": "overlays/endcard",
+      "description": "Claude answers the keyword, a card resolves from a dot matrix of pixels popping in dim blacklight colours with little pixel mushrooms into a numbered grid of results (tiles: [{name, image}], more: N), then grows to full screen and holds (3.2 s).",
+      "over": true
+    },
+    {
+      "id": "stamp",
+      "name": "Edited by Claude",
+      "group": "Claude app",
+      "piece": "overlays/stamp",
+      "description": "A small translucent 'Edited by Claude' pill for a full-screen result (transparent around it).",
+      "over": true
+    },
+    {
+      "id": "prompt",
+      "name": "Prompt box",
+      "group": "Claude app",
+      "piece": "overlays/prompt",
+      "description": "The composer on its own as a floating card (transparent around it): the prompt types letter by letter with the orange caret, the send button presses, then the spark spins beside a short status line. Props: text, placeholder, status, typeAt, typeFor, sendAt, x, y, w, size.",
+      "over": true
+    },
+    {
+      "id": "worklog",
+      "name": "Work log",
+      "group": "Claude app",
+      "piece": "overlays/worklog",
+      "description": "Claude at work as a floating dark card: the spinning spark and a title, then the steps of the job; each lights up with a turning ring while it runs and gets an orange tick and its figure when done, over a progress line. Props: title, label, steps [{label, detail, at, doneAt}], doneAt, done, x, y, w, size. Give it real steps and figures.",
+      "over": true
+    },
+    {
+      "id": "style-scan",
+      "name": "Style scan",
+      "group": "Claude app",
+      "piece": "overlays/style-scan",
+      "description": "Claude learning a creator's style as a floating dark card: the user's reel covers stream in from both sides into the spinning spark, then at cardAt the card resolves into what it learned: colour swatches with hex codes, the user's fonts set in those fonts, and short facts (captions, pace). Props: images, colors [{hex, label}], fonts [{family, label}], facts [{label, value}], title, done, cardAt, x, y, w. Give it the user's real covers and style/profile.json; it invents nothing.",
+      "over": true
+    },
+    {
+      "id": "terminal",
+      "name": "Claude Code terminal",
+      "group": "Claude app",
+      "piece": "overlays/terminal",
+      "description": "Claude Code in a terminal window: `claude` is typed at a shell prompt and the welcome box opens, the request types into the input box and is sent (Claude starts working with the spark and a reply line), then a video file falls in and lands as an attachment chip. Props: command, file, reply, cwd, launchAt, typeAt, typeFor, sendAt, dropAt (seconds from the overlay start), x, y, w, size.",
+      "over": true
+    },
+    {
+      "id": "agent-rain",
+      "name": "Claude agent rain",
+      "group": "Claude app",
+      "piece": "overlays/agent-rain",
+      "description": "It rains little Claude agents: small clay-orange helpers (spark on top, two eyes, stubby legs) tumble down over the picture, near ones big and fast, far ones small and pale. Transparent. Props: count (34), speed (1), lead (s over which they enter, 0.25), size (1). For a 'Claude did it' moment."
+    },
+    {
+      "id": "edit-hook",
+      "name": "Edit hook",
+      "group": "Claude app",
+      "piece": "overlays/edit-hook",
+      "description": "Opening hook for a 'Claude edited this video' reel: a Claude Code status pill ('editing your video…') above the head; on slamAt the word slams in huge in ivory serif with a clay flash and shake and the pill flips to 'edited'; on burstAt a big Claude spark bursts behind the head; the tag types in in clay mono; the word slices into strips at wipeAt. Use two copies: layer 'back' (behind: person) and layer 'front'. Pair with a raw grade ending on slamAt. Props: layer, word, status, done, tag, slamAt, burstAt, tagAt, tagFor, wipeAt, y, size, pillY, burst {x,y,r}.",
+      "over": true
+    }
+  ]
+}

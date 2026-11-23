@@ -1,0 +1,143 @@
+{
+ "id": "overlays",
+ "title": "Overlays",
+ "summary": "See-through graphics for footage in the modern editorial look: one huge white word that builds and drops out letter by letter, words in charcoal strips, slots and tabs, minimal tracked credits and captions on thin rules, huge stats, heavy lists, frame numbers, letterbox bars and strip guides. White and charcoal only; colour comes from the footage. Defaults keep the middle of the frame (the face) clear.",
+ "usage": "In a footage storyboard: {\"piece\": \"overlays/big-word\", \"start\": 1.2, \"end\": 3.4, \"props\": {\"word\": \"STYLE\", \"y\": 1520}}. Positions are 1080x1920 frame pixels; each piece leaves before its end when the player passes `life`. frame-counter, letterbox and guides can run a whole clip. White type carries a faint shadow; on a very bright background use color: ink (big-word, keyword-slam) or a charcoal piece (slot-word, strip-word). Kit: library/themes/modern/kit.js.",
+ "groups": [
+  "Word",
+  "Data",
+  "Labels",
+  "Frame",
+  "Accents"
+ ],
+ "items": [
+  {
+   "id": "big-word",
+   "name": "Big word",
+   "group": "Word",
+   "piece": "overlays/big-word",
+   "description": "The theme's signature: one huge white word centred across the frame, letters building in a scattered order through a translucent ghost and dropping out one by one in another order before the overlay ends. Props: word, y, size, color (white|ink), order, seed, step, kicker.",
+   "over": true
+  },
+  {
+   "id": "ghost-stack",
+   "name": "Ghost stack",
+   "group": "Word",
+   "piece": "overlays/ghost-stack",
+   "description": "One word stacked three times, ghost / solid / ghost, the rows sliding in from opposite sides; the solid row builds letter by letter. Props: word, y, size, gap.",
+   "over": true
+  },
+  {
+   "id": "slot-word",
+   "name": "Slot word",
+   "group": "Word",
+   "piece": "overlays/slot-word",
+   "description": "A charcoal bar opens from a thin line to the word's width, the word builds inside it in white, a small white tab label underneath; closes back to a line. Props: word, y, size, sub, align.",
+   "over": true
+  },
+  {
+   "id": "strip-word",
+   "name": "Strip word",
+   "group": "Word",
+   "piece": "overlays/strip-word",
+   "description": "A narrow charcoal strip drops down the frame edge with a word stacked letter over letter inside it, building from the top; a small label at its foot. Props: word, x, width, top, bottom, label.",
+   "over": true
+  },
+  {
+   "id": "stat",
+   "name": "Stat",
+   "group": "Data",
+   "piece": "overlays/stat",
+   "description": "A statistic in huge heavy type counting up to its value, a tracked label building under it and a small white tab note above (default note says ILLUSTRATIVE). Props: value, label, note, y, size.",
+   "over": true
+  },
+  {
+   "id": "list",
+   "name": "List",
+   "group": "Data",
+   "piece": "overlays/list",
+   "description": "A list in heavy capitals, one item per beat: mono number, letter-by-letter build, hairline. Props: items, x, y, step, size, numbered.",
+   "over": true
+  },
+  {
+   "id": "credit",
+   "name": "Credit",
+   "group": "Labels",
+   "piece": "overlays/credit",
+   "description": "A minimal opening credit: role in small tracked capitals, a short rule, the name in heavy capitals, typing on. Props: role, name, x, y, align.",
+   "over": true
+  },
+  {
+   "id": "rule-caption",
+   "name": "Rule caption",
+   "group": "Labels",
+   "piece": "overlays/rule-caption",
+   "description": "A thin white rule draws across the frame; a caption in heavy tracked capitals types on above it, a sub line and mono index below. Props: caption, sub, index, y, x0, x1.",
+   "over": true
+  },
+  {
+   "id": "tag",
+   "name": "Index tag",
+   "group": "Labels",
+   "piece": "overlays/tag",
+   "description": "A small white (or charcoal) block with a mono index and a heavy word, wiping open from its left edge. Props: index, text, x, y, align, dark.",
+   "over": true
+  },
+  {
+   "id": "frame-counter",
+   "name": "Frame counter",
+   "group": "Frame",
+   "piece": "overlays/frame-counter",
+   "description": "A running frame number in Space Mono with a square blinking on the beat and a tracked format tag; can run the whole clip. Props: x, y, align, fps, start, tag.",
+   "over": true
+  },
+  {
+   "id": "letterbox",
+   "name": "Letterbox",
+   "group": "Frame",
+   "piece": "overlays/letterbox",
+   "description": "Charcoal bars slide in at the top and bottom (a cinematic crop) with a small tracked title and a running frame number; can run the whole clip. Props: top, bottom, title, note.",
+   "over": true
+  },
+  {
+   "id": "guides",
+   "name": "Strip guides",
+   "group": "Frame",
+   "piece": "overlays/guides",
+   "description": "Quiet layout guides: thin rules split the frame into strips, corner crop marks lock on, small strip numbers at the top; a whole-clip frame. Props: strips, opacity, labels.",
+   "over": true
+  },
+  {
+   "id": "face-frame",
+   "name": "Face frame",
+   "group": "Frame",
+   "piece": "overlays/face-frame",
+   "description": "Four white crop brackets snap in round the speaker's face and follow it (props.locate / track / box), with a small tag; never covers the face. Props: tag, pad.",
+   "over": true
+  },
+  {
+   "id": "beat-bars",
+   "name": "Beat bars",
+   "group": "Accents",
+   "piece": "overlays/beat-bars",
+   "description": "A strip-wipe flicker: three charcoal bars sweep across the frame in turn in under a second, for a cut or a hit. Props: n, width, color (coal|white).",
+   "over": true
+  },
+  {
+   "id": "agent-parade",
+   "name": "Agent parade",
+   "group": "Accents",
+   "piece": "overlays/agent-parade",
+   "description": "A full-frame card for behind the person (\"behind\": \"person\", best with \"exit\": \"slice\"): a psychedelic purple field of wavy rings pulsing out from behind the head, a parade of little orange agents marching down the frame in columns with depth, and the theme's big white words building over the top. Props: titles [{lines, at, until, times}], y, size, count, speed, agent, palette, cy, seed.",
+   "over": true
+  },
+  {
+   "id": "emoji-pop",
+   "name": "Emoji pop",
+   "group": "Accents",
+   "piece": "overlays/emoji-pop",
+   "description": "One emoji pops in on a word with an overshoot and a small wobble, then pops out at the end of its slot. Props: image (a PNG of the emoji: the renderer may not draw colour-emoji glyphs, so pass one), emoji (fallback character), x, y (centre, frame px), size, tilt, delay (pop-in, seconds into the slot), jitter (px: after the pop it shakes and swells like it is about to explode), seed.",
+   "over": true
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "compare",
+  "title": "Side-by-side comparison",
+  "kind": "direct",
+  "summary": "2 to 4 videos playing side by side, each 540x960 with a label (1080x960 for two, 1620x960 for three). For comparing versions, themes or systems.",
+  "inputs": {
+    "videos": "[{file, label}] - 2 to 4, left to right",
+    "audio": "which video's sound to keep, by position (default 1 = the first; 0 = silent)",
+    "height": "panel height in pixels (default 960; width is 9:16 of it)",
+    "gap": "pixels between panels (default 0)",
+    "labels": "false hides the labels"
+  },
+  "uses": ["ffmpeg only: renders projects/<project>/out/cut.mp4 directly (the video frame is 9:16; this is a landscape review layout)"]
+}

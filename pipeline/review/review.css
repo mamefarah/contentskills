@@ -1,0 +1,246 @@
+/* The review page. Colours and fonts come from /dashboard/style.css (the same dark dashboard look). */
+body.review{height:100vh;overflow:hidden;display:grid;grid-template-rows:54px minmax(0,1fr);--violet:#b06bff;--stage:clamp(340px,calc((100vh - 54px - 96px)*9/16),46vw)}
+body.review.listing{overflow:auto;height:auto;min-height:100vh;grid-template-rows:54px auto}
+.review [hidden]{display:none!important}
+.review button,.review select,.review textarea,.review input{font:inherit;color:inherit}
+.review button{border:1px solid var(--line);background:var(--panel-2);border-radius:8px;padding:6px 12px;font-weight:600;font-size:13px;line-height:1.2}
+.review button:hover{border-color:var(--cyan)}
+.review button:focus-visible,.review select:focus-visible,.review textarea:focus-visible,.review a:focus-visible{outline:2px solid var(--cyan);outline-offset:1px}
+.review button.primary{background:var(--coral);border-color:var(--coral);color:var(--ink)}
+.review button.primary:hover{background:var(--yellow);border-color:var(--yellow)}
+.review button.quiet{background:none;color:var(--muted);padding:4px 8px}
+.review button[aria-pressed=true]{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+.review button:disabled{opacity:.45;cursor:default}
+.review select{background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:5px 8px;font-size:13px}
+.grow{flex:1}
+.eyebrow{font:600 11px "Dash Text";letter-spacing:.16em;text-transform:uppercase;color:var(--coral)}
+.hint{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.field{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:12.5px;white-space:nowrap}
+.pill{font:500 12px "Dash Mono";color:var(--yellow);border:1px solid var(--line);border-radius:999px;padding:3px 10px;white-space:nowrap}
+
+#bar{display:flex;align-items:center;gap:16px;padding:0 18px;background:var(--navy);border-bottom:1px solid var(--line);min-width:0}
+#bar .back,#bar .link{color:var(--cyan);text-decoration:none;font-size:13px;font-weight:600;white-space:nowrap}
+#bar .what{display:flex;align-items:baseline;gap:12px;min-width:0}
+#bar .what b{font:750 19px/1.1 "Dash Text";letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ---------- project list ---------- */
+#list{padding:34px 40px 80px;max-width:1200px}
+#list h1{font:750 40px/1.05 "Dash Text";letter-spacing:-.02em;margin:0 0 6px}
+#list>p{color:var(--muted);margin:0 0 24px;max-width:70ch}
+#list .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+#list a.project{display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--cream);text-decoration:none}
+#list a.project:hover{border-color:var(--cyan)}
+#list a.project b{font-size:15.5px}
+#list a.project .id{font:500 11.5px "Dash Mono";color:var(--cyan)}
+#list a.project .facts{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+#list a.project .facts span{font:500 11.5px "Dash Mono";padding:3px 8px;border-radius:6px;background:var(--ink);color:var(--muted)}
+#list a.project .facts span.todo{color:var(--ink);background:var(--yellow)}
+#list a.project.novideo{opacity:.6}
+
+/* ---------- layout ---------- */
+#app{display:grid;grid-template-columns:var(--stage) minmax(0,1fr);min-height:0}
+#stage{display:flex;flex-direction:column;background:#08061a;border-right:1px solid var(--line);min-height:0}
+#screen{position:relative;flex:1;min-height:0;display:grid;place-items:center;overflow:hidden}
+#video{width:100%;height:100%;object-fit:contain;background:#08061a;display:block;cursor:pointer}
+#novideo{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:30px;color:var(--muted);font-size:14px}
+#novideo code{display:block;margin-top:10px;color:var(--cream)}
+#now{position:absolute;left:12px;top:12px;max-width:calc(100% - 24px);padding:5px 10px;border-radius:8px;background:#08061acc;font:600 12px "Dash Text";color:var(--cream);pointer-events:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#now:empty{display:none}
+#now i{font-style:normal;color:var(--yellow);font-family:"Dash Mono";font-weight:500;margin-right:8px}
+#scrub{display:flex;align-items:center;gap:10px;padding:8px 12px 0}
+#seek{flex:1;min-width:0;accent-color:var(--coral)}
+#transport{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:8px 12px 12px;min-width:0}
+#transport button{padding:6px 10px}
+#transport #play{min-width:64px}
+#clock{font:500 11.5px "Dash Mono";color:var(--muted);white-space:nowrap}
+
+#side{display:grid;grid-template-rows:minmax(0,1fr) auto;min-width:0;min-height:0}
+#top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);min-height:0}
+.panel{min-width:0;min-height:0}
+.panel .head{display:flex;align-items:center;gap:10px;min-height:28px}
+#inspector{padding:16px 18px;display:flex;flex-direction:column;gap:12px;border-right:1px solid var(--line);overflow:auto}
+#selection .empty,#mark-list .empty{color:var(--muted);font-size:13.5px;border:1px dashed var(--line);border-radius:12px;padding:16px}
+#selection h2{font:750 22px/1.15 "Dash Text";letter-spacing:-.02em;margin:0 0 4px}
+#selection .range{font:500 12.5px "Dash Mono";color:var(--yellow)}
+.ref{display:flex;align-items:center;gap:8px;margin-top:8px;padding:6px 6px 6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--ink);min-width:0}
+.ref code{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--cream);font-size:12px}
+.ref button{padding:3px 9px;font-size:12px}
+.eyebrow.dim{color:var(--muted)}
+.here{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;margin:8px 0 0;font-size:12.5px}
+.here dt{color:var(--muted)}
+.here dd{margin:0;display:flex;gap:4px;flex-wrap:wrap;min-width:0}
+.here dd span{font:500 11px "Dash Mono";padding:1px 6px;border-radius:5px;background:var(--panel-2);color:var(--cream);white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+.here dd q{quotes:none;color:var(--cream);font-style:italic}
+#composer{display:flex;flex-direction:column;gap:8px}
+#composer textarea{width:100%;resize:vertical;min-height:54px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--ink);font-size:14px;line-height:1.45}
+#composer .row{display:flex;align-items:center;gap:8px}
+.kinds{display:flex;gap:6px;flex-wrap:wrap}
+.kinds button{border-radius:999px;padding:4px 12px;background:none;color:var(--muted)}
+.kind-hint{margin:6px 0 0;font-size:12.5px;color:var(--muted)}
+.kinds button[aria-pressed=true]{color:var(--ink)}
+.kinds button[data-kind=change][aria-pressed=true]{background:var(--coral);border-color:var(--coral)}
+.kinds button[data-kind=cut][aria-pressed=true]{background:var(--pink);border-color:var(--pink)}
+.kinds button[data-kind=keep][aria-pressed=true]{background:var(--cyan);border-color:var(--cyan)}
+.kinds button[data-kind=question][aria-pressed=true]{background:var(--yellow);border-color:var(--yellow)}
+
+#marks{padding:16px 18px;display:flex;flex-direction:column;gap:12px}
+#marks .count{font:500 12px "Dash Mono";color:var(--yellow)}
+.chips.small{margin:0;gap:6px}
+.chips.small .chip{padding:3px 10px;font-size:12px;border-radius:999px;background:none;color:var(--muted)}
+.chips.small .chip[aria-pressed=true]{background:var(--cream);border-color:var(--cream);color:var(--ink)}
+#mark-list{flex:1;min-height:0;overflow:auto;display:flex;flex-direction:column;gap:10px;padding-right:2px}
+
+/* ---------- timeline ---------- */
+#timeline{border-top:1px solid var(--line);background:var(--navy);display:flex;flex-direction:column;min-height:0;max-height:56vh}
+.toolbar{display:flex;align-items:center;gap:12px;padding:8px 14px;min-width:0}
+.toolbar button{padding:4px 10px;font-size:12px;white-space:nowrap}
+.toolbar .eyebrow,.toolbar .field{flex:none}
+#zoom{width:120px;accent-color:var(--coral)}
+#tl{display:grid;grid-template-columns:92px minmax(0,1fr);overflow-y:auto;min-height:0;border-top:1px solid var(--line)}
+#labels>div{display:flex;align-items:center;padding:0 10px 0 14px;font:600 11px "Dash Text";letter-spacing:.04em;color:var(--muted);border-bottom:1px solid #2a2062;box-sizing:border-box}
+#scroll{overflow-x:auto;overflow-y:hidden;min-width:0}
+#track{position:relative;min-width:100%;user-select:none;-webkit-user-select:none;touch-action:none}
+#track.ranging{cursor:crosshair}
+.row{position:relative;border-bottom:1px solid #2a2062;box-sizing:border-box}
+.row.ruler{background:#100b2a;cursor:ew-resize}
+.tick{position:absolute;top:0;bottom:0;border-left:1px solid #33287a;padding-left:4px;font:500 10px/20px "Dash Mono";color:var(--muted);pointer-events:none}
+.tick.minor{border-left-color:#2a2062;top:12px}
+.sec{position:absolute;top:4px;bottom:4px;border-radius:8px;border:1px solid var(--line);background:#08061a center/cover no-repeat;overflow:hidden;cursor:pointer;box-sizing:border-box;padding:0;text-align:left}
+.sec::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#08061a00 30%,#08061ae6 78%)}
+.sec:hover{border-color:var(--cyan)}
+.sec.current{border-color:var(--cream)}
+.sec.selected{border-color:var(--coral);box-shadow:0 0 0 2px var(--coral)}
+.sec .txt{position:absolute;left:6px;right:4px;bottom:4px;z-index:1;display:flex;flex-direction:column;gap:1px;min-width:0;pointer-events:none}
+.sec .txt b{font:700 11.5px/1.15 "Dash Text";color:var(--cream);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sec .txt span{font:500 10px/1.2 "Dash Mono";color:var(--yellow);white-space:nowrap;overflow:hidden}
+.sec .job{position:absolute;left:5px;top:5px;z-index:1;font:600 9px/1 "Dash Text";letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--cream);padding:3px 5px;border-radius:4px;pointer-events:none;max-width:calc(100% - 10px);overflow:hidden}
+.sec .n{position:absolute;right:5px;top:5px;z-index:1;font:500 10px/1 "Dash Mono";color:var(--ink);background:var(--yellow);padding:3px 5px;border-radius:999px;pointer-events:none}
+.item{position:absolute;top:3px;height:14px;border-radius:4px;background:var(--c,var(--cyan));color:var(--ink);font:600 10px/14px "Dash Mono";padding:0 4px;white-space:nowrap;overflow:hidden;box-sizing:border-box;min-width:2px;cursor:pointer}
+.item:hover{filter:brightness(1.2);z-index:2}
+.item.point{padding:0;width:3px!important;border-radius:2px}
+.item.tight{padding:0;color:transparent}
+.item.mid{top:3px;border-radius:2px;background:none;border:1px solid var(--c);border-top:0;border-bottom:0;color:var(--c)}
+.item.ghost{background:none;border:1px dashed var(--c);color:var(--c)}
+.item.word{background:none;color:var(--muted);font-weight:500;padding:0 1px}
+.item.word.emph{color:var(--cream);font-weight:700}
+.item.word.tight{color:transparent;border-left:1px solid #4a3d99;border-radius:0}
+.item.word.emph.tight{border-left-color:var(--cream)}
+.row[data-lane=graphics]{--c:var(--blue)}.row[data-lane=layouts]{--c:var(--violet)}.row[data-lane=zooms]{--c:#8f86c9}.row[data-lane=effects]{--c:var(--coral)}
+.row[data-lane=transitions]{--c:var(--yellow)}.row[data-lane=sounds]{--c:var(--pink)}.row[data-lane=captions]{--c:#d6d0f5}.row[data-lane=marks]{background:#100b2a}
+.mk{position:absolute;top:3px;height:10px;border-radius:5px;background:var(--kind);cursor:pointer;min-width:5px;box-sizing:border-box}
+.mk.done{opacity:.4}
+.mk[data-kind=change]{--kind:var(--coral)}.mk[data-kind=cut]{--kind:var(--pink)}.mk[data-kind=keep]{--kind:var(--blue)}.mk[data-kind=question]{--kind:var(--yellow)}
+#sel{position:absolute;top:0;bottom:0;background:#3dffa826;border-left:2px solid var(--coral);border-right:2px solid var(--coral);pointer-events:none;z-index:3;box-sizing:border-box}
+#head{position:absolute;top:0;bottom:0;width:0;border-left:2px solid var(--cream);z-index:4;pointer-events:none}
+#head::before{content:"";position:absolute;left:-6px;top:0;border:5px solid transparent;border-top:7px solid var(--cream)}
+
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--cream);color:var(--ink);font-weight:600;font-size:13px;padding:8px 14px;border-radius:999px;z-index:20;box-shadow:0 8px 30px #0008}
+#toast.bad{background:var(--danger)}
+@media(max-width:980px){
+  body.review{height:auto;overflow:auto;display:block}
+  #app{display:block}#stage{height:80vh}#top{grid-template-columns:1fr}#inspector{border-right:0;border-bottom:1px solid var(--line)}#mark-list{max-height:50vh}
+  #timeline{max-height:none}.hint#keys{display:none}
+}
+
+/* "Make a new version": the one big next step once they have left notes */
+#bar .remake{flex:none;padding:9px 18px;border:0;border-radius:999px;background:var(--grad,var(--coral));color:#fff;font:700 14px "Dash Text",system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px #f0603a40;white-space:nowrap}
+#bar .remake:hover:not(:disabled){filter:brightness(1.06);transform:translateY(-1px)}
+#bar .remake:disabled{opacity:.75;cursor:progress}
+#apply{position:fixed;right:18px;bottom:18px;z-index:15;width:min(420px,calc(100vw - 36px));padding:14px 16px;border-radius:14px;background:var(--navy);border:1px solid var(--line);box-shadow:0 12px 40px #0003}
+#apply b{display:block;font-size:14px;padding-right:22px}
+#apply:not(.done) b::before{content:'';display:inline-block;width:8px;height:8px;margin-right:8px;border-radius:50%;background:var(--coral);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.3}}
+#apply p{margin:6px 0 0;font-size:12.5px;color:var(--muted);overflow:hidden;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;word-break:break-word}
+#apply details{margin-top:8px;font-size:12.5px}
+#apply summary{cursor:pointer;color:var(--cyan)}
+#apply pre{max-height:220px;overflow:auto;margin:8px 0 0;padding:8px 10px;border-radius:8px;background:var(--ink);font:11.5px/1.45 "Dash Mono",ui-monospace,monospace;white-space:pre-wrap;word-break:break-word}
+#apply-close{position:absolute;top:8px;right:10px;border:0;background:none;font-size:18px;color:var(--muted);cursor:pointer;padding:0 4px}
+
+/* finishing: "Finish video ✓" when they are happy, then a Final badge with Download and Reopen */
+#bar .finish{flex:none;padding:9px 18px;border:0;border-radius:999px;background:#16A34A;color:#fff;font:700 14px "Dash Text",system-ui,sans-serif;cursor:pointer;box-shadow:0 4px 14px #16a34a40;white-space:nowrap}
+#bar .finish:hover{filter:brightness(1.07);transform:translateY(-1px)}
+#bar .finish.quiet{background:transparent;color:#16A34A;box-shadow:inset 0 0 0 1.5px #16A34A}
+#bar .final-badge{display:inline-flex;align-items:center;gap:12px;padding:6px 8px 6px 14px;border-radius:999px;background:#16A34A14;font-size:13px;white-space:nowrap}
+#bar .final-badge b{color:#16A34A;font-size:14px}
+#bar .final-badge a{color:#16A34A;font-weight:700;text-decoration:none}
+#bar .final-badge a:hover{text-decoration:underline}
+#bar .final-badge button{border:0;background:none;color:var(--muted);font-size:12.5px;cursor:pointer;padding:2px 6px}
+
+/* notes as a chat (Frame.io style): avatar, name, time chip, words; actions show on hover */
+.mark{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:12px 14px;display:flex;flex-direction:column;gap:10px;cursor:pointer}
+.mark:hover{border-color:#ffffff33}
+.mark.current{background:var(--panel-2);border-color:var(--cyan)}
+.mark.editing{border-color:var(--coral)}
+.mark.done{opacity:.55}
+.mark .msg{display:flex;gap:10px;align-items:flex-start;min-width:0}
+.mark .msg.reply{margin-left:22px;padding-top:10px;border-top:1px solid var(--line)}
+.mark .avatar{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:600 11px "Dash Text";color:var(--ink)}
+.mark .avatar.you{background:#b9a6ff}
+.mark .avatar.claude{background:var(--coral);font-size:13px}
+.mark .body{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.mark .who{display:flex;align-items:center;gap:8px;min-height:24px}
+.mark .who b{font-weight:600;font-size:14px;color:var(--cream)}
+.mark .ago{font-size:12.5px;color:var(--muted)}
+.mark .note{margin:0;font-size:14px;line-height:1.45;color:var(--cream);white-space:pre-wrap;overflow-wrap:anywhere}
+.mark .tc{display:inline-block;margin-right:7px;padding:1px 7px;border-radius:6px;background:#ffc94a26;color:var(--yellow);font:500 12.5px "Dash Mono";vertical-align:1px}
+.mark .working{margin:0;font-size:12.5px;color:var(--cyan)}
+.mark .ic{display:inline-grid;place-items:center;width:28px;height:28px;padding:0;border:0;border-radius:50%;background:none;color:var(--muted)}
+.mark .ic svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.mark .ic:hover{background:#ffffff14;color:var(--cream)}
+.mark .ic.danger:hover{color:var(--danger)}
+.mark .apply-now{margin-left:6px;padding:5px 12px;border:0;border-radius:999px;background:#2f9e44;color:#fff;font:600 13px/1 inherit;font-family:inherit;cursor:pointer;white-space:nowrap}
+.mark .apply-now:hover{background:#268a3b}
+.mark .lock{display:inline-flex;align-items:center;gap:5px;margin-left:6px;padding:4px 10px;border-radius:999px;background:#ffffff14;color:var(--muted);font-size:12px;font-weight:600}
+.mark .lock svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mark.locked{cursor:default}
+.mark .tools{display:flex;gap:2px;opacity:0;transition:opacity .12s}
+.mark:hover .tools,.mark:focus-within .tools{opacity:1}
+@media (hover:none){.mark .tools{opacity:1}}
+#here .said{margin:4px 0 10px;font-size:14px;line-height:1.45;color:var(--muted);font-style:italic}
+#here .onscreen summary{cursor:pointer;font-size:12.5px;color:var(--muted);list-style:none}
+#here .onscreen summary::before{content:'▸ '}#here .onscreen[open] summary::before{content:'▾ '}
+#here .onscreen .here{margin-top:8px}
+#bar .final-badge{padding:5px 6px 5px 14px}
+#bar .final-badge a.dl{background:#16A34A;color:#fff;padding:6px 14px;border-radius:999px}
+#bar .final-badge a.dl:hover{text-decoration:none;filter:brightness(1.07)}
+
+#trimbar{white-space:nowrap;display:inline-flex;gap:6px;align-items:center;font:600 12px "Dash Text",sans-serif;color:#e5484d;background:#e5484d14;border:1px solid #e5484d55;border-radius:999px;padding:2px 4px 2px 10px}
+#trim-status{font:600 12px "Dash Text",sans-serif;color:#b7791f;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+
+/* Trim: pending cuts over the whole timeline (red hatch), and the two buttons in the note panel */
+#cuts{position:absolute;inset:0;pointer-events:none;z-index:2}
+.cutzone{position:absolute;top:22px;bottom:0;background:repeating-linear-gradient(135deg,#e5484d66 0 5px,#e5484d33 5px 10px);border-left:1px solid #e5484d;border-right:1px solid #e5484d;color:#fff;font:700 10px/20px "Dash Mono",monospace;text-align:center;overflow:hidden;white-space:nowrap;box-sizing:border-box}
+#trim-tools{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+#trim-tools button{color:#e5484d;border-color:#e5484d55}
+#trim-tools button:disabled{opacity:.4;cursor:not-allowed}
+
+/* Screenshots attached to a note: in the composer (removable) and under a note in the list. */
+.shots{display:flex;flex-wrap:wrap;gap:6px}
+.shots .shot{position:relative;display:block;width:54px;aspect-ratio:9/16;border-radius:6px;overflow:hidden;border:1px solid var(--line);background:#000}
+.shots .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shots .shot button{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:50%;border:0;background:rgba(0,0,0,.65);color:#fff;font-size:12px;line-height:18px;padding:0;cursor:pointer}
+.mark .shots{margin-top:6px}
+
+/* A part of the video Claude is changing (one job per section, several at once): a badge on its section in the timeline
+   and on its notes. editing / rendering / queued / assembling pulse; done is green; failed is red. */
+.sec .work{position:absolute;top:4px;right:4px;max-width:calc(100% - 8px);overflow:hidden;text-overflow:ellipsis;box-sizing:border-box;z-index:2;padding:2px 7px;border-radius:99px;font-size:10px;font-weight:700;letter-spacing:.02em;background:#F59E0B;color:#1a1300;white-space:nowrap}
+.sec[data-job] {border-color:#F59E0B;border-width:2px}
+.sec[data-job="done"]{border-color:#16A34A} .sec[data-job="done"] .work{background:#16A34A;color:#fff}
+.sec[data-job="failed"]{border-color:#DC2626} .sec[data-job="failed"] .work{background:#DC2626;color:#fff}
+.sec[data-job="editing"] .work,.sec[data-job="rendering"] .work,.sec[data-job="queued"] .work,.sec[data-job="assembling"] .work{animation:work-pulse 1.2s ease-in-out infinite}
+@keyframes work-pulse{50%{opacity:.55}}
+.mark .jobline{margin:6px 0 0;font-size:12px;color:#B45309;display:flex;gap:6px;align-items:center}
+.mark .jobline.done{color:#16A34A} .mark .jobline.failed{color:#DC2626}
+.mark .jobline i{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none;animation:work-pulse 1.2s ease-in-out infinite}
+.mark .jobline.done i,.mark .jobline.failed i{animation:none}
+.history{margin-top:14px;border-top:1px solid var(--line);padding-top:10px;font-size:13px}
+.history summary{cursor:pointer;color:var(--muted)}
+.history ol{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.history li{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.history li span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.history li small{color:var(--muted);margin-left:6px}
+.cutzone.queued{opacity:.55}
+.cutzone.running,.cutzone.sending{animation:cutpulse 1s ease-in-out infinite}
+@keyframes cutpulse{50%{opacity:.6}}
+#tl.collapsed #track>.row:not([data-lane=ruler]):not([data-lane=sections]):not([data-lane=effects]),
+#tl.collapsed #labels>div:not([data-lane=ruler]):not([data-lane=sections]):not([data-lane=effects]){display:none}

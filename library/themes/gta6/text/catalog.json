@@ -1,0 +1,171 @@
+{
+  "id": "text",
+  "title": "Text animations",
+  "summary": "Title cards and text overlays in the comic sunset look: chunky gradient lettering with a heavy ink outline and hard drop shadow, slanted panel bands with pale gutters, halftone, bursts and brush kickers. Words slam, stretch, rise and scroll.",
+  "usage": "Title cards fill the frame (any shape from square to 9:16): use one as a shot's \"background\", e.g. {\"background\": {\"piece\": \"text/headline-slam\", \"props\": {\"lines\": [\"YOUR\", \"WORDS\"], \"field\": \"sunset\"}}}, or as a footage \"cutaway\". Fields: sunset, dusk, candy, sea, gold, paper (field and colour names from other themes are mapped onto these). Overlays are see-through, in 1080×1920 frame pixels: {\"piece\": \"text/keyword-slam\", \"start\": 1.2, \"end\": 3.4, \"props\": {\"word\": \"FOCUS\", \"y\": 330}}. Every word, colour and position is a prop. Kit: library/themes/gta6/text/kit.js (style lives in its `theme`). Files: library/themes/gta6/text/pieces/.",
+  "groups": [
+    "Title cards",
+    "Overlays"
+  ],
+  "items": [
+    {
+      "id": "headline-slam",
+      "name": "Headline slam",
+      "group": "Title cards",
+      "piece": "text/headline-slam",
+      "description": "A headline slamming in letter by letter on a slanted panel band, with a brush kicker and a note.",
+      "tall": true
+    },
+    {
+      "id": "split-stack",
+      "name": "Split stack",
+      "group": "Title cards",
+      "piece": "text/split-stack",
+      "description": "Two words stacked across a slanted gutter, sliding in from opposite sides around a small illustrated panel.",
+      "tall": true
+    },
+    {
+      "id": "marquee-wall",
+      "name": "Marquee wall",
+      "group": "Title cards",
+      "piece": "text/marquee-wall",
+      "description": "A tilted wall of sign strips that never stop scrolling, alternating direction and colour.",
+      "tall": true
+    },
+    {
+      "id": "statement",
+      "name": "Statement",
+      "group": "Title cards",
+      "piece": "text/statement",
+      "description": "A sentence rising word by word over the turning backdrop; the words you pick come up in the hot gradient.",
+      "tall": true
+    },
+    {
+      "id": "big-number",
+      "name": "Big number",
+      "group": "Title cards",
+      "piece": "text/big-number",
+      "description": "One enormous figure slammed onto a turning inked burst, with a kicker tab and a label.",
+      "tall": true
+    },
+    {
+      "id": "quote-card",
+      "name": "Quote card",
+      "group": "Title cards",
+      "piece": "text/quote-card",
+      "description": "A quotation in a comic speech bubble, the words landing one at a time, the speaker named below.",
+      "tall": true
+    },
+    {
+      "id": "agenda",
+      "name": "Agenda",
+      "group": "Title cards",
+      "piece": "text/agenda",
+      "description": "A title and a numbered plan dealt in as slanted strips, one step at a time.",
+      "tall": true
+    },
+    {
+      "id": "versus",
+      "name": "Versus",
+      "group": "Title cards",
+      "piece": "text/versus",
+      "description": "Two words charging in from opposite sides across a slanted gutter, a badge bursting on the seam.",
+      "tall": true
+    },
+    {
+      "id": "chapter",
+      "name": "Chapter opener",
+      "group": "Title cards",
+      "piece": "text/chapter",
+      "description": "A giant numeral with a brushed kicker across it and the title on a slanted band.",
+      "tall": true
+    },
+    {
+      "id": "countdown",
+      "name": "Countdown",
+      "group": "Title cards",
+      "piece": "text/countdown",
+      "description": "Each number slams in on its own colour field with a burst, then the go word.",
+      "tall": true
+    },
+    {
+      "id": "end-card",
+      "name": "End card",
+      "group": "Title cards",
+      "piece": "text/end-card",
+      "description": "Closing lines, a call to action and a handle plate over a marquee strip that keeps running.",
+      "tall": true
+    },
+    {
+      "id": "follow-card",
+      "name": "Follow card",
+      "group": "Overlays",
+      "piece": "text/follow-card",
+      "description": "A slanted dusk plate with a sun monogram and the handle in chunky lettering; the pink FOLLOW tab is punched and turns into a yellow FOLLOWING tick. Sits on footage."
+    },
+    {
+      "id": "keyword-slam",
+      "name": "Keyword slam",
+      "group": "Overlays",
+      "piece": "text/keyword-slam",
+      "description": "A slanted gradient band shoots across and one word lands on it letter by letter, with a shake.",
+      "over": true
+    },
+    {
+      "id": "highlight-swipe",
+      "name": "Highlight swipe",
+      "group": "Overlays",
+      "piece": "text/highlight-swipe",
+      "description": "A sentence in outlined capitals; an inked marker bar swipes behind the words you name.",
+      "over": true
+    },
+    {
+      "id": "lower-third",
+      "name": "Lower third",
+      "group": "Overlays",
+      "piece": "text/lower-third",
+      "description": "The speaker's name on a slanted plate with a small sun, the role on a tag.",
+      "over": true
+    },
+    {
+      "id": "side-text",
+      "name": "Side text",
+      "group": "Overlays",
+      "piece": "text/side-text",
+      "description": "A slanted sign strip running up one edge of the picture with a tag at its end.",
+      "over": true
+    },
+    {
+      "id": "marquee-band",
+      "name": "Marquee band",
+      "group": "Overlays",
+      "piece": "text/marquee-band",
+      "description": "A band across the picture that keeps scrolling, with a thinner strip running the other way.",
+      "over": true
+    },
+    {
+      "id": "corner-labels",
+      "name": "Corner labels",
+      "group": "Overlays",
+      "piece": "text/corner-labels",
+      "description": "Slanted tabs in the four corners with halftone wedges and a round mark.",
+      "over": true
+    },
+    {
+      "id": "pip-frame",
+      "name": "Picture frame",
+      "group": "Overlays",
+      "piece": "text/pip-frame",
+      "description": "A comic-panel frame around a picture-in-picture window, with a label and caption tab.",
+      "over": true
+    },
+    {
+      "id": "sticker",
+      "name": "Sticker",
+      "group": "Overlays",
+      "piece": "text/sticker",
+      "description": "A starburst sticker slapped on with a wobble, small text running round inside its edge.",
+      "over": true
+    }
+  ]
+}
