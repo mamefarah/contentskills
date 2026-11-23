@@ -7,6 +7,18 @@ import {join} from 'node:path';
 import {start} from '../dashboard/serve.mjs';
 import {browserBinary} from './tools.mjs';
 
+/** Delete Chrome's temporary profile. A file still being written (ENOTEMPTY, EBUSY) is retried briefly; a profile that
+ *  stays behind is only a temp folder, so it is reported and never fails the render that already finished. */
+function removeProfile(profile) {
+  for (let attempt = 1; ; attempt++) {
+    try { rmSync(profile, {recursive: true, force: true}); return; }
+    catch (error) {
+      if (attempt >= 10 || !['ENOTEMPTY', 'EBUSY', 'EPERM'].includes(error.code)) { console.warn(`Could not remove Chrome profile ${profile}: ${error.message}`); return; }
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100);      // synchronous 100 ms pause before retrying
+    }
+  }
+}
+
 /**
  * @returns {evaluate(js), screenshot() -> Buffer (JPEG, or PNG with alpha when `transparent`), close()}
  * The page is the draft player in render mode: window.draft.seek(t) and window.draft.view(shot, n).
@@ -14,11 +26,15 @@ import {browserBinary} from './tools.mjs';
 export async function openDraft(project, {width, height, scale = 1, cut = 'all', transparent = false}) {
   const {server, port} = await start(0);
   const profile = mkdtempSync(join(tmpdir(), 'faceless-chrome-'));
-  const chrome = spawn(browserBinary(), ['--headless', '--remote-debugging-port=0', '--hide-scrollbars', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--no-first-run', `--user-data-dir=${profile}`, 'about:blank'], {stdio: ['ignore', 'ignore', 'pipe']});
+  // Own process group (POSIX), so closing can stop Chrome's helper processes too, not only the main process.
+  const posix = process.platform !== 'win32';
+  const chrome = spawn(browserBinary(), ['--headless', '--remote-debugging-port=0', '--hide-scrollbars', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--no-first-run', `--user-data-dir=${profile}`, 'about:blank'], {stdio: ['ignore', 'ignore', 'pipe'], detached: posix});
   const close = async () => {
     server.close(); server.closeAllConnections?.();      // do not wait for the browser's idle connections to time out
-    chrome.kill(); await new Promise(r => chrome.exitCode === null ? chrome.once('exit', r) : r());
-    rmSync(profile, {recursive: true, force: true});
+    const exited = new Promise(r => chrome.exitCode !== null || chrome.signalCode !== null ? r() : chrome.once('exit', r));
+    try { posix ? process.kill(-chrome.pid, 'SIGKILL') : chrome.kill(); } catch {}      // the whole group; ESRCH if it already exited
+    await exited;
+    removeProfile(profile);
   };
   try {
     const wsUrl = await new Promise((ok, bad) => {

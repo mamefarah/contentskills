@@ -66,6 +66,13 @@
       "description": "Banknotes and coins tumbling down in front of a turning sunburst."
     },
     {
+      "id": "neon-terrain",
+      "name": "Neon terrain",
+      "group": "Backdrops",
+      "piece": "three/neon-terrain",
+      "description": "A low flight down a valley of glowing wireframe mountains toward a slotted sun (loops). Full frame."
+    },
+    {
       "id": "reel-billboards",
       "name": "Reel billboards",
       "group": "Scenes",
